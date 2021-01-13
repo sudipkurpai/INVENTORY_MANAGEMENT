@@ -67,7 +67,7 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/inventory_management/email.png"/>
+              <Image iconType="3" name="/image/email.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value=" Email / Phone"/>
           </Properties>
@@ -104,7 +104,7 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/inventory_management/key.png"/>
+              <Image iconType="3" name="/image/key.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value=" Password"/>
           </Properties>
@@ -151,7 +151,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/inventory_management/button (1).png"/>
+              <Image iconType="3" name="/image/buttonraghu.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -163,7 +163,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/inventory_management/raghu1.jpg"/>
+              <Image iconType="3" name="/image/raghu1.jpg"/>
             </Property>
           </Properties>
           <Constraints>
