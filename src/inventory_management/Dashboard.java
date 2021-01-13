@@ -142,6 +142,8 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField4.setText("         Orders");
         jTextField4.setBorder(null);
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 330, 51));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/shopping-cart (1).png"))); // NOI18N
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 30, 40));
 
         jTextField5.setBackground(new java.awt.Color(32, 2, 92));
