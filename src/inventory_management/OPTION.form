@@ -88,7 +88,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/inventory_management/button (7).png"/>
+              <Image iconType="3" name="/image/button (7).png"/>
             </Property>
           </Properties>
           <Events>
@@ -103,7 +103,7 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/inventory_management/button (8).png"/>
+              <Image iconType="3" name="/image/button (8).png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -115,7 +115,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/inventory_management/modern-backgrounds-fluid-gradient-shapes-composition_169549-39.jpg"/>
+              <Image iconType="3" name="/image/modern-backgrounds-fluid-gradient-shapes-composition_169549-39.jpg"/>
             </Property>
           </Properties>
           <Constraints>
