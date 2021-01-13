@@ -190,13 +190,13 @@ public class UPDATEPROFILE extends javax.swing.JFrame {
         jTextField10.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 489, 340, 40));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventory_management/button (11).png"))); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (11).png"))); // NOI18N
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 640, -1, -1));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventory_management/button (13).png"))); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (13).png"))); // NOI18N
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 640, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventory_management/raghu2.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/raghu2.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
