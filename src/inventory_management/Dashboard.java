@@ -152,6 +152,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/courthouse.png"))); // NOI18N
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 30, 40));
 
         jTextField6.setBackground(new java.awt.Color(32, 2, 92));
@@ -187,6 +188,11 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField9.setForeground(new java.awt.Color(255, 255, 255));
         jTextField9.setText("         Setting");
         jTextField9.setBorder(null);
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 330, 45));
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, -1, 30));
 
@@ -413,6 +419,10 @@ public class Dashboard extends javax.swing.JFrame {
     private void jTextField25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField25ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField25ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
 
     /**
      * @param args the command line arguments
