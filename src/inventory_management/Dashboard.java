@@ -93,7 +93,6 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user.png"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 30, 40));
 
         jTextField1.setBackground(new java.awt.Color(32, 2, 92));
@@ -106,7 +105,6 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/speedometer (2).png"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         jTextField2.setBackground(new java.awt.Color(32, 2, 92));
@@ -123,7 +121,6 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 330, 45));
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/box (1).png"))); // NOI18N
         jLabel12.setText(" ");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 40, 30));
 
@@ -135,7 +132,6 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 330, 40));
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/order.png"))); // NOI18N
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 30, 40));
 
         jTextField4.setBackground(new java.awt.Color(32, 2, 92));
@@ -144,8 +140,6 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField4.setText("         Orders");
         jTextField4.setBorder(null);
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 330, 51));
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart (1).png"))); // NOI18N
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 30, 40));
 
         jTextField5.setBackground(new java.awt.Color(32, 2, 92));
@@ -158,7 +152,6 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/courthouse.png"))); // NOI18N
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 30, 40));
 
         jTextField6.setBackground(new java.awt.Color(32, 2, 92));
@@ -169,7 +162,6 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 330, 51));
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/skills.png"))); // NOI18N
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 30, 40));
 
         jTextField7.setBackground(new java.awt.Color(32, 2, 92));
@@ -178,8 +170,6 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField7.setText("         Members");
         jTextField7.setBorder(null);
         jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 330, 51));
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/categories.png"))); // NOI18N
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 30, 40));
 
         jTextField8.setBackground(new java.awt.Color(32, 2, 92));
@@ -189,11 +179,7 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField8.setText("        Category");
         jTextField8.setBorder(null);
         jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 330, 51));
-
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bill.png"))); // NOI18N
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 30, 40));
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/settings.png"))); // NOI18N
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, -1, 30));
 
         jTextField9.setBackground(new java.awt.Color(32, 2, 92));
@@ -202,8 +188,6 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField9.setText("         Setting");
         jTextField9.setBorder(null);
         jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 330, 45));
-
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logout.png"))); // NOI18N
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, -1, 30));
 
         jTextField16.setBackground(new java.awt.Color(32, 2, 92));
@@ -237,8 +221,6 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField12.setText("More info");
         jTextField12.setBorder(null);
         jPanel2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 510, 280, 30));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dashboard-interface.png"))); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 340, 70, 100));
 
         jTextField10.setBackground(new java.awt.Color(0, 166, 90));
@@ -260,7 +242,8 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 204));
         jLabel2.setForeground(new java.awt.Color(204, 204, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/product (4).png"))); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/box (1).png"))); // NOI18N
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 340, 100, 120));
 
         jTextField11.setBackground(new java.awt.Color(0, 192, 239));
@@ -280,8 +263,6 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField15.setText("More info");
         jTextField15.setBorder(null);
         jPanel2.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 510, 290, 30));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/office-building.png"))); // NOI18N
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 330, 110, 100));
 
         jTextField14.setBackground(new java.awt.Color(232, 158, 61));
@@ -305,8 +286,6 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 820, 300, 30));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/box.png"))); // NOI18N
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 680, 80, 70));
 
         jTextField17.setBackground(new java.awt.Color(0, 192, 239));
@@ -326,8 +305,6 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 820, 280, 30));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/company.png"))); // NOI18N
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 660, 110, 80));
 
         jTextField19.setBackground(new java.awt.Color(0, 166, 90));
@@ -347,8 +324,6 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField22.setText("More info");
         jTextField22.setBorder(null);
         jPanel2.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 810, 290, 30));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/warehouse.png"))); // NOI18N
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 650, 90, 90));
 
         jTextField21.setBackground(new java.awt.Color(232, 158, 61));
@@ -362,15 +337,10 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(51, 102, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, -1));
-
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/close-button.png"))); // NOI18N
         getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1720, 10, -1, 40));
-
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/restore.png"))); // NOI18N
         getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1660, 10, 40, 40));
 
         jLabel22.setFont(new java.awt.Font("Dialog", 0, 50)); // NOI18N
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minus.png"))); // NOI18N
         getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 10, 40, 40));
 
         jTextField25.setBackground(new java.awt.Color(153, 153, 255));
@@ -389,8 +359,6 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField26.setText("Inventory");
         jTextField26.setBorder(null);
         getContentPane().add(jTextField26, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 3, 140, -1));
-
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/timetable.png"))); // NOI18N
         getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 90, 40));
 
         jTextField23.setBackground(new java.awt.Color(51, 102, 255));
