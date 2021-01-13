@@ -46,10 +46,10 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jTextField16 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
         jTextField24 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jTextField12 = new javax.swing.JTextField();
@@ -105,7 +105,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 20, 30));
 
         jTextField2.setBackground(new java.awt.Color(32, 2, 92));
         jTextField2.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
@@ -186,7 +186,6 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField8.setBorder(null);
         jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 330, 51));
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 30, 40));
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, -1, 30));
 
         jTextField9.setBackground(new java.awt.Color(32, 2, 92));
         jTextField9.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
@@ -212,6 +211,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 330, 57));
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 30, 30));
 
         jTextField24.setBackground(new java.awt.Color(32, 2, 92));
         jTextField24.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
@@ -232,6 +232,9 @@ public class Dashboard extends javax.swing.JFrame {
         jTextField12.setText("More info");
         jTextField12.setBorder(null);
         jPanel2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 510, 280, 30));
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/courthouse.png"))); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 340, 70, 100));
 
         jTextField10.setBackground(new java.awt.Color(0, 166, 90));
