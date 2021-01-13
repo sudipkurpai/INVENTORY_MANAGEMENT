@@ -235,7 +235,7 @@
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/inventory_management/button (13).png"/>
+              <Image iconType="3" name="/image/button (13).png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -247,7 +247,7 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/inventory_management/button (15).png"/>
+              <Image iconType="3" name="/image/button (15).png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -259,7 +259,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/inventory_management/raghu2.jpg"/>
+              <Image iconType="3" name="/image/raghu2.jpg"/>
             </Property>
           </Properties>
           <Constraints>
