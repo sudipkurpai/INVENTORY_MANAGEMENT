@@ -5,6 +5,7 @@
  */
 package inventory_management;
 
+import javax.swing.JOptionPane;
 /**
  *
  * @author Sudip Maiti
@@ -28,6 +29,7 @@ public class REGISTRATION extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -35,9 +37,15 @@ public class REGISTRATION extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        email = new javax.swing.JTextField();
+        firstname = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        lastname = new javax.swing.JTextField();
+        phone = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        conf_pass = new javax.swing.JPasswordField();
+        pass = new javax.swing.JPasswordField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -46,17 +54,23 @@ public class REGISTRATION extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        sign_up = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(14, 73, 181));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Sudip Icon .png"))); // NOI18N
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 410, 440));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -79,7 +93,12 @@ public class REGISTRATION extends javax.swing.JFrame {
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close .png"))); // NOI18N
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, 20, 20));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, 20, 20));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(10, 36, 25));
@@ -92,10 +111,30 @@ public class REGISTRATION extends javax.swing.JFrame {
         jLabel6.setText("Confirm Password");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 110, 20));
 
+        email.setBackground(new java.awt.Color(255, 255, 255));
+        email.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        email.setBorder(null);
+        jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 150, 20));
+
+        firstname.setBackground(new java.awt.Color(255, 255, 255));
+        firstname.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        firstname.setBorder(null);
+        jPanel2.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 150, 20));
+
         jLabel7.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(10, 36, 25));
         jLabel7.setText("Already have an account ? ");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 150, 10));
+
+        lastname.setBackground(new java.awt.Color(255, 255, 255));
+        lastname.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        lastname.setBorder(null);
+        jPanel2.add(lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 150, 20));
+
+        phone.setBackground(new java.awt.Color(255, 255, 255));
+        phone.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        phone.setBorder(null);
+        jPanel2.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 150, 20));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, 40));
@@ -105,6 +144,16 @@ public class REGISTRATION extends javax.swing.JFrame {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Terms Privacy        Fees.");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, 150, -1));
+
+        conf_pass.setBackground(new java.awt.Color(255, 255, 255));
+        conf_pass.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        conf_pass.setBorder(null);
+        jPanel2.add(conf_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 150, 20));
+
+        pass.setBackground(new java.awt.Color(255, 255, 255));
+        pass.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        pass.setBorder(null);
+        jPanel2.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 150, 20));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, 40));
@@ -142,8 +191,13 @@ public class REGISTRATION extends javax.swing.JFrame {
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, 40));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Sing up.png"))); // NOI18N
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 130, 60));
+        sign_up.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Sing up.png"))); // NOI18N
+        sign_up.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sign_upMouseClicked(evt);
+            }
+        });
+        jPanel2.add(sign_up, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 130, 60));
 
         jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setFont(new java.awt.Font("Bahnschrift", 0, 11)); // NOI18N
@@ -171,22 +225,14 @@ public class REGISTRATION extends javax.swing.JFrame {
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(432, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 569, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 12, 454, 569));
+
+        jLabel23.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel23.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setText("INVENTORY MANAGEMENT");
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 410, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,13 +245,45 @@ public class REGISTRATION extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(912, 593));
+        setSize(new java.awt.Dimension(895, 593));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void sign_upMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sign_upMouseClicked
+        // TODO add your handling code here:
+        
+        String fName = firstname.getText();
+        String lName = lastname.getText();
+        String ph = phone.getText();
+        String mail = email.getText();
+        String password = pass.getText();
+        String c_pass = conf_pass.getText();
+        String add = "";
+        String gen = "";
+        if(fName.isEmpty() || lName.equals("") || ph.equals("") || mail.isEmpty() || password.equals("")|| c_pass.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Fill up all field first");
+        }else {
+            int i = REGISTRATION_DATAOBEJECT.inventory_management_system(fName, lName, mail, ph, password,c_pass, add, gen);
+            //(FIRST_NAME,LAST_NAME,EMAIL,MOBILE_NO,PASSWORD,CONFIRM_PASSWORD,ADDRESS,GENDER)
+           if(i>0){
+                System.out.println("Data inserted");
+                JOptionPane.showMessageDialog(this, "Your Account Sucessfully Created"); 
+           }else{
+                System.out.println("Data NOT inserted");
+                JOptionPane.showMessageDialog(this, "Your Account Not Created"); 
+           }
+        }
+        
+    }//GEN-LAST:event_sign_upMouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -243,6 +321,9 @@ public class REGISTRATION extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField conf_pass;
+    private javax.swing.JTextField email;
+    private javax.swing.JTextField firstname;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
@@ -254,10 +335,11 @@ public class REGISTRATION extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -267,5 +349,9 @@ public class REGISTRATION extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField lastname;
+    private javax.swing.JPasswordField pass;
+    private javax.swing.JTextField phone;
+    private javax.swing.JLabel sign_up;
     // End of variables declaration//GEN-END:variables
 }
