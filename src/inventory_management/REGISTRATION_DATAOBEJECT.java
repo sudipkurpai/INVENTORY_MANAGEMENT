@@ -7,6 +7,7 @@ package inventory_management;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.*;
 
 /**
  *
@@ -37,5 +38,20 @@ public class REGISTRATION_DATAOBEJECT {
               return status;
 
 //INSERT INTO `register`(`FIRST_NAME`, `LAST_NAME`, `EMAIL`, `MOBILE_NO`, `PASSWORD`, `CONFIRM_PASSWORD`, `ADDRESS`, `GENDER`) 
+    }
+    public static boolean validate(String email,String password) throws SQLException
+    {
+        boolean status =false;
+        try{
+            Connection con=DATABASE_CONNECTION.getConnection();
+            PreparedStatement ps=con.prepareStatement("select * from register where Email = ? and Password=?");
+            ps.setString(1, email);
+            ps.setString(2, password);
+            ResultSet rs=ps.executeQuery();
+            status=rs.next();
+            con.close();
+           }
+        catch(Exception e){System.out.println(e);}
+        return status;
     }
 }

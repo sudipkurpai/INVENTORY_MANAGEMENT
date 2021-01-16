@@ -5,6 +5,10 @@
  */
 package inventory_management;
 
+import java.sql.*;
+import javax.swing.JOptionPane;
+import java.awt.Color;
+
 /**
  *
  * @author RAGHUNATH DAS
@@ -30,9 +34,9 @@ public class LOGINfROM extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        email = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        pass = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -54,10 +58,10 @@ public class LOGINfROM extends javax.swing.JFrame {
         jLabel3.setText(" Email / Phone");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 190, 40));
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 350, 50));
+        email.setBackground(new java.awt.Color(255, 255, 255));
+        email.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        email.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 350, 50));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
@@ -65,10 +69,10 @@ public class LOGINfROM extends javax.swing.JFrame {
         jLabel4.setText(" Password");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 150, 50));
 
-        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
-        jPasswordField1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 350, 50));
+        pass.setBackground(new java.awt.Color(255, 255, 255));
+        pass.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        pass.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 350, 50));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(153, 0, 153));
@@ -76,6 +80,11 @@ public class LOGINfROM extends javax.swing.JFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, 120, 20));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/buttonraghu.png"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/raghu1.jpg"))); // NOI18N
@@ -95,6 +104,60 @@ public class LOGINfROM extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(626, 626));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+        String p_email = email.getText();
+        String p_pass = pass.getText();
+            try {
+            //Data fetch from database
+            String sql = "Select * from register Where Email = ?";
+            Connection con=DATABASE_CONNECTION.getConnection();
+            PreparedStatement ps=con.prepareStatement(sql);
+            ps.setString(1,p_email);
+            ResultSet rs=ps.executeQuery();
+            if(rs.next()){
+                String eml =rs.getString("Email");
+                System.out.println("EMAILLLLLLLL "+eml);
+                String pss =rs.getString("Password");
+                System.out.println("PASSSSSSSSSS "+pss);
+                rs.close();
+                ps.close();
+            }else{
+                email.setBackground(Color.red);
+                email.setText(null);
+                pass.setBackground(Color.red);
+                pass.setText(null);
+                JOptionPane.showMessageDialog(null, "Enter Correct User Name");
+                email.setBackground(Color.white);
+                pass.setBackground(Color.white);
+            }            
+        }catch(Exception e){
+            System.out.println("error"+e);
+        }
+        try{
+            if(p_email.equals("") || p_pass.equals("")){
+                JOptionPane.showMessageDialog(this, "Fill up all field first"); 
+            }else if(REGISTRATION_DATAOBEJECT.validate(p_email, p_pass)){
+                email.setBackground(Color.green);
+                email.setText(null);
+                pass.setBackground(Color.green);
+                pass.setText(null);
+                JOptionPane.showMessageDialog(null, "Login Successfully");
+                new DASHBOARD().setVisible(true);
+                this.dispose();
+            }else{
+                //JOptionPane.showMessageDialog(LOG_IN.this,"You are not a valid user plese create your account","Login Error",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Login Error");
+                email.setBackground(Color.red);
+                email.setText(null);
+                pass.setBackground(Color.red);
+                pass.setText(null);
+            }
+        }catch (Exception e){
+            System.out.println("Exception -"+e);
+        }     
+    }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -132,6 +195,7 @@ public class LOGINfROM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField email;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -139,7 +203,6 @@ public class LOGINfROM extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField pass;
     // End of variables declaration//GEN-END:variables
 }

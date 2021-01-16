@@ -5,6 +5,7 @@
  */
 package inventory_management;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 /**
  *
@@ -28,13 +29,13 @@ public class REGISTRATION extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         email = new javax.swing.JTextField();
@@ -59,7 +60,16 @@ public class REGISTRATION extends javax.swing.JFrame {
         jCheckBox2 = new javax.swing.JCheckBox();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        sign_up_btn = new javax.swing.JButton();
         jLabel23 = new javax.swing.JLabel();
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close .png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -90,15 +100,6 @@ public class REGISTRATION extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Log in.");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 50, 30));
-
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close .png"))); // NOI18N
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, 20, 20));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(10, 36, 25));
@@ -196,6 +197,9 @@ public class REGISTRATION extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 sign_upMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                sign_upMouseEntered(evt);
+            }
         });
         jPanel2.add(sign_up, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 130, 60));
 
@@ -224,6 +228,18 @@ public class REGISTRATION extends javax.swing.JFrame {
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, 40));
+
+        sign_up_btn.setBackground(new java.awt.Color(14, 73, 181));
+        sign_up_btn.setText("Sign Up");
+        sign_up_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                sign_up_btnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                sign_up_btnMouseExited(evt);
+            }
+        });
+        jPanel2.add(sign_up_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, 140, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 12, 454, 569));
 
@@ -264,18 +280,25 @@ public class REGISTRATION extends javax.swing.JFrame {
         String c_pass = conf_pass.getText();
         String add = "";
         String gen = "";
+        
+        
+        
         if(fName.isEmpty() || lName.equals("") || ph.equals("") || mail.isEmpty() || password.equals("")|| c_pass.isEmpty()){
             JOptionPane.showMessageDialog(this, "Fill up all field first");
-        }else {
+        }else if(password.equals(c_pass) ){
             int i = REGISTRATION_DATAOBEJECT.inventory_management_system(fName, lName, mail, ph, password,c_pass, add, gen);
             //(FIRST_NAME,LAST_NAME,EMAIL,MOBILE_NO,PASSWORD,CONFIRM_PASSWORD,ADDRESS,GENDER)
            if(i>0){
                 System.out.println("Data inserted");
                 JOptionPane.showMessageDialog(this, "Your Account Sucessfully Created"); 
+                new LOGINfROM().setVisible(true);
+                this.dispose();
            }else{
                 System.out.println("Data NOT inserted");
                 JOptionPane.showMessageDialog(this, "Your Account Not Created"); 
            }
+        }else {
+            JOptionPane.showMessageDialog(this, "Both Password Not Same");
         }
         
     }//GEN-LAST:event_sign_upMouseClicked
@@ -284,6 +307,21 @@ public class REGISTRATION extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void sign_upMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sign_upMouseEntered
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_sign_upMouseEntered
+
+    private void sign_up_btnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sign_up_btnMouseEntered
+        // TODO add your handling code here:
+        sign_up_btn.setBackground(Color.red);
+    }//GEN-LAST:event_sign_up_btnMouseEntered
+
+    private void sign_up_btnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sign_up_btnMouseExited
+        // TODO add your handling code here:
+         sign_up_btn.setBackground(Color.decode("#0E49B5"));
+    }//GEN-LAST:event_sign_up_btnMouseExited
 
     /**
      * @param args the command line arguments
@@ -353,5 +391,6 @@ public class REGISTRATION extends javax.swing.JFrame {
     private javax.swing.JPasswordField pass;
     private javax.swing.JTextField phone;
     private javax.swing.JLabel sign_up;
+    private javax.swing.JButton sign_up_btn;
     // End of variables declaration//GEN-END:variables
 }
