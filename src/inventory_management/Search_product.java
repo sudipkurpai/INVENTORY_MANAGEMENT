@@ -195,7 +195,7 @@ public class Search_product extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ADD");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0)));
+        jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -207,7 +207,7 @@ public class Search_product extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Modify");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0)));
+        jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -219,7 +219,7 @@ public class Search_product extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Delete");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 0, 0), new java.awt.Color(204, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0)));
+        jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);

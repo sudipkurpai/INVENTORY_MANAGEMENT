@@ -227,13 +227,8 @@
             </Property>
             <Property name="text" type="java.lang.String" value="ADD"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                <BevelBorder>
-                  <Color PropertyName="highlightOuter" blue="0" green="0" red="ff" type="rgb"/>
-                  <Color PropertyName="highlightInner" blue="0" green="0" red="ff" type="rgb"/>
-                  <Color PropertyName="shadowOuter" blue="0" green="0" red="ff" type="rgb"/>
-                  <Color PropertyName="shadowInner" blue="0" green="0" red="ff" type="rgb"/>
-                </BevelBorder>
+              <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                <CompoundBorder/>
               </Border>
             </Property>
           </Properties>
@@ -259,13 +254,8 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Modify"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                <BevelBorder>
-                  <Color PropertyName="highlightOuter" blue="0" green="0" red="ff" type="rgb"/>
-                  <Color PropertyName="highlightInner" blue="0" green="0" red="ff" type="rgb"/>
-                  <Color PropertyName="shadowOuter" blue="0" green="0" red="ff" type="rgb"/>
-                  <Color PropertyName="shadowInner" blue="0" green="0" red="ff" type="rgb"/>
-                </BevelBorder>
+              <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                <CompoundBorder/>
               </Border>
             </Property>
           </Properties>
@@ -291,13 +281,8 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Delete"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                <BevelBorder>
-                  <Color PropertyName="highlightOuter" blue="0" green="0" red="ff" type="rgb"/>
-                  <Color PropertyName="highlightInner" blue="0" green="0" red="cc" type="rgb"/>
-                  <Color PropertyName="shadowOuter" blue="0" green="0" red="ff" type="rgb"/>
-                  <Color PropertyName="shadowInner" blue="0" green="0" red="ff" type="rgb"/>
-                </BevelBorder>
+              <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                <CompoundBorder/>
               </Border>
             </Property>
           </Properties>
