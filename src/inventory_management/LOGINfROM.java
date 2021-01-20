@@ -111,7 +111,8 @@ public class LOGINfROM extends javax.swing.JFrame {
         String p_pass = pass.getText();
             try {
             //Data fetch from database
-            String sql = "Select * from register Where Email = ?";
+          
+          String sql = "Select * from register Where Email = ?";
             Connection con=DATABASE_CONNECTION.getConnection();
             PreparedStatement ps=con.prepareStatement(sql);
             ps.setString(1,p_email);
@@ -136,7 +137,7 @@ public class LOGINfROM extends javax.swing.JFrame {
             System.out.println("error"+e);
         }
         try{
-            if(p_email.equals("") || p_pass.equals("")){
+            if(p_email.equals("") != p_pass.equals("")){
                 JOptionPane.showMessageDialog(this, "Fill up all field first"); 
             }else if(REGISTRATION_DATAOBEJECT.validate(p_email, p_pass)){
                 email.setBackground(Color.green);
