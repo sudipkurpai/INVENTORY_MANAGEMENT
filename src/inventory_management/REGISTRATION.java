@@ -291,7 +291,7 @@ public class REGISTRATION extends javax.swing.JFrame {
            if(i>0){
                 System.out.println("Data inserted");
                 JOptionPane.showMessageDialog(this, "Your Account Sucessfully Created"); 
-                new LOGINfROM().setVisible(true);
+                new REGISTRATION().setVisible(true);
                 this.dispose();
            }else{
                 System.out.println("Data NOT inserted");
