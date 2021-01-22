@@ -106,12 +106,11 @@ public class LOGINFROM extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-        // TODO add your handling code here:
+        //TODO add your handling code here:
         String p_email = email.getText();
         String p_pass = pass.getText();
             try {
-            //Data fetch from database
-          
+              //  Data fetch from database
           String sql = "Select * from register Where Email = ?";
             Connection con=DATABASE_CONNECTION.getConnection();
             PreparedStatement ps=con.prepareStatement(sql);
