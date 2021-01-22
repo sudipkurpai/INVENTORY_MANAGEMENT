@@ -29,26 +29,25 @@ public class DASHBOARD extends javax.swing.JFrame {
 
         bg = new javax.swing.JPanel();
         C_Dashboard = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
         jTextField11 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
         jLabel33 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
         jTextField12 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
         C_Iteams = new javax.swing.JPanel();
-        jPanel23 = new javax.swing.JPanel();
         sidepanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -112,7 +111,26 @@ public class DASHBOARD extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         C_Report = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
+        jPanel23 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -120,13 +138,10 @@ public class DASHBOARD extends javax.swing.JFrame {
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         C_Dashboard.setBackground(new java.awt.Color(255, 255, 255));
-
-        jTextField1.setBackground(new java.awt.Color(0, 192, 239));
-        jTextField1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jTextField1.setText(" Total Iteam");
-        jTextField1.setBorder(null);
+        C_Dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/product (4).png"))); // NOI18N
+        C_Dashboard.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 175, 60, 70));
 
         jTextField7.setBackground(new java.awt.Color(0, 173, 213));
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -137,189 +152,94 @@ public class DASHBOARD extends javax.swing.JFrame {
                 jTextField7ActionPerformed(evt);
             }
         });
+        C_Dashboard.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 285, 230, 20));
+
+        jTextField1.setBackground(new java.awt.Color(0, 192, 239));
+        jTextField1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField1.setText(" Total Iteam");
+        jTextField1.setBorder(null);
+        C_Dashboard.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 125, 230, 180));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/dashboard-interface.png"))); // NOI18N
+        C_Dashboard.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 145, 80, 100));
 
         jTextField9.setBackground(new java.awt.Color(0, 149, 81));
         jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField9.setText("More info");
         jTextField9.setBorder(null);
+        C_Dashboard.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 285, 230, 20));
 
         jTextField2.setBackground(new java.awt.Color(0, 166, 90));
         jTextField2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jTextField2.setText(" Category");
         jTextField2.setBorder(null);
-
-        jTextField3.setBackground(new java.awt.Color(232, 158, 61));
-        jTextField3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jTextField3.setText(" Company");
-        jTextField3.setBorder(null);
+        C_Dashboard.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 125, 230, 180));
 
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/office-building.png"))); // NOI18N
+        C_Dashboard.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 165, 70, 70));
 
         jTextField11.setBackground(new java.awt.Color(208, 142, 55));
         jTextField11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField11.setText("More info");
         jTextField11.setBorder(null);
+        C_Dashboard.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 285, 230, 20));
 
-        jTextField4.setBackground(new java.awt.Color(0, 192, 239));
-        jTextField4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jTextField4.setText(" Products");
-        jTextField4.setBorder(null);
+        jTextField3.setBackground(new java.awt.Color(232, 158, 61));
+        jTextField3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField3.setText(" Company");
+        jTextField3.setBorder(null);
+        C_Dashboard.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 125, 230, 180));
 
         jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/box.png"))); // NOI18N
+        C_Dashboard.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 415, 60, 80));
 
         jTextField8.setBackground(new java.awt.Color(0, 173, 213));
         jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField8.setText("More info");
         jTextField8.setBorder(null);
+        C_Dashboard.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 230, 20));
 
-        jTextField5.setBackground(new java.awt.Color(0, 166, 90));
-        jTextField5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jTextField5.setText(" Members");
-        jTextField5.setBorder(null);
+        jTextField4.setBackground(new java.awt.Color(0, 192, 239));
+        jTextField4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField4.setText(" Products");
+        jTextField4.setBorder(null);
+        C_Dashboard.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 230, 180));
 
         jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/company.png"))); // NOI18N
         jLabel34.setText("jLabel34");
+        C_Dashboard.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 80, 70));
 
         jTextField10.setBackground(new java.awt.Color(0, 149, 81));
         jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField10.setText("More info");
         jTextField10.setBorder(null);
+        C_Dashboard.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 510, 230, 20));
 
-        jTextField6.setBackground(new java.awt.Color(232, 158, 61));
-        jTextField6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jTextField6.setText(" Wearhouse");
-        jTextField6.setBorder(null);
+        jTextField5.setBackground(new java.awt.Color(0, 166, 90));
+        jTextField5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField5.setText(" Members");
+        jTextField5.setBorder(null);
+        C_Dashboard.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 230, 180));
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/warehouse.png"))); // NOI18N
+        C_Dashboard.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 390, -1, 70));
 
         jTextField12.setBackground(new java.awt.Color(208, 142, 55));
         jTextField12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField12.setText("More info");
         jTextField12.setBorder(null);
+        C_Dashboard.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, 230, 20));
 
-        javax.swing.GroupLayout C_DashboardLayout = new javax.swing.GroupLayout(C_Dashboard);
-        C_Dashboard.setLayout(C_DashboardLayout);
-        C_DashboardLayout.setHorizontalGroup(
-            C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(C_DashboardLayout.createSequentialGroup()
-                .addGap(0, 140, Short.MAX_VALUE)
-                .addGroup(C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGroup(C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(C_DashboardLayout.createSequentialGroup()
-                                .addGap(150, 150, 150)
-                                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(C_DashboardLayout.createSequentialGroup()
-                                .addGap(130, 130, 130)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(C_DashboardLayout.createSequentialGroup()
-                                .addGap(150, 150, 150)
-                                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGroup(C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(C_DashboardLayout.createSequentialGroup()
-                                .addGap(150, 150, 150)
-                                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(40, 40, 40)
-                        .addGroup(C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(C_DashboardLayout.createSequentialGroup()
-                                .addGap(140, 140, 140)
-                                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(40, 40, 40)
-                        .addGroup(C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(C_DashboardLayout.createSequentialGroup()
-                                .addGap(140, 140, 140)
-                                .addComponent(jLabel35))
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 140, Short.MAX_VALUE))
-        );
-        C_DashboardLayout.setVerticalGroup(
-            C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(C_DashboardLayout.createSequentialGroup()
-                .addGap(0, 125, Short.MAX_VALUE)
-                .addGroup(C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
-                .addGroup(C_DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(C_DashboardLayout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 125, Short.MAX_VALUE))
-        );
+        jTextField6.setBackground(new java.awt.Color(232, 158, 61));
+        jTextField6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField6.setText(" Wearhouse");
+        jTextField6.setBorder(null);
+        C_Dashboard.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 230, 180));
 
-        bg.add(C_Dashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1030, 690));
+        bg.add(C_Dashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1090, 690));
 
         C_Iteams.setBackground(new java.awt.Color(110, 110, 241));
         C_Iteams.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel23.setBackground(new java.awt.Color(255, 0, 0));
-
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1030, Short.MAX_VALUE)
-        );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-        );
-
-        C_Iteams.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 700));
-
         bg.add(C_Iteams, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1030, 690));
 
         sidepanel.setBackground(new java.awt.Color(54, 33, 89));
@@ -972,7 +892,7 @@ public class DASHBOARD extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addGap(301, 301, 301)
                 .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(479, Short.MAX_VALUE))
+                .addContainerGap(392, Short.MAX_VALUE))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -986,7 +906,10 @@ public class DASHBOARD extends javax.swing.JFrame {
         C_Bill.setLayout(C_BillLayout);
         C_BillLayout.setHorizontalGroup(
             C_BillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(C_BillLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(75, 75, 75))
         );
         C_BillLayout.setVerticalGroup(
             C_BillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -995,40 +918,130 @@ public class DASHBOARD extends javax.swing.JFrame {
 
         bg.add(C_Bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 1030, 750));
 
-        jPanel22.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel22.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel39.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jPanel23.setBackground(new java.awt.Color(69, 83, 106));
+
+        jLabel39.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("Report");
+        jLabel39.setText("STOCK REPORT");
 
-        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
-        jPanel22.setLayout(jPanel22Layout);
-        jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel22Layout.createSequentialGroup()
-                .addGap(311, 311, 311)
-                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(454, Short.MAX_VALUE))
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, 1290, Short.MAX_VALUE)
         );
-        jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel22Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(534, Short.MAX_VALUE))
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
+
+        jPanel22.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1290, -1));
+
+        jTextField16.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField16.setBorder(null);
+        jPanel22.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 200, 270, 40));
+
+        jLabel50.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(255, 153, 102));
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel50.setText("Stock Out");
+        jPanel22.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 160, 270, 30));
+
+        jLabel42.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 153, 153));
+        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel22.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 150, 290, 141));
+
+        jTextField15.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField15.setBorder(null);
+        jPanel22.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 200, 270, 30));
+
+        jLabel49.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel49.setText("*Current Month");
+        jPanel22.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 260, 110, -1));
+
+        jLabel48.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 153, 102));
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("Stock In");
+        jPanel22.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 290, 40));
+
+        jLabel40.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(255, 153, 153));
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel22.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 290, 141));
+
+        jLabel41.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(255, 153, 102));
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel41.setText("Current Stock");
+        jPanel22.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 290, 30));
+
+        jTextField13.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField13.setBorder(null);
+        jPanel22.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 250, 60));
+
+        jLabel43.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(255, 153, 153));
+        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel22.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 290, 141));
+
+        jTextField14.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField14.setBorder(null);
+        jPanel22.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 270, 40));
+
+        jLabel47.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(255, 153, 102));
+        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel47.setText("Stock Value");
+        jPanel22.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 290, 30));
+
+        jLabel44.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 153, 153));
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel22.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 290, 141));
+
+        jLabel53.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel53.setText("Product wise Current Stock");
+        jPanel22.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 330, 260, 30));
+
+        jLabel45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel22.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 600, 370));
+
+        jLabel52.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel52.setText("Category Wise Current Stock");
+        jPanel22.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 270, 30));
+
+        jLabel46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel22.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 600, 370));
+
+        jLabel51.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel51.setText("*Current Month");
+        jPanel22.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 260, 120, 20));
 
         javax.swing.GroupLayout C_ReportLayout = new javax.swing.GroupLayout(C_Report);
         C_Report.setLayout(C_ReportLayout);
         C_ReportLayout.setHorizontalGroup(
             C_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, C_ReportLayout.createSequentialGroup()
+                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         C_ReportLayout.setVerticalGroup(
             C_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(C_ReportLayout.createSequentialGroup()
-                .addComponent(jPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, 710, Short.MAX_VALUE)
         );
 
         bg.add(C_Report, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 1030, 710));
@@ -1046,7 +1059,7 @@ public class DASHBOARD extends javax.swing.JFrame {
             .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(1368, 794));
+        setSize(new java.awt.Dimension(1415, 794));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1135,7 +1148,21 @@ public class DASHBOARD extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1168,6 +1195,10 @@ public class DASHBOARD extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
