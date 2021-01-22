@@ -137,7 +137,7 @@ public class LOGINFROM extends javax.swing.JFrame {
             System.out.println("error"+e);
         }
         try{
-            if(p_email.equals("") != p_pass.equals("")){
+            if(p_email.equals("")!= p_pass.equals("")){
                 JOptionPane.showMessageDialog(this, "Fill up all field first"); 
             }else if(REGISTRATION_DATAOBEJECT.validate(p_email, p_pass)){
                 email.setBackground(Color.green);
