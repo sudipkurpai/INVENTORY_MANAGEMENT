@@ -9,12 +9,12 @@ package inventory_management;
  *
  * @author Sudip Maiti
  */
-public class LOGOUT extends javax.swing.JFrame {
+public class LOGOUT_E extends javax.swing.JFrame {
 
     /**
      * Creates new form LOGOUT
      */
-    public LOGOUT() {
+    public LOGOUT_E() {
         initComponents();
     }
 
@@ -38,7 +38,7 @@ public class LOGOUT extends javax.swing.JFrame {
         setBackground(new java.awt.Color(94, 55, 146));
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 204));
+        jPanel1.setBackground(new java.awt.Color(153, 51, 255));
         jPanel1.setForeground(new java.awt.Color(94, 55, 146));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/EXIT.png"))); // NOI18N
@@ -55,7 +55,7 @@ public class LOGOUT extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Thank You Sir / Madam  ");
+        jLabel5.setText("Thank You 'Emp name' ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -132,20 +132,21 @@ public class LOGOUT extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LOGOUT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGOUT_E.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LOGOUT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGOUT_E.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LOGOUT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGOUT_E.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LOGOUT.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGOUT_E.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LOGOUT().setVisible(true);
+                new LOGOUT_E().setVisible(true);
             }
         });
     }
