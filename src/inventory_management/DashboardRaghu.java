@@ -48,7 +48,37 @@ public class DashboardRaghu extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        Body = new javax.swing.JPanel();
+        C_DASHBOARD = new javax.swing.JPanel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        C_ITEAM = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel16 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -64,7 +94,7 @@ public class DashboardRaghu extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventory_management/speedometer.png"))); // NOI18N
-        jLabel6.setText("  Dashboard");
+        jLabel6.setText("     Dashboard");
 
         javax.swing.GroupLayout dashboardLayout = new javax.swing.GroupLayout(dashboard);
         dashboard.setLayout(dashboardLayout);
@@ -91,13 +121,13 @@ public class DashboardRaghu extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/shopping-cart (1).png"))); // NOI18N
-        jLabel7.setText(" Item");
+        jLabel7.setText("Item");
 
         javax.swing.GroupLayout ItemLayout = new javax.swing.GroupLayout(Item);
         Item.setLayout(ItemLayout);
         ItemLayout.setHorizontalGroup(
             ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ItemLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ItemLayout.createSequentialGroup()
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -199,7 +229,7 @@ public class DashboardRaghu extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/settings.png"))); // NOI18N
-        jLabel13.setText(" Setting");
+        jLabel13.setText("REPORT");
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -259,13 +289,13 @@ public class DashboardRaghu extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jButton1.setText("-");
         jButton1.setBorder(null);
-        Date.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, 34, 35));
+        Date.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, 34, 35));
 
         jButton2.setBackground(new java.awt.Color(153, 153, 255));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jButton2.setText("x");
         jButton2.setBorder(null);
-        Date.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 34, 35));
+        Date.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 34, 35));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 204));
@@ -277,18 +307,257 @@ public class DashboardRaghu extends javax.swing.JFrame {
         jLabel3.setText("Date :~ 15-01-2021");
         Date.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 160, 50));
 
-        Body.setBackground(new java.awt.Color(255, 255, 255));
+        C_DASHBOARD.setBackground(new java.awt.Color(255, 255, 255));
+        C_DASHBOARD.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout BodyLayout = new javax.swing.GroupLayout(Body);
-        Body.setLayout(BodyLayout);
-        BodyLayout.setHorizontalGroup(
-            BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+        jTextField7.setBackground(new java.awt.Color(0, 173, 213));
+        jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField7.setText("More info");
+        jTextField7.setBorder(null);
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        C_DASHBOARD.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 285, 230, 20));
+
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/product (4).png"))); // NOI18N
+        C_DASHBOARD.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 175, 60, 70));
+
+        jTextField1.setBackground(new java.awt.Color(0, 192, 239));
+        jTextField1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField1.setText(" Total Iteam");
+        jTextField1.setBorder(null);
+        C_DASHBOARD.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 125, 230, 180));
+
+        jTextField9.setBackground(new java.awt.Color(0, 149, 81));
+        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField9.setText("More info");
+        jTextField9.setBorder(null);
+        C_DASHBOARD.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 285, 230, 20));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/dashboard-interface.png"))); // NOI18N
+        C_DASHBOARD.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 145, 80, 100));
+
+        jTextField2.setBackground(new java.awt.Color(0, 166, 90));
+        jTextField2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField2.setText(" Category");
+        jTextField2.setBorder(null);
+        C_DASHBOARD.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 125, 230, 180));
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/office-building.png"))); // NOI18N
+        C_DASHBOARD.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 165, 70, 70));
+
+        jTextField11.setBackground(new java.awt.Color(208, 142, 55));
+        jTextField11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField11.setText("More info");
+        jTextField11.setBorder(null);
+        C_DASHBOARD.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 285, 230, 20));
+
+        jTextField3.setBackground(new java.awt.Color(232, 158, 61));
+        jTextField3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField3.setText(" Company");
+        jTextField3.setBorder(null);
+        C_DASHBOARD.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 125, 230, 180));
+
+        jTextField8.setBackground(new java.awt.Color(0, 173, 213));
+        jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField8.setText("More info");
+        jTextField8.setBorder(null);
+        C_DASHBOARD.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 230, 20));
+
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/box.png"))); // NOI18N
+        C_DASHBOARD.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 415, 60, 80));
+
+        jTextField4.setBackground(new java.awt.Color(0, 192, 239));
+        jTextField4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField4.setText(" Products");
+        jTextField4.setBorder(null);
+        C_DASHBOARD.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 230, 180));
+
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/company.png"))); // NOI18N
+        C_DASHBOARD.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 80, 70));
+
+        jTextField10.setBackground(new java.awt.Color(0, 149, 81));
+        jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField10.setText("More info");
+        jTextField10.setBorder(null);
+        C_DASHBOARD.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 510, 230, 20));
+
+        jTextField5.setBackground(new java.awt.Color(0, 166, 90));
+        jTextField5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField5.setText(" Members");
+        jTextField5.setBorder(null);
+        C_DASHBOARD.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 230, 180));
+
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/warehouse.png"))); // NOI18N
+        C_DASHBOARD.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 390, -1, 70));
+
+        jTextField12.setBackground(new java.awt.Color(208, 142, 55));
+        jTextField12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField12.setText("More info");
+        jTextField12.setBorder(null);
+        C_DASHBOARD.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, 230, 20));
+
+        jTextField6.setBackground(new java.awt.Color(232, 158, 61));
+        jTextField6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jTextField6.setText(" Wearhouse");
+        jTextField6.setBorder(null);
+        C_DASHBOARD.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 230, 180));
+
+        C_ITEAM.setBackground(new java.awt.Color(255, 255, 255));
+        C_ITEAM.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(54, 33, 89));
+
+        jPanel7.setBackground(new java.awt.Color(85, 65, 118));
+        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 51)));
+
+        jPanel14.setBackground(new java.awt.Color(85, 65, 118));
+        jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 51)));
+
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Delete Product");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        BodyLayout.setVerticalGroup(
-            BodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
+
+        jLabel12.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Product Details");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel15.setBackground(new java.awt.Color(85, 65, 118));
+        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 51)));
+
+        jLabel11.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Search Product");
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanel16.setBackground(new java.awt.Color(85, 65, 118));
+        jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 51)));
+
+        jLabel26.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("Product Stock Check");
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanel18.setBackground(new java.awt.Color(85, 65, 118));
+        jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 102)));
+
+        jLabel27.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel27.setText("Add New Product");
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 195, Short.MAX_VALUE))
+        );
+
+        C_ITEAM.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 132, -1, -1));
+
+        C_DASHBOARD.add(C_ITEAM, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 940, 740));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -298,22 +567,24 @@ public class DashboardRaghu extends javax.swing.JFrame {
                 .addComponent(Dashbord, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(Body, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(C_DASHBOARD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Dashbord, javax.swing.GroupLayout.DEFAULT_SIZE, 808, Short.MAX_VALUE)
+            .addComponent(Dashbord, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(Body, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(C_DASHBOARD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(1352, 808));
+        setSize(new java.awt.Dimension(1374, 808));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -351,17 +622,29 @@ public class DashboardRaghu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Body;
+    private javax.swing.JPanel C_DASHBOARD;
+    private javax.swing.JPanel C_ITEAM;
     private javax.swing.JPanel Dashbord;
     private javax.swing.JPanel Date;
     private javax.swing.JPanel Item;
     private javax.swing.JPanel dashboard;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -372,6 +655,24 @@ public class DashboardRaghu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

@@ -47,14 +47,10 @@ public class DASHBOARD extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         jTextField12 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
-        C_Iteams = new javax.swing.JPanel();
         sidepanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -102,10 +98,23 @@ public class DASHBOARD extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         C_Members = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
+        jPanel26 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         C_Category = new javax.swing.JPanel();
         jPanel20 = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jComboBox8 = new javax.swing.JComboBox<>();
+        jComboBox9 = new javax.swing.JComboBox<>();
         C_Bill = new javax.swing.JPanel();
         jPanel21 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
@@ -206,7 +215,6 @@ public class DASHBOARD extends javax.swing.JFrame {
         C_Dashboard.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 230, 180));
 
         jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/company.png"))); // NOI18N
-        jLabel34.setText("jLabel34");
         C_Dashboard.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 80, 70));
 
         jTextField10.setBackground(new java.awt.Color(0, 149, 81));
@@ -237,10 +245,6 @@ public class DASHBOARD extends javax.swing.JFrame {
         C_Dashboard.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 230, 180));
 
         bg.add(C_Dashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1090, 690));
-
-        C_Iteams.setBackground(new java.awt.Color(110, 110, 241));
-        C_Iteams.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        bg.add(C_Iteams, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1030, 690));
 
         sidepanel.setBackground(new java.awt.Color(54, 33, 89));
         sidepanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -276,38 +280,7 @@ public class DASHBOARD extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        sidepanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 320, 50));
-
-        jPanel4.setBackground(new java.awt.Color(85, 65, 118));
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/shopping-cart (1).png"))); // NOI18N
-
-        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Iteams");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        sidepanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 320, 50));
+        sidepanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 320, 50));
 
         jPanel5.setBackground(new java.awt.Color(85, 65, 118));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
@@ -351,7 +324,7 @@ public class DASHBOARD extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        sidepanel.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 320, 50));
+        sidepanel.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 320, 50));
 
         jPanel6.setBackground(new java.awt.Color(85, 65, 118));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
@@ -383,7 +356,7 @@ public class DASHBOARD extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        sidepanel.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 320, 50));
+        sidepanel.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 320, 50));
 
         jPanel8.setBackground(new java.awt.Color(85, 65, 118));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
@@ -415,7 +388,7 @@ public class DASHBOARD extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        sidepanel.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 320, 50));
+        sidepanel.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 320, 50));
 
         jPanel9.setBackground(new java.awt.Color(85, 65, 118));
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
@@ -447,7 +420,7 @@ public class DASHBOARD extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        sidepanel.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 320, 50));
+        sidepanel.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 320, 50));
 
         jPanel10.setBackground(new java.awt.Color(85, 65, 118));
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
@@ -476,7 +449,7 @@ public class DASHBOARD extends javax.swing.JFrame {
             .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        sidepanel.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 320, 40));
+        sidepanel.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 320, 40));
 
         jPanel11.setBackground(new java.awt.Color(85, 65, 118));
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
@@ -505,7 +478,7 @@ public class DASHBOARD extends javax.swing.JFrame {
             .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        sidepanel.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 320, 40));
+        sidepanel.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 320, 40));
 
         jPanel12.setBackground(new java.awt.Color(85, 65, 118));
         jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
@@ -534,7 +507,7 @@ public class DASHBOARD extends javax.swing.JFrame {
             .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
         );
 
-        sidepanel.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 320, 40));
+        sidepanel.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 320, 40));
 
         jPanel13.setBackground(new java.awt.Color(54, 33, 89));
 
@@ -755,14 +728,14 @@ public class DASHBOARD extends javax.swing.JFrame {
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1020, Short.MAX_VALUE)
+            .addGap(0, 910, Short.MAX_VALUE)
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 670, Short.MAX_VALUE)
         );
 
-        C_Proudcts.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -210, 1020, 670));
+        C_Proudcts.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -210, 910, 670));
 
         bg.add(C_Proudcts, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 230, 460));
 
@@ -806,26 +779,199 @@ public class DASHBOARD extends javax.swing.JFrame {
 
         jPanel19.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel30.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(220, 21, 220));
+        jPanel26.setBackground(new java.awt.Color(14, 73, 181));
+
+        jLabel30.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel30.setText("Members");
+        jLabel30.setText("MEMBERS");
+
+        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
+        jPanel26.setLayout(jPanel26Layout);
+        jPanel26Layout.setHorizontalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel26Layout.setVerticalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
+        );
+
+        jTable1.setBackground(new java.awt.Color(255, 255, 255));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Member Name", "Phone NO.", "Email ID", "Address"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addGap(326, 326, 326)
-                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(518, Short.MAX_VALUE))
+            .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE)
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(612, Short.MAX_VALUE))
+                .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 79, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout C_MembersLayout = new javax.swing.GroupLayout(C_Members);
@@ -836,33 +982,125 @@ public class DASHBOARD extends javax.swing.JFrame {
         );
         C_MembersLayout.setVerticalGroup(
             C_MembersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         bg.add(C_Members, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 1030, 700));
 
         jPanel20.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel36.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel27.setBackground(new java.awt.Color(14, 73, 181));
+
+        jLabel36.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel36.setText("Category");
+        jLabel36.setText("CATEGORY");
+
+        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
+        jPanel27.setLayout(jPanel27Layout);
+        jPanel27Layout.setHorizontalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel27Layout.setVerticalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+        );
+
+        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Electronic Goods", "Fan", "Light", "Box", "Item 4", "Item 5", "fughgi" }));
+
+        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dress", "Itean 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox3.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox3.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Beauty", "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox4.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox4.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Moblies", "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox5.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox5.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox5.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Appliances", "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox6.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox6.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox6.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Home", "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox7.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox7.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox7.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Toy & Baby", "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox8.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox8.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox8.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sports", "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox9.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox9.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBox9.setForeground(new java.awt.Color(0, 0, 0));
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Furniture", "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGap(314, 314, 314)
-                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(499, Short.MAX_VALUE))
+            .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox1, 0, 178, Short.MAX_VALUE))
+                .addGap(95, 95, 95)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jComboBox6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(93, 93, 93)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jComboBox9, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox8, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(545, Short.MAX_VALUE))
+                .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel20Layout.createSequentialGroup()
+                            .addGap(94, 94, 94)
+                            .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(64, 64, 64)
+                            .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel20Layout.createSequentialGroup()
+                            .addGap(94, 94, 94)
+                            .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(64, 64, 64)
+                            .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(296, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout C_CategoryLayout = new javax.swing.GroupLayout(C_Category);
@@ -1107,13 +1345,21 @@ public class DASHBOARD extends javax.swing.JFrame {
     private javax.swing.JPanel C_Bill;
     private javax.swing.JPanel C_Category;
     private javax.swing.JPanel C_Dashboard;
-    private javax.swing.JPanel C_Iteams;
     private javax.swing.JPanel C_Members;
     private javax.swing.JPanel C_Orders;
     private javax.swing.JPanel C_Proudcts;
     private javax.swing.JPanel C_Report;
     private javax.swing.JPanel Statusbar;
     private javax.swing.JPanel bg;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JComboBox<String> jComboBox8;
+    private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1147,7 +1393,6 @@ public class DASHBOARD extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -1163,7 +1408,6 @@ public class DASHBOARD extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -1184,13 +1428,16 @@ public class DASHBOARD extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
