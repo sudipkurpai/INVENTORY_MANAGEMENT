@@ -5,6 +5,8 @@
  */
 package inventory_management;
 
+import java.awt.Color;
+
 /**
  *
  * @author RAGHUNATH DAS
@@ -101,6 +103,11 @@ public class DashboardRaghu extends javax.swing.JFrame {
         Item_.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Item_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/shopping-cart (1).png"))); // NOI18N
         Item_.setText("Product");
+        Item_.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Item_MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout ItemLayout = new javax.swing.GroupLayout(Item);
         Item.setLayout(ItemLayout);
@@ -423,9 +430,7 @@ public class DashboardRaghu extends javax.swing.JFrame {
                 .addComponent(Dashbord, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Body, javax.swing.GroupLayout.DEFAULT_SIZE, 1407, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(Date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(Date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -442,8 +447,7 @@ public class DashboardRaghu extends javax.swing.JFrame {
 
     private void Deshboard_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Deshboard_MouseClicked
         // TODO add your handling code here:
-       // new Ds_Option().setVisible(true);
-//this.dispose();
+       
       
     }//GEN-LAST:event_Deshboard_MouseClicked
 
@@ -469,9 +473,21 @@ public class DashboardRaghu extends javax.swing.JFrame {
 
     private void dashboardMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardMouseClicked
         // TODO add your handling code here:
-        dashboard.setVisible(false);
-        Pro_Option.setVisible(true);
+        Pro_Option.setBackground(Color.white);
+        Item_.setForeground(Color.decode("#362159"));
+        Pro_Option.setBackground(Color.decode("#554176"));
+        Item_.setForeground(Color.WHITE);
     }//GEN-LAST:event_dashboardMouseClicked
+
+    private void Item_MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Item_MouseClicked
+        // TODO add your handling code here:
+        Item.setBackground(Color.white);
+        Item_.setForeground(Color.decode("#362159"));
+        Pro_Option.setBackground(Color.decode("#554176"));
+        Item_.setForeground(Color.WHITE);
+       // Pro_Option.setVisible(true);
+       // Item_.setVisible(false);
+    }//GEN-LAST:event_Item_MouseClicked
 
     /**
      * @param args the command line arguments
@@ -537,7 +553,6 @@ public class DashboardRaghu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;

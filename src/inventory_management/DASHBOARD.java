@@ -271,6 +271,11 @@ public class DASHBOARD extends javax.swing.JFrame {
         order_click.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         order_click.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/order.png"))); // NOI18N
         order_click.setText("  Orders  ");
+        order_click.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                order_clickMouseDragged(evt);
+            }
+        });
         order_click.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 order_clickMouseClicked(evt);
@@ -342,6 +347,11 @@ public class DASHBOARD extends javax.swing.JFrame {
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bill.png"))); // NOI18N
         jLabel18.setText(" Bill            ");
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -386,6 +396,11 @@ public class DASHBOARD extends javax.swing.JFrame {
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logout.png"))); // NOI18N
         jLabel22.setText(" Logout       ");
+        jLabel22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel22MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -457,6 +472,11 @@ public class DASHBOARD extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(85, 65, 118));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 51)));
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel7MouseClicked(evt);
+            }
+        });
 
         c_pro_detail.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         c_pro_detail.setForeground(new java.awt.Color(255, 255, 255));
@@ -491,6 +511,11 @@ public class DASHBOARD extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Search Product");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -515,6 +540,11 @@ public class DASHBOARD extends javax.swing.JFrame {
         jLabel26.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("Product Stock Check");
+        jLabel26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel26MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -538,6 +568,11 @@ public class DASHBOARD extends javax.swing.JFrame {
 
         jLabel27.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel27.setText("Add New Product");
+        jLabel27.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel27MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -799,6 +834,8 @@ public class DASHBOARD extends javax.swing.JFrame {
         c_del_pro.setForeground(Color.decode("#554176"));
        c_pro_detail.setVisible(false);
        c_del_pro.setVisible(true);
+       new DELETE_PRODUCT().setVisible(true);
+                this.dispose();
     }//GEN-LAST:event_c_del_proMouseClicked
 
     private void order_clickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_order_clickMouseClicked
@@ -812,7 +849,49 @@ public class DASHBOARD extends javax.swing.JFrame {
        C_Dashboard.setVisible(false);
         C_Proudcts.setVisible(false);
         order_click.setVisible(true);
+        new MANAGE_ORDER().setVisible(true);
+                this.dispose();
     }//GEN-LAST:event_order_clickMouseClicked
+
+    private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
+        // TODO add your handling code here:
+        new LOGOUT_E().setVisible(true);
+                this.dispose();
+    }//GEN-LAST:event_jLabel22MouseClicked
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        // TODO add your handling code here:
+        new BILL_PRINT().setVisible(true);
+                this.dispose();
+    }//GEN-LAST:event_jLabel18MouseClicked
+
+    private void order_clickMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_order_clickMouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_order_clickMouseDragged
+
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+        // TODO add your handling code here:
+        new PRODUCT_DETAILS().setVisible(true);
+                this.dispose();
+    }//GEN-LAST:event_jPanel7MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        new SEARCH_PRODUCT().setVisible(true);
+                this.dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseClicked
+        // TODO add your handling code here:
+        new PRODUCT_STOCK_CHECK().setVisible(true);
+                this.dispose();
+    }//GEN-LAST:event_jLabel26MouseClicked
+
+    private void jLabel27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel27MouseClicked
+        // TODO add your handling code here:
+        new ADD_NEW_PRODUCT().setVisible(true);
+                this.dispose();
+    }//GEN-LAST:event_jLabel27MouseClicked
 
     /**
      * @param args the command line arguments
