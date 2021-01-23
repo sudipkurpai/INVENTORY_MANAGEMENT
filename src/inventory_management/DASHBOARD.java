@@ -53,7 +53,7 @@ public class DASHBOARD extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         pro_click = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
+        order_click = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
@@ -202,12 +202,12 @@ public class DASHBOARD extends javax.swing.JFrame {
         sidepanel.setBackground(new java.awt.Color(54, 33, 89));
         sidepanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(85, 65, 118));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
         jPanel3.setForeground(new java.awt.Color(255, 255, 255));
 
         dash_click.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        dash_click.setForeground(new java.awt.Color(85, 65, 118));
+        dash_click.setForeground(new java.awt.Color(255, 255, 255));
         dash_click.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dash_click.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/speedometer (2).png"))); // NOI18N
         dash_click.setText(" Dashboard");
@@ -266,21 +266,26 @@ public class DASHBOARD extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(85, 65, 118));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
 
-        jLabel10.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/order.png"))); // NOI18N
-        jLabel10.setText("  Orders  ");
+        order_click.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        order_click.setForeground(new java.awt.Color(255, 255, 255));
+        order_click.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        order_click.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/order.png"))); // NOI18N
+        order_click.setText("  Orders  ");
+        order_click.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                order_clickMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+            .addComponent(order_click, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+            .addComponent(order_click, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
         );
 
         sidepanel.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 320, 50));
@@ -761,16 +766,15 @@ public class DASHBOARD extends javax.swing.JFrame {
         // TODO add your handling code here:
         jPanel3.setBackground(Color.decode("#554176"));
         dash_click.setForeground(Color.WHITE);
-        jPanel5.setBackground(Color.WHITE);
-        pro_click.setForeground(Color.decode("#554176"));
+        jPanel5.setBackground(Color.decode("#1f6f8b"));
         C_Dashboard.setVisible(false);
         C_Proudcts.setVisible(true);
     }//GEN-LAST:event_pro_clickMouseClicked
 
     private void dash_clickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dash_clickMouseClicked
         // TODO add your handling code here:
-        jPanel3.setBackground(Color.WHITE);
-        dash_click.setForeground(Color.decode("#362159"));
+        jPanel3.setBackground(Color.decode("#1f6f8b"));
+        dash_click.setForeground(Color.WHITE);
         jPanel5.setBackground(Color.decode("#554176"));
         pro_click.setForeground(Color.WHITE);
         C_Dashboard.setVisible(true);
@@ -779,8 +783,8 @@ public class DASHBOARD extends javax.swing.JFrame {
 
     private void c_pro_detailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c_pro_detailMouseClicked
         // TODO add your handling code here:
-        jPanel7.setBackground(Color.WHITE);
-        c_pro_detail.setForeground(Color.decode("#362159"));
+        jPanel7.setBackground(Color.decode("#1f6f8b"));
+        c_pro_detail.setForeground(Color.WHITE);
          jPanel4.setBackground(Color.decode("#554176"));
        c_del_pro.setForeground(Color.WHITE);
          c_pro_detail.setVisible(true);
@@ -791,11 +795,24 @@ public class DASHBOARD extends javax.swing.JFrame {
         // TODO add your handling code here:
          jPanel7.setBackground(Color.decode("#554176"));
         c_pro_detail.setForeground(Color.WHITE);
-        jPanel4.setBackground(Color.WHITE);
+        jPanel4.setBackground(Color.decode("#1f6f8b"));
         c_del_pro.setForeground(Color.decode("#554176"));
        c_pro_detail.setVisible(false);
        c_del_pro.setVisible(true);
     }//GEN-LAST:event_c_del_proMouseClicked
+
+    private void order_clickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_order_clickMouseClicked
+        // TODO add your handling code here:
+         jPanel3.setBackground(Color.decode("#554176"));
+        dash_click.setForeground(Color.WHITE);
+        jPanel5.setBackground(Color.decode("#554176"));
+        pro_click.setForeground(Color.WHITE);
+       jPanel6.setBackground(Color.decode("#1f6f8b"));
+        order_click.setForeground(Color.WHITE);
+       C_Dashboard.setVisible(false);
+        C_Proudcts.setVisible(false);
+        order_click.setVisible(true);
+    }//GEN-LAST:event_order_clickMouseClicked
 
     /**
      * @param args the command line arguments
@@ -846,7 +863,6 @@ public class DASHBOARD extends javax.swing.JFrame {
     private javax.swing.JLabel c_del_pro;
     private javax.swing.JLabel c_pro_detail;
     private javax.swing.JLabel dash_click;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
@@ -898,6 +914,7 @@ public class DASHBOARD extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel order_click;
     private javax.swing.JLabel pro_click;
     private javax.swing.JPanel sidepanel;
     // End of variables declaration//GEN-END:variables
