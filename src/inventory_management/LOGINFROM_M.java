@@ -13,12 +13,12 @@ import java.awt.Color;
  *
  * @author RAGHUNATH DAS
  */
-public class LOGINFROM extends javax.swing.JFrame {
+public class LOGINFROM_M extends javax.swing.JFrame {
 
     /**
      * Creates new form LOGINfROM
      */
-    public LOGINFROM() {
+    public LOGINFROM_M() {
         initComponents();
     }
 
@@ -163,7 +163,7 @@ public class LOGINFROM extends javax.swing.JFrame {
         }catch (Exception e){
             System.out.println("Exception -"+e);
         }  */
-        new DASHBOARD().setVisible(true);
+        new DashboardRaghu().setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
@@ -184,21 +184,23 @@ public class LOGINFROM extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGINFROM_M.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGINFROM_M.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGINFROM_M.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGINFROM_M.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LOGINFROM().setVisible(true);
+                new LOGINFROM_M().setVisible(true);
             }
         });
     }
