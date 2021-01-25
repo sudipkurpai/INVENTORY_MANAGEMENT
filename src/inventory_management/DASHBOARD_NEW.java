@@ -267,7 +267,7 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/user (2).png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ttt.png"))); // NOI18N
         jLabel8.setText("  Orders");
 
         javax.swing.GroupLayout PRODUCTSLayout = new javax.swing.GroupLayout(PRODUCTS);
@@ -333,6 +333,7 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/profit-report.png"))); // NOI18N
         jLabel10.setText("  Report");
 
         javax.swing.GroupLayout REPORTLayout = new javax.swing.GroupLayout(REPORT);
