@@ -30,6 +30,8 @@ public class END_STOCK_REPORT_M extends javax.swing.JFrame {
         jPanel22 = new javax.swing.JPanel();
         jPanel23 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jTextField16 = new javax.swing.JTextField();
         jLabel50 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
@@ -48,139 +50,166 @@ public class END_STOCK_REPORT_M extends javax.swing.JFrame {
         jLabel52 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel22.setBackground(new java.awt.Color(255, 255, 255));
         jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel23.setBackground(new java.awt.Color(69, 83, 106));
+        jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel39.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel39.setText("STOCK REPORT");
+        jPanel23.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 620, 100));
 
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, 1290, Short.MAX_VALUE)
-        );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-        );
+        jLabel1.setText("jLabel1");
+        jPanel23.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1256, 12, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        jPanel23.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 20, 20, 30));
 
         jPanel22.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1290, -1));
 
         jTextField16.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField16.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField16.setBorder(null);
-        jPanel22.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 200, 270, 40));
+        jPanel22.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 200, 240, 40));
 
         jLabel50.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
         jLabel50.setForeground(new java.awt.Color(255, 153, 102));
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel50.setText("Stock Out");
-        jPanel22.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 160, 270, 30));
+        jPanel22.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 160, 260, 30));
 
         jLabel42.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 153, 153));
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel22.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 150, 290, 141));
+        jPanel22.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 150, 260, 141));
 
         jTextField15.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField15.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField15.setBorder(null);
-        jPanel22.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 200, 270, 30));
+        jPanel22.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, 240, 40));
 
         jLabel49.setForeground(new java.awt.Color(0, 0, 0));
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel49.setText("*Current Month");
-        jPanel22.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 260, 110, -1));
+        jPanel22.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 260, 110, -1));
 
         jLabel48.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(255, 153, 102));
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel48.setText("Stock In");
-        jPanel22.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 290, 40));
+        jPanel22.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 260, 40));
 
         jLabel40.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(255, 153, 153));
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel22.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 290, 141));
+        jPanel22.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 260, 141));
 
         jLabel41.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(255, 153, 102));
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setText("Current Stock");
-        jPanel22.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 290, 30));
+        jPanel22.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 260, 30));
 
         jTextField13.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField13.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jTextField13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField13.setBorder(null);
-        jPanel22.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 250, 60));
+        jPanel22.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 240, 60));
 
         jLabel43.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(255, 153, 153));
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel22.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 290, 141));
+        jPanel22.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 260, 141));
 
         jTextField14.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField14.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField14.setBorder(null);
-        jPanel22.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 270, 40));
+        jPanel22.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 240, 50));
 
         jLabel47.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(255, 153, 102));
         jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel47.setText("Stock Value");
-        jPanel22.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 290, 30));
+        jPanel22.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 260, 30));
 
         jLabel44.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 153, 153));
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel22.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 290, 141));
+        jPanel22.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 260, 141));
 
         jLabel53.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(51, 51, 51));
         jLabel53.setText("Product wise Current Stock");
-        jPanel22.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 330, 260, 30));
+        jPanel22.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 330, 260, 30));
 
         jLabel45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel22.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 600, 370));
+        jPanel22.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 540, 370));
 
         jLabel52.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel52.setForeground(new java.awt.Color(51, 51, 51));
         jLabel52.setText("Category Wise Current Stock");
-        jPanel22.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 270, 30));
+        jPanel22.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, 260, 30));
 
         jLabel46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel22.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 600, 370));
+        jPanel22.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 550, 370));
 
         jLabel51.setForeground(new java.awt.Color(0, 0, 0));
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel51.setText("*Current Month");
-        jPanel22.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 260, 120, 20));
+        jPanel22.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 260, 120, 20));
+
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(51, 51, 51));
+        jTextField1.setBorder(null);
+        jPanel22.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 470, 160));
+
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(51, 51, 51));
+        jTextField2.setBorder(null);
+        jPanel22.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 480, 470, 160));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, 1176, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 713, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1176, 713));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -218,6 +247,8 @@ public class END_STOCK_REPORT_M extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
@@ -235,9 +266,11 @@ public class END_STOCK_REPORT_M extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel53;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

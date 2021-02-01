@@ -385,9 +385,7 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
         Button1.setLayout(Button1Layout);
         Button1Layout.setHorizontalGroup(
             Button1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Button1Layout.createSequentialGroup()
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         Button1Layout.setVerticalGroup(
             Button1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -514,7 +512,7 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
             .addGroup(DASH_PANELLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(LOG_OUT, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         DASH_PANELLayout.setVerticalGroup(
             DASH_PANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
