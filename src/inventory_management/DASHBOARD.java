@@ -464,7 +464,7 @@ public class DASHBOARD extends javax.swing.JFrame {
         jLabel25.setText("TIME: 11:30 AM");
         Statusbar.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 11, 170, 30));
 
-        bg.add(Statusbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 1030, 60));
+        bg.add(Statusbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 1090, 60));
 
         C_Proudcts.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
