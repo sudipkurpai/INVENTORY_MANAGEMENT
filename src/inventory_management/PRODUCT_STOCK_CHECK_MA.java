@@ -32,19 +32,14 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
@@ -83,6 +78,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jTextField11 = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
+        jLabel17 = new javax.swing.JLabel();
         jRadioButton3 = new javax.swing.JRadioButton();
         jLabel15 = new javax.swing.JLabel();
         jSeparator17 = new javax.swing.JSeparator();
@@ -98,10 +94,14 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jTextField14 = new javax.swing.JTextField();
         jTextField15 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -151,11 +151,6 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Start Date");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Add/ Update");
@@ -165,11 +160,6 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 150, 160, -1));
-
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 80, -1));
 
         jButton1.setBackground(new java.awt.Color(102, 255, 102));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
@@ -233,29 +223,12 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 350, 340));
 
-        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField3.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 80, -1));
-
-        jLabel5.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("End Date");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, -1, 20));
-
         jButton3.setBackground(new java.awt.Color(102, 255, 102));
         jButton3.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Update");
         jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 64, 2), 1, true));
         jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 240, 60, 30));
-
-        jButton4.setBackground(new java.awt.Color(102, 255, 102));
-        jButton4.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
-        jButton4.setText("Refresh");
-        jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 64, 2), 1, true));
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 60, 30));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
@@ -347,7 +320,12 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jTextField12.setBackground(new java.awt.Color(16, 16, 134));
         jTextField12.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
         jTextField12.setBorder(null);
-        jPanel2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 50, 160, 50));
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField12ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 70, 160, 30));
 
         jTextField8.setBackground(new java.awt.Color(255, 255, 255));
         jTextField8.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
@@ -411,6 +389,9 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jRadioButton2.setForeground(new java.awt.Color(0, 0, 0));
         jRadioButton2.setText("ALL");
         jPanel2.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, 20));
+
+        jLabel17.setText("jLabel17");
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
 
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
@@ -486,37 +467,101 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jTextField16.setBackground(new java.awt.Color(205, 0, 202));
         jTextField16.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
         jTextField16.setBorder(null);
-        jPanel2.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 50, 160, 50));
+        jPanel2.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 80, 160, 20));
 
         jTextField13.setBackground(new java.awt.Color(128, 0, 1));
         jTextField13.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
         jTextField13.setBorder(null);
-        jPanel2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 160, 50));
+        jPanel2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 160, 30));
 
         jTextField14.setBackground(new java.awt.Color(127, 128, 0));
         jTextField14.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
         jTextField14.setBorder(null);
-        jPanel2.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 160, 50));
+        jPanel2.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 160, 40));
 
         jTextField15.setBackground(new java.awt.Color(0, 202, 202));
         jTextField15.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
         jTextField15.setBorder(null);
-        jPanel2.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, 160, 50));
-
-        jLabel16.setIcon(new javax.swing.ImageIcon("D:\\JAVA\\INVENTORY_MANAGEMENT_\\src\\image\\color5.png")); // NOI18N
+        jPanel2.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, 160, 30));
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 160, -1));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/color1.png"))); // NOI18N
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 160, -1));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Date Range", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 13), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel3.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/color2.png"))); // NOI18N
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 160, -1));
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/calendar.png"))); // NOI18N
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/color3.png"))); // NOI18N
-        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 160, 50));
+        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField3.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/color4.png"))); // NOI18N
-        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 40, 160, -1));
+        jLabel5.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("End Date");
+
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField2.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
+
+        jButton4.setBackground(new java.awt.Color(102, 255, 102));
+        jButton4.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 0, 0));
+        jButton4.setText("Refresh");
+        jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 64, 2), 1, true));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jLabel18.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel18.setText("Start Date");
+
+        jLabel19.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/calendar.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel18)
+                .addGap(2, 2, 2)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addGap(3, 3, 3)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(jLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel18))
+                        .addComponent(jLabel19)))
+                .addGap(0, 5, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -548,6 +593,14 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField12ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -605,7 +658,6 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -616,6 +668,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
