@@ -69,6 +69,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
+        phone3 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -135,7 +136,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         phone.setBackground(new java.awt.Color(255, 255, 255));
         phone.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         phone.setBorder(null);
-        jPanel2.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 150, 20));
+        jPanel2.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 340, 50));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, 40));
@@ -281,6 +282,11 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, -1, 40));
+
+        phone3.setBackground(new java.awt.Color(255, 255, 255));
+        phone3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        phone3.setBorder(null);
+        jPanel2.add(phone3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 150, 20));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 12, 454, 580));
 
@@ -431,6 +437,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     private javax.swing.JTextField phone;
     private javax.swing.JTextField phone1;
     private javax.swing.JTextField phone2;
+    private javax.swing.JTextField phone3;
     private javax.swing.JLabel sign_up;
     // End of variables declaration//GEN-END:variables
 }
