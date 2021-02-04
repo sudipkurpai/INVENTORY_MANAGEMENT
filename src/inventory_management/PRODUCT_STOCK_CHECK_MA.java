@@ -64,6 +64,10 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
@@ -73,12 +77,12 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jTextField10 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jTextField11 = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel17 = new javax.swing.JLabel();
         jRadioButton3 = new javax.swing.JRadioButton();
         jLabel15 = new javax.swing.JLabel();
         jSeparator17 = new javax.swing.JSeparator();
@@ -126,7 +130,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(1130, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,12 +144,12 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(2, 2, 2)
-                    .addComponent(jLabel21)
-                    .addContainerGap(22, Short.MAX_VALUE)))
+                    .addContainerGap()
+                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -154,7 +158,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Add/ Update");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, -1, 20));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, -1, 20));
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
@@ -166,14 +170,14 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Save");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 64, 2), 1, true));
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 0, 60, 30));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 10, 60, 30));
 
         jButton2.setBackground(new java.awt.Color(102, 255, 102));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jButton2.setText("Refresh");
+        jButton2.setText("Search");
         jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 64, 2), 1, true));
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 60, 30));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 60, 20));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
@@ -242,7 +246,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel2.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 120, 30, 430));
         jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, 370, 10));
-        jPanel2.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 20, 20));
+        jPanel2.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 10, 20));
         jPanel2.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 30, 10));
 
         jSeparator8.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -250,9 +254,9 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
 
         jSeparator9.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel2.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 30, 430));
-        jPanel2.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 490, 20));
-        jPanel2.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 50, 10));
-        jPanel2.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 40, 10));
+        jPanel2.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 120, 510, 20));
+        jPanel2.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 10, 10));
+        jPanel2.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 20, 10));
 
         jSeparator13.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel2.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 30, 430));
@@ -265,7 +269,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("ShowTransactions:");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, -1, 20));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, -1, 20));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
@@ -302,6 +306,26 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 170, -1));
 
+        jLabel17.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Inventory Amt.");
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 90, 90, -1));
+
+        jLabel22.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jLabel22.setText("Sale");
+        jPanel2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, -1, -1));
+
+        jLabel23.setBackground(new java.awt.Color(204, 0, 204));
+        jLabel23.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("Profit");
+        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 50, -1));
+
+        jLabel24.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("Inventory Qty");
+        jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, -1));
+
         jTextField5.setBackground(new java.awt.Color(255, 255, 255));
         jTextField5.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jTextField5.setForeground(new java.awt.Color(0, 0, 0));
@@ -319,13 +343,14 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
 
         jTextField12.setBackground(new java.awt.Color(16, 16, 134));
         jTextField12.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
+        jTextField12.setForeground(new java.awt.Color(255, 255, 255));
         jTextField12.setBorder(null);
         jTextField12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField12ActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 70, 160, 30));
+        jPanel2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 60, 160, 50));
 
         jTextField8.setBackground(new java.awt.Color(255, 255, 255));
         jTextField8.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
@@ -356,12 +381,17 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jTextField10.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, 260, -1));
 
+        jLabel20.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Purchase");
+        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
+
         jButton7.setBackground(new java.awt.Color(102, 255, 102));
         jButton7.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("Add");
         jButton7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 64, 2), 1, true));
-        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 190, 60, 30));
+        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 190, 60, 40));
 
         jLabel14.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
@@ -390,9 +420,6 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jRadioButton2.setText("ALL");
         jPanel2.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, 20));
 
-        jLabel17.setText("jLabel17");
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
-
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(0, 0, 0));
@@ -402,12 +429,12 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Sale / Purchese Transactions:");
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, 20));
-        jPanel2.add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 550, 20));
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, 20));
+        jPanel2.add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 590, 20));
 
         jSeparator18.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel2.add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 140, 30, 140));
-        jPanel2.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, 90, 20));
+        jPanel2.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 100, 20));
 
         jSeparator20.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel2.add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 290, 20, 40));
@@ -418,7 +445,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jButton8.setForeground(new java.awt.Color(0, 0, 0));
         jButton8.setText("Extract");
         jButton8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 64, 2), 1, true));
-        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 60, 30));
+        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 60, 20));
 
         jTable2.setBackground(new java.awt.Color(192, 192, 255));
         jTable2.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
@@ -466,23 +493,32 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
 
         jTextField16.setBackground(new java.awt.Color(205, 0, 202));
         jTextField16.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
+        jTextField16.setForeground(new java.awt.Color(255, 255, 255));
         jTextField16.setBorder(null);
-        jPanel2.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 80, 160, 20));
+        jPanel2.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 60, 160, 50));
 
         jTextField13.setBackground(new java.awt.Color(128, 0, 1));
         jTextField13.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
+        jTextField13.setForeground(new java.awt.Color(255, 255, 255));
         jTextField13.setBorder(null);
-        jPanel2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 160, 30));
+        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField13ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 160, 50));
 
         jTextField14.setBackground(new java.awt.Color(127, 128, 0));
         jTextField14.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
+        jTextField14.setForeground(new java.awt.Color(255, 255, 255));
         jTextField14.setBorder(null);
-        jPanel2.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 160, 40));
+        jPanel2.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 160, 50));
 
-        jTextField15.setBackground(new java.awt.Color(0, 202, 202));
+        jTextField15.setBackground(new java.awt.Color(0, 128, 129));
         jTextField15.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
+        jTextField15.setForeground(new java.awt.Color(255, 255, 255));
         jTextField15.setBorder(null);
-        jPanel2.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 70, 160, 30));
+        jPanel2.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 160, 50));
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 40, 160, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -508,7 +544,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(102, 255, 102));
         jButton4.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 0, 0));
-        jButton4.setText("Refresh");
+        jButton4.setText("GO");
         jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 64, 2), 1, true));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -529,56 +565,56 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel18)
-                .addGap(2, 2, 2)
+                .addGap(3, 3, 3)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
-                .addGap(3, 3, 3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel18))
-                        .addComponent(jLabel19)))
-                .addGap(0, 5, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel18))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel19)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 60));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 500, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1158, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1158, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 579, Short.MAX_VALUE))
         );
 
         setSize(new java.awt.Dimension(1156, 631));
@@ -601,6 +637,10 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -658,7 +698,11 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

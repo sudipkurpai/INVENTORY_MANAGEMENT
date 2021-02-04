@@ -83,7 +83,7 @@ public class BILL_PRINT extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Gadugi", 1, 15)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("COMPANY NAME");
+        jLabel7.setText("INVENTORY MANAGEMENT");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -120,7 +120,7 @@ public class BILL_PRINT extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Gadugi", 1, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("BILL TO :-");
+        jLabel6.setText("BILL TO ");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 75, -1));
 
         jLabel3.setFont(new java.awt.Font("Gadugi", 1, 15)); // NOI18N
