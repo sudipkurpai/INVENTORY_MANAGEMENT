@@ -201,13 +201,17 @@
                   <Color blue="0" green="ff" red="66" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="6" rowCount="70">
-                    <Column editable="true" title="product DI" type="java.lang.Object"/>
+                  <Table columnCount="10" rowCount="70">
+                    <Column editable="true" title="product ID" type="java.lang.Object"/>
                     <Column editable="true" title="Product Name" type="java.lang.Object"/>
-                    <Column editable="true" title="Product Brand Name " type="java.lang.Object"/>
-                    <Column editable="true" title="Product Type" type="java.lang.Object"/>
-                    <Column editable="true" title="Product Price" type="java.lang.Object"/>
-                    <Column editable="true" title="Number Product " type="java.lang.Object"/>
+                    <Column editable="true" title="Decription" type="java.lang.Object"/>
+                    <Column editable="true" title="Unit Price" type="java.lang.Object"/>
+                    <Column editable="true" title="Mfg Date" type="java.lang.Object"/>
+                    <Column editable="true" title="ExperyDate" type="java.lang.Object"/>
+                    <Column editable="true" title="Quantity" type="java.lang.Object"/>
+                    <Column editable="true" title="Category" type="java.lang.Object"/>
+                    <Column editable="true" title="Brand" type="java.lang.Object"/>
+                    <Column editable="true" title="Total" type="java.lang.Object"/>
                   </Table>
                 </Property>
               </Properties>
