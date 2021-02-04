@@ -9,12 +9,12 @@ package inventory_management;
  *
  * @author ganesh pradhan
  */
-public class DASHBOARD_EMPLOYEE extends javax.swing.JFrame {
+public class DASHBOARD_MANAGER extends javax.swing.JFrame {
 
     /**
      * Creates new form DASHBOARD_M
      */
-    public DASHBOARD_EMPLOYEE() {
+    public DASHBOARD_MANAGER() {
         initComponents();
     }
 
@@ -430,6 +430,11 @@ public class DASHBOARD_EMPLOYEE extends javax.swing.JFrame {
         LOG_OUT.setForeground(new java.awt.Color(255, 255, 255));
         LOG_OUT.setText("LOG OUT");
         LOG_OUT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        LOG_OUT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LOG_OUTMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout DASH_PANELLayout = new javax.swing.GroupLayout(DASH_PANEL);
         DASH_PANEL.setLayout(DASH_PANELLayout);
@@ -499,7 +504,7 @@ public class DASHBOARD_EMPLOYEE extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("EMPLOYEE DASHBOARD");
+        jLabel3.setText("MANAGER DASHBOARD");
 
         javax.swing.GroupLayout BACK_GROUNDLayout = new javax.swing.GroupLayout(BACK_GROUND);
         BACK_GROUND.setLayout(BACK_GROUNDLayout);
@@ -511,36 +516,32 @@ public class DASHBOARD_EMPLOYEE extends javax.swing.JFrame {
                 .addGroup(BACK_GROUNDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TIME_BAR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(BACK_GROUNDLayout.createSequentialGroup()
-                        .addGap(302, 302, 302)
+                        .addGap(299, 299, 299)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         BACK_GROUNDLayout.setVerticalGroup(
             BACK_GROUNDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 874, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(BACK_GROUNDLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TIME_BAR, javax.swing.GroupLayout.PREFERRED_SIZE, 758, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1624, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(BACK_GROUND, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(BACK_GROUND, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 58, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 874, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addComponent(BACK_GROUND, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(BACK_GROUND, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -569,6 +570,11 @@ public class DASHBOARD_EMPLOYEE extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel5MouseEntered
 
+    private void LOG_OUTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LOG_OUTMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_LOG_OUTMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -586,21 +592,23 @@ public class DASHBOARD_EMPLOYEE extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DASHBOARD_EMPLOYEE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DASHBOARD_MANAGER.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DASHBOARD_EMPLOYEE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DASHBOARD_MANAGER.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DASHBOARD_EMPLOYEE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DASHBOARD_MANAGER.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DASHBOARD_EMPLOYEE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DASHBOARD_MANAGER.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DASHBOARD_EMPLOYEE().setVisible(true);
+                new DASHBOARD_MANAGER().setVisible(true);
             }
         });
     }

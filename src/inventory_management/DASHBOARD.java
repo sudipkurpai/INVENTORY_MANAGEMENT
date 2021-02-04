@@ -850,7 +850,7 @@ public class DASHBOARD extends javax.swing.JFrame {
         C_Proudcts.setVisible(false);
         order_click.setVisible(true);
         new MANAGE_ORDER().setVisible(true);
-                this.dispose();
+               // this.dispose();
     }//GEN-LAST:event_order_clickMouseClicked
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked

@@ -157,7 +157,7 @@ public class LOGINFROM extends javax.swing.JFrame {
         }catch (Exception e){
             System.out.println("Exception -"+e);
         }  */
-        new DASHBOARD().setVisible(true);
+        new DASHBOARD_NEW().setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
