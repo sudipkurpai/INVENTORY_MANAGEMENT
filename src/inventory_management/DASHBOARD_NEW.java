@@ -100,16 +100,6 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
         jLabel30 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        cd_product_details = new javax.swing.JPanel();
-        jPanel27 = new javax.swing.JPanel();
-        jPanel28 = new javax.swing.JPanel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         child_bill = new javax.swing.JPanel();
         jPanel29 = new javax.swing.JPanel();
@@ -146,6 +136,16 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
         jLabel55 = new javax.swing.JLabel();
+        cd_product_details = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
+        jPanel28 = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
         C_report = new javax.swing.JPanel();
         jPanel23 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
@@ -895,131 +895,6 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel27.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel28.setBackground(new java.awt.Color(166, 133, 226));
-
-        jLabel56.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel56.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
-        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel56.setText("PRODUCT DETAILS");
-
-        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
-        jLabel57.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel57MouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
-        jPanel28.setLayout(jPanel28Layout);
-        jPanel28Layout.setHorizontalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, 1177, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel57)
-                .addGap(21, 21, 21))
-        );
-        jPanel28Layout.setVerticalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
-            .addComponent(jLabel56, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        jPanel27.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, 60));
-
-        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/magnifying-glass.png"))); // NOI18N
-        jPanel27.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, -1, 40));
-
-        jLabel59.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/RaghuSearch.png"))); // NOI18N
-        jPanel27.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, -1, 65));
-
-        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (23).png"))); // NOI18N
-        jPanel27.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 70, -1, 70));
-
-        jScrollPane4.setBackground(new java.awt.Color(255, 255, 255));
-
-        jTable4.setBackground(new java.awt.Color(255, 255, 255));
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Product Id", "Product Name", "Price", "Brand"
-            }
-        ));
-        jScrollPane4.setViewportView(jTable4);
-
-        jPanel27.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 1220, 550));
-
-        javax.swing.GroupLayout cd_product_detailsLayout = new javax.swing.GroupLayout(cd_product_details);
-        cd_product_details.setLayout(cd_product_detailsLayout);
-        cd_product_detailsLayout.setHorizontalGroup(
-            cd_product_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        cd_product_detailsLayout.setVerticalGroup(
-            cd_product_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1040,11 +915,6 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
                 .addContainerGap(50, Short.MAX_VALUE))
             .addGroup(BACK_GROUNDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(BACK_GROUNDLayout.createSequentialGroup()
-                    .addGap(309, 309, 309)
-                    .addComponent(cd_product_details, javax.swing.GroupLayout.PREFERRED_SIZE, 1208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(53, Short.MAX_VALUE)))
-            .addGroup(BACK_GROUNDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(BACK_GROUNDLayout.createSequentialGroup()
                     .addGap(311, 311, 311)
                     .addComponent(c_orders, javax.swing.GroupLayout.PREFERRED_SIZE, 1208, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(51, Short.MAX_VALUE)))
@@ -1058,11 +928,6 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TIME_BAR, javax.swing.GroupLayout.PREFERRED_SIZE, 758, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(72, Short.MAX_VALUE))
-            .addGroup(BACK_GROUNDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(BACK_GROUNDLayout.createSequentialGroup()
-                    .addGap(111, 111, 111)
-                    .addComponent(cd_product_details, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(70, Short.MAX_VALUE)))
             .addGroup(BACK_GROUNDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(BACK_GROUNDLayout.createSequentialGroup()
                     .addGap(108, 108, 108)
@@ -1376,6 +1241,131 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
                 .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE))
         );
 
+        jPanel27.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel28.setBackground(new java.awt.Color(166, 133, 226));
+
+        jLabel56.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel56.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel56.setText("PRODUCT DETAILS");
+
+        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
+        jLabel57.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel57MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
+        jPanel28.setLayout(jPanel28Layout);
+        jPanel28Layout.setHorizontalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, 1177, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel57)
+                .addGap(21, 21, 21))
+        );
+        jPanel28Layout.setVerticalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
+            .addComponent(jLabel56, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel27.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, 60));
+
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/magnifying-glass.png"))); // NOI18N
+        jPanel27.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, -1, 40));
+
+        jLabel59.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/RaghuSearch.png"))); // NOI18N
+        jPanel27.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, -1, 65));
+
+        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (23).png"))); // NOI18N
+        jPanel27.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 70, -1, 70));
+
+        jScrollPane4.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTable4.setBackground(new java.awt.Color(255, 255, 255));
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Product Id", "Product Name", "Price", "Brand"
+            }
+        ));
+        jScrollPane4.setViewportView(jTable4);
+
+        jPanel27.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 1220, 550));
+
+        javax.swing.GroupLayout cd_product_detailsLayout = new javax.swing.GroupLayout(cd_product_details);
+        cd_product_details.setLayout(cd_product_detailsLayout);
+        cd_product_detailsLayout.setHorizontalGroup(
+            cd_product_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        cd_product_detailsLayout.setVerticalGroup(
+            cd_product_detailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         jPanel23.setBackground(new java.awt.Color(255, 255, 255));
         jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1632,6 +1622,11 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(c_bill, javax.swing.GroupLayout.PREFERRED_SIZE, 853, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel29Layout.createSequentialGroup()
+                    .addGap(88, 88, 88)
+                    .addComponent(cd_product_details, javax.swing.GroupLayout.PREFERRED_SIZE, 1208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(88, Short.MAX_VALUE)))
         );
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1646,6 +1641,11 @@ public class DASHBOARD_NEW extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(c_bill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel29Layout.createSequentialGroup()
+                    .addGap(27, 27, 27)
+                    .addComponent(cd_product_details, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(27, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
