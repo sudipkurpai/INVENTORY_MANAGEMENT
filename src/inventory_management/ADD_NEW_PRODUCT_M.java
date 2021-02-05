@@ -244,7 +244,9 @@ public class ADD_NEW_PRODUCT_M extends javax.swing.JFrame {
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         // TODO add your handling code here:
-        System.exit(0);
+ DASHBOARD_M dm = new DASHBOARD_M();
+        dm.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jLabel14MouseClicked
 
     /**

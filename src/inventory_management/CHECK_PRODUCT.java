@@ -43,11 +43,10 @@ public class CHECK_PRODUCT extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 1, 60)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 204));
         jLabel1.setText("Check product");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 380, 60));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 530, 60));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1240, 80));
 
-        jTable1.setBackground(new java.awt.Color(255, 255, 255));
         jTable1.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jTable1.setForeground(new java.awt.Color(102, 255, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(

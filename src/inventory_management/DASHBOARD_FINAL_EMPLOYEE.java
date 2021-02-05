@@ -37,6 +37,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
         OPTION = new javax.swing.JPanel();
         Welcome = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
@@ -85,6 +86,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -131,6 +133,9 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel9.setText("05-02-2021");
         TIME.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 120, 50));
 
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/minimize.png"))); // NOI18N
+        TIME.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, -1, -1));
+
         OPTION.setBackground(new java.awt.Color(32, 64, 81));
         OPTION.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -138,7 +143,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         Welcome.setForeground(new java.awt.Color(255, 255, 255));
         Welcome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Welcome.setText("Welcome");
-        OPTION.add(Welcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 63));
+        OPTION.add(Welcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 63));
 
         ID.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         ID.setForeground(new java.awt.Color(255, 255, 255));
@@ -433,7 +438,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
                 .addComponent(OPTION, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TIME, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BODY, javax.swing.GroupLayout.DEFAULT_SIZE, 1083, Short.MAX_VALUE)))
+                    .addComponent(BODY, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -455,7 +460,8 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1407, 752));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -534,6 +540,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
