@@ -9,12 +9,12 @@ package inventory_management;
  *
  * @author RAGHUNATH DAS
  */
-public class MANAGE_PRODUCT1 extends javax.swing.JFrame {
+public class MANAGE_PRODUCT_MA extends javax.swing.JFrame {
 
     /**
      * Creates new form DEMO
      */
-    public MANAGE_PRODUCT1() {
+    public MANAGE_PRODUCT_MA() {
         initComponents();
     }
 
@@ -258,21 +258,23 @@ public class MANAGE_PRODUCT1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MANAGE_PRODUCT1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MANAGE_PRODUCT_MA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MANAGE_PRODUCT1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MANAGE_PRODUCT_MA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MANAGE_PRODUCT1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MANAGE_PRODUCT_MA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MANAGE_PRODUCT1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MANAGE_PRODUCT_MA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MANAGE_PRODUCT1().setVisible(true);
+                new MANAGE_PRODUCT_MA().setVisible(true);
             }
         });
     }
