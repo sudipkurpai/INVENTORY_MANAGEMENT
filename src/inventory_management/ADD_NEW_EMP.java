@@ -60,11 +60,13 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        phone2 = new javax.swing.JTextField();
+        DOB = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         phone3 = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -115,6 +117,11 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
 
         address.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         address.setBorder(null);
+        address.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addressActionPerformed(evt);
+            }
+        });
         jPanel2.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 340, 50));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
@@ -161,8 +168,8 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(107, 116, 113));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Address");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 70, 20));
+        jLabel14.setText("Gender");
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 60, 20));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, 40));
@@ -176,22 +183,29 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         crt_emp.setBackground(new java.awt.Color(0, 102, 255));
         crt_emp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 153, 255)));
 
-        jLabel28.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabel28.setFont(new java.awt.Font("Dialog", 1, 22)); // NOI18N
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel28.setText("Create Employee");
+        jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel28MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout crt_empLayout = new javax.swing.GroupLayout(crt_emp);
         crt_emp.setLayout(crt_empLayout);
         crt_empLayout.setHorizontalGroup(
             crt_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
+            .addGroup(crt_empLayout.createSequentialGroup()
+                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         crt_empLayout.setVerticalGroup(
             crt_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
         );
 
-        jPanel2.add(crt_emp, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 520, 210, 40));
+        jPanel2.add(crt_emp, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 520, 190, 40));
 
         jLabel19.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(107, 116, 113));
@@ -227,9 +241,9 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel24.setText("Date Of Birth");
         jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 90, 20));
 
-        phone2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        phone2.setBorder(null);
-        jPanel2.add(phone2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 150, 20));
+        DOB.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        DOB.setBorder(null);
+        jPanel2.add(DOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 150, 20));
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/A_rounded.png"))); // NOI18N
         jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, 70));
@@ -246,6 +260,15 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         phone3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         phone3.setBorder(null);
         jPanel2.add(phone3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 150, 20));
+
+        jLabel29.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(107, 116, 113));
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setText("Address");
+        jPanel2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 70, 20));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other", " " }));
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 160, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 12, 454, 580));
 
@@ -280,6 +303,46 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     private void Emp_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Emp_idActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Emp_idActionPerformed
+
+    private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
+        String fName = firstname.getText();
+        String lName = lastname.getText();
+        String ph = "";
+        String mail = email.getText();
+        String password = pass.getText();
+        String c_pass = conf_pass.getText();
+        String add = address.getText();
+        String gen = "";
+        String emp = Emp_id.getText();
+        String dob = DOB.getText();
+        String td = "";
+        
+        
+        
+        if(fName.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Fill up all field first");
+        }else if(password.equals(c_pass) ){
+            int i = ADD_NEW_EMP_DATAOBEJECT.inventory_management (fName, lName, mail, ph, password,c_pass, add, gen,emp,dob,td);
+            //(FIRST_NAME,LAST_NAME,EMAIL,MOBILE_NO,PASSWORD,CONFIRM_PASSWORD,ADDRESS,GENDER)
+           if(i>0){
+                System.out.println("Data inserted");
+                JOptionPane.showMessageDialog(this, "Your Account Sucessfully Created"); 
+                new REGISTRATION().setVisible(true);
+                this.dispose();
+           }else{
+                System.out.println("Data NOT inserted");
+                JOptionPane.showMessageDialog(this, "Your Account Not Created"); 
+           }
+        }else {
+            JOptionPane.showMessageDialog(this, "Both Password Not Same");
+        }
+        
+           // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel28MouseClicked
+
+    private void addressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addressActionPerformed
 
     /**
      * @param args the command line arguments
@@ -318,12 +381,14 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField DOB;
     private javax.swing.JTextField Emp_id;
     private javax.swing.JTextField address;
     private javax.swing.JPasswordField conf_pass;
     private javax.swing.JPanel crt_emp;
     private javax.swing.JTextField email;
     private javax.swing.JTextField firstname;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -345,6 +410,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -353,7 +419,6 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField lastname;
     private javax.swing.JPasswordField pass;
-    private javax.swing.JTextField phone2;
     private javax.swing.JTextField phone3;
     // End of variables declaration//GEN-END:variables
 }
