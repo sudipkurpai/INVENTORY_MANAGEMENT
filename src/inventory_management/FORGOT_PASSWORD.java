@@ -38,6 +38,7 @@ public class FORGOT_PASSWORD extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel2.setBackground(new java.awt.Color(154, 211, 188));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -104,7 +105,8 @@ public class FORGOT_PASSWORD extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(558, 584));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
@@ -116,7 +118,7 @@ public class FORGOT_PASSWORD extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-        FORGOT_PASSWORD1 FP = new FORGOT_PASSWORD1();
+        RESET_PASSWORD FP = new RESET_PASSWORD();
         FP.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2MouseClicked
