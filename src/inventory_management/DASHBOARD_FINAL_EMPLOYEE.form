@@ -320,6 +320,9 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/image/stock (5).png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value=" STOCK"/>
                   </Properties>
                 </Component>
@@ -365,6 +368,9 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/image/home.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value=" HOME"/>
                   </Properties>
                 </Component>
@@ -410,6 +416,9 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/image/shopping-cart_1.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value=" SALES"/>
                   </Properties>
                 </Component>
@@ -452,6 +461,9 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/image/bill (6).png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value=" BILL"/>
                   </Properties>
                 </Component>
@@ -497,6 +509,9 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/image/stack.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value=" PRODUCTS"/>
                   </Properties>
                 </Component>
@@ -542,6 +557,9 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/image/packages (5).png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value=" PERCHASE"/>
                   </Properties>
                 </Component>

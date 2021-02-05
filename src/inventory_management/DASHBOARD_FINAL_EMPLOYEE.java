@@ -160,6 +160,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/stock (5).png"))); // NOI18N
         jLabel12.setText(" STOCK");
 
         javax.swing.GroupLayout MemuLabels4Layout = new javax.swing.GroupLayout(MemuLabels4);
@@ -184,6 +185,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/home.png"))); // NOI18N
         jLabel13.setText(" HOME");
 
         javax.swing.GroupLayout MemuLabels1Layout = new javax.swing.GroupLayout(MemuLabels1);
@@ -208,6 +210,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/shopping-cart_1.png"))); // NOI18N
         jLabel14.setText(" SALES");
 
         javax.swing.GroupLayout MemuLabels5Layout = new javax.swing.GroupLayout(MemuLabels5);
@@ -232,6 +235,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bill (6).png"))); // NOI18N
         jLabel15.setText(" BILL");
 
         javax.swing.GroupLayout MemuLabels6Layout = new javax.swing.GroupLayout(MemuLabels6);
@@ -254,6 +258,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/stack.png"))); // NOI18N
         jLabel16.setText(" PRODUCTS");
 
         javax.swing.GroupLayout MemuLabels2Layout = new javax.swing.GroupLayout(MemuLabels2);
@@ -278,6 +283,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/packages (5).png"))); // NOI18N
         jLabel17.setText(" PERCHASE");
 
         javax.swing.GroupLayout MemuLabels3Layout = new javax.swing.GroupLayout(MemuLabels3);
