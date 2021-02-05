@@ -44,6 +44,7 @@ public class COUSTOMER_PRODUCT_DETAILS extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -165,26 +166,22 @@ public class COUSTOMER_PRODUCT_DETAILS extends javax.swing.JFrame {
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 620, 170, 40));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 10, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Customer Product Buying Details");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 1227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
-        );
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1227, 62));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -197,7 +194,7 @@ public class COUSTOMER_PRODUCT_DETAILS extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
         );
@@ -205,6 +202,13 @@ public class COUSTOMER_PRODUCT_DETAILS extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1225, 800));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        // TODO add your handling code here:
+        DASHBOARD_M dm = new DASHBOARD_M();
+        dm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel19MouseClicked
 
     /**
      * @param args the command line arguments
@@ -247,6 +251,7 @@ public class COUSTOMER_PRODUCT_DETAILS extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

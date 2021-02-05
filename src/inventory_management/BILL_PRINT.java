@@ -33,7 +33,7 @@ public class BILL_PRINT extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -86,11 +86,11 @@ public class BILL_PRINT extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("INVENTORY MANAGEMENT");
 
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
-        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel18MouseClicked(evt);
+                jLabel19MouseClicked(evt);
             }
         });
 
@@ -112,7 +112,7 @@ public class BILL_PRINT extends javax.swing.JFrame {
                             .addComponent(jLabel7)
                             .addComponent(jLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +122,7 @@ public class BILL_PRINT extends javax.swing.JFrame {
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1))
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -359,12 +359,12 @@ public class BILL_PRINT extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
 
-    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         // TODO add your handling code here:
         DASHBOARD_M dm = new DASHBOARD_M();
         dm.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jLabel18MouseClicked
+    }//GEN-LAST:event_jLabel19MouseClicked
 
     /**
      * @param args the command line arguments
@@ -411,7 +411,7 @@ public class BILL_PRINT extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
