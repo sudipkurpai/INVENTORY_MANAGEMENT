@@ -98,6 +98,11 @@ public class LOGINFROM extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, 20));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/raghu1.jpg"))); // NOI18N
@@ -122,7 +127,7 @@ public class LOGINFROM extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         //TODO add your handling code here:
-        /* String p_email = email.getText();
+         String p_email = email.getText();
         String p_pass = pass.getText();
         try {
             //  Data fetch from database
@@ -151,7 +156,7 @@ public class LOGINFROM extends javax.swing.JFrame {
             System.out.println("error"+e);
         }
         try{
-            if(p_email.equals("")!= p_pass.equals("")){
+            if(p_email.equals("")||p_pass.equals("")){
                 JOptionPane.showMessageDialog(this, "Fill up all field first");
             }else if(REGISTRATION_DATAOBEJECT.validate(p_email, p_pass)){
                 email.setBackground(Color.green);
@@ -159,7 +164,7 @@ public class LOGINFROM extends javax.swing.JFrame {
                 pass.setBackground(Color.green);
                 pass.setText(null);
                 JOptionPane.showMessageDialog(null, "Login Successfully");
-                new DASHBOARD().setVisible(true);
+                new DASHBOARD_M().setVisible(true);
                 this.dispose();
             }else{
                 //JOptionPane.showMessageDialog(LOG_IN.this,"You are not a valid user plese create your account","Login Error",JOptionPane.ERROR_MESSAGE);
@@ -171,10 +176,15 @@ public class LOGINFROM extends javax.swing.JFrame {
             }
         }catch (Exception e){
             System.out.println("Exception -"+e);
-        }  */
-        new DASHBOARD_NEW().setVisible(true);
-                this.dispose();
+        }  
     }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+        OPTION op = new OPTION();
+        op.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel8MouseClicked
 
     /**
      * @param args the command line arguments

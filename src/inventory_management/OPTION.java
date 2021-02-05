@@ -28,6 +28,7 @@ public class OPTION extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -38,6 +39,16 @@ public class OPTION extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, 20));
 
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -91,9 +102,14 @@ public class OPTION extends javax.swing.JFrame {
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
-        new LOGINFROM().setVisible(true);
+        new LOGINFROM_MG().setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
      * @param args the command line arguments
@@ -136,6 +152,7 @@ public class OPTION extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
