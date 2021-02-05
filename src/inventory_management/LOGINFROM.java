@@ -127,7 +127,7 @@ public class LOGINFROM extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         //TODO add your handling code here:
-         String p_email = email.getText();
+        String p_email = email.getText();
         String p_pass = pass.getText();
         try {
             //  Data fetch from database

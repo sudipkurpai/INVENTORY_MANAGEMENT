@@ -6,18 +6,45 @@
 package inventory_management;
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import java.math.*;
 /**
  *
  * @author Sudip Maiti
  */
 public class ADD_NEW_EMP extends javax.swing.JFrame {
 
+    String mng_Id = null;
+    String emp_Id = null;
     /**
      * Creates new form REGISTRATION
      */
     public ADD_NEW_EMP() {
         initComponents();
+        id_create();
+    }
+    //FETCH LAST ID FROM DATABASE AND STORE THE DATA IN GLOBAL VARIABLE
+    void id_create(){
+         try{
+            Connection con=DATABASE_CONNECTION.getConnection();
+            PreparedStatement ps=con.prepareStatement("select * from id_store");         
+            ResultSet rs=ps.executeQuery();
+            if(rs.next()){
+                mng_Id=rs.getString("MNG_ID");
+                System.out.println("MANAGER ID "+mng_Id);
+                emp_Id=rs.getString("EMP_ID");
+                System.out.println("EMPLOYEE ID "+emp_Id);
+                rs.close();
+                ps.close();
+            }else{
+                JOptionPane.showMessageDialog(null, "NOTHING FOUND IN DATABASE!!!!!!");
+            }
+            con.close();
+           }
+        catch(Exception e){System.out.println(e);}
     }
 
     /**
@@ -313,21 +340,33 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         String c_pass = conf_pass.getText();
         String add = address.getText();
         String gen = "";
-        String emp = Emp_id.getText();
         String dob = DOB.getText();
-        String td = "";
+        String td = "";   
         
-        
+        //generate emp id
+            BigInteger emp_id = new BigInteger(emp_Id);
+            BigInteger nxt = new BigInteger("1");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!"+emp_Id);
+            System.out.println("#################"+emp_id);
+            emp_id = emp_id.add(nxt);
+            System.out.println("%%%%%%%%%%%%%%%%%%%%%%"+emp_id);
+            String emp = "INVEE"+emp_id.toString();
+            System.out.println("%%%%%%%%%%%%%%%%%%%%%%"+emp);
+        ///////////////////////////////////////////////////////////
         
         if(fName.isEmpty()){
             JOptionPane.showMessageDialog(this, "Fill up all field first");
         }else if(password.equals(c_pass) ){
-            int i = ADD_NEW_EMP_DATAOBEJECT.inventory_management (fName, lName, mail, ph, password,c_pass, add, gen,emp,dob,td);
+            int i = ADD_NEW_EMP_DATAOBEJECT.inventory_management (fName, lName,ph, mail, password,c_pass, add, gen,emp,dob,td);
             //(FIRST_NAME,LAST_NAME,EMAIL,MOBILE_NO,PASSWORD,CONFIRM_PASSWORD,ADDRESS,GENDER)
-           if(i>0){
+            System.out.println("++++++++++++++++"+emp_id);
+            Emp_id.setText(emp);
+            int j = ID_STORE_FETCH.insert_id(mng_Id, emp_id.toString());
+           if(i>0 || j>0){
                 System.out.println("Data inserted");
+                
                 JOptionPane.showMessageDialog(this, "Your Account Sucessfully Created"); 
-                new REGISTRATION().setVisible(true);
+                new DASHBOARD_M().setVisible(true);
                 this.dispose();
            }else{
                 System.out.println("Data NOT inserted");
