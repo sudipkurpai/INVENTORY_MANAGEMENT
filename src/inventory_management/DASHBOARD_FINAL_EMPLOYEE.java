@@ -4,13 +4,20 @@
  * and open the template in the editor.
  */
 package inventory_management;
+import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 /**
  *
  * @author RAGHUNATH DAS
  */
 public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
-
+CardLayout layout;
     /**
      * Creates new form DASHBOARD_FINAL_EMPLOYEE
      */
@@ -42,21 +49,133 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         Welcome = new javax.swing.JLabel();
         ID = new javax.swing.JLabel();
         Name = new javax.swing.JLabel();
-        MemuLabels4 = new javax.swing.JPanel();
+        stckn = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        MemuLabels1 = new javax.swing.JPanel();
+        homen = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        MemuLabels5 = new javax.swing.JPanel();
+        slsn = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        MemuLabels6 = new javax.swing.JPanel();
+        cusln = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        MemuLabels2 = new javax.swing.JPanel();
+        prdtn = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
-        MemuLabels3 = new javax.swing.JPanel();
+        purcn = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         Logout = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         BODY = new javax.swing.JPanel();
+        home = new javax.swing.JPanel();
+        jPanel43 = new javax.swing.JPanel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        jPanel44 = new javax.swing.JPanel();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jPanel45 = new javax.swing.JPanel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jPanel46 = new javax.swing.JPanel();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        jPanel47 = new javax.swing.JPanel();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jPanel48 = new javax.swing.JPanel();
+        jLabel102 = new javax.swing.JLabel();
+        jLabel103 = new javax.swing.JLabel();
+        jPanel49 = new javax.swing.JPanel();
+        jLabel104 = new javax.swing.JLabel();
+        jLabel105 = new javax.swing.JLabel();
+        jPanel50 = new javax.swing.JPanel();
+        jLabel106 = new javax.swing.JLabel();
+        jLabel107 = new javax.swing.JLabel();
+        jPanel51 = new javax.swing.JPanel();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel109 = new javax.swing.JLabel();
+        product = new javax.swing.JPanel();
+        jPanel33 = new javax.swing.JPanel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jPanel34 = new javax.swing.JPanel();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jPanel35 = new javax.swing.JPanel();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jPanel36 = new javax.swing.JPanel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        jPanel37 = new javax.swing.JPanel();
+        jLabel82 = new javax.swing.JLabel();
+        jLabel83 = new javax.swing.JLabel();
+        jPanel38 = new javax.swing.JPanel();
+        jLabel84 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
+        jPanel39 = new javax.swing.JPanel();
+        jLabel86 = new javax.swing.JLabel();
+        jLabel87 = new javax.swing.JLabel();
+        jPanel40 = new javax.swing.JPanel();
+        jLabel88 = new javax.swing.JLabel();
+        jLabel89 = new javax.swing.JLabel();
+        jPanel41 = new javax.swing.JPanel();
+        jLabel90 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
+        purchase = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jPanel26 = new javax.swing.JPanel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jPanel27 = new javax.swing.JPanel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jPanel28 = new javax.swing.JPanel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jPanel29 = new javax.swing.JPanel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jPanel30 = new javax.swing.JPanel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jPanel31 = new javax.swing.JPanel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jPanel32 = new javax.swing.JPanel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        stock = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jPanel22 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jPanel24 = new javax.swing.JPanel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jPanel25 = new javax.swing.JPanel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -84,11 +203,13 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jPanel14 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
+        sales = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TIME.setBackground(new java.awt.Color(32, 64, 81));
         TIME.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -136,6 +257,8 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/minimize.png"))); // NOI18N
         TIME.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 10, -1, -1));
 
+        jPanel1.add(TIME, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 0, 1080, 73));
+
         OPTION.setBackground(new java.awt.Color(32, 64, 81));
         OPTION.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -155,7 +278,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         Name.setText("Name : Raghunath");
         OPTION.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 310, 30));
 
-        MemuLabels4.setBackground(new java.awt.Color(0, 161, 171));
+        stckn.setBackground(new java.awt.Color(32, 64, 81));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -163,24 +286,29 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/stock (5).png"))); // NOI18N
         jLabel12.setText(" STOCK");
 
-        javax.swing.GroupLayout MemuLabels4Layout = new javax.swing.GroupLayout(MemuLabels4);
-        MemuLabels4.setLayout(MemuLabels4Layout);
-        MemuLabels4Layout.setHorizontalGroup(
-            MemuLabels4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MemuLabels4Layout.createSequentialGroup()
+        javax.swing.GroupLayout stcknLayout = new javax.swing.GroupLayout(stckn);
+        stckn.setLayout(stcknLayout);
+        stcknLayout.setHorizontalGroup(
+            stcknLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(stcknLayout.createSequentialGroup()
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 61, Short.MAX_VALUE))
         );
-        MemuLabels4Layout.setVerticalGroup(
-            MemuLabels4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MemuLabels4Layout.createSequentialGroup()
+        stcknLayout.setVerticalGroup(
+            stcknLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, stcknLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        OPTION.add(MemuLabels4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 330, 70));
+        OPTION.add(stckn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 330, 70));
 
-        MemuLabels1.setBackground(new java.awt.Color(0, 161, 171));
+        homen.setBackground(new java.awt.Color(0, 161, 171));
+        homen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homenMouseClicked(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -188,24 +316,24 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/home.png"))); // NOI18N
         jLabel13.setText(" HOME");
 
-        javax.swing.GroupLayout MemuLabels1Layout = new javax.swing.GroupLayout(MemuLabels1);
-        MemuLabels1.setLayout(MemuLabels1Layout);
-        MemuLabels1Layout.setHorizontalGroup(
-            MemuLabels1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MemuLabels1Layout.createSequentialGroup()
+        javax.swing.GroupLayout homenLayout = new javax.swing.GroupLayout(homen);
+        homen.setLayout(homenLayout);
+        homenLayout.setHorizontalGroup(
+            homenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homenLayout.createSequentialGroup()
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 68, Short.MAX_VALUE))
+                .addGap(0, 65, Short.MAX_VALUE))
         );
-        MemuLabels1Layout.setVerticalGroup(
-            MemuLabels1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MemuLabels1Layout.createSequentialGroup()
+        homenLayout.setVerticalGroup(
+            homenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homenLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        OPTION.add(MemuLabels1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 330, 70));
+        OPTION.add(homen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 330, 70));
 
-        MemuLabels5.setBackground(new java.awt.Color(0, 161, 171));
+        slsn.setBackground(new java.awt.Color(32, 64, 81));
 
         jLabel14.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -213,24 +341,24 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/shopping-cart_1.png"))); // NOI18N
         jLabel14.setText(" SALES");
 
-        javax.swing.GroupLayout MemuLabels5Layout = new javax.swing.GroupLayout(MemuLabels5);
-        MemuLabels5.setLayout(MemuLabels5Layout);
-        MemuLabels5Layout.setHorizontalGroup(
-            MemuLabels5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MemuLabels5Layout.createSequentialGroup()
+        javax.swing.GroupLayout slsnLayout = new javax.swing.GroupLayout(slsn);
+        slsn.setLayout(slsnLayout);
+        slsnLayout.setHorizontalGroup(
+            slsnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(slsnLayout.createSequentialGroup()
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 67, Short.MAX_VALUE))
         );
-        MemuLabels5Layout.setVerticalGroup(
-            MemuLabels5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MemuLabels5Layout.createSequentialGroup()
+        slsnLayout.setVerticalGroup(
+            slsnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, slsnLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        OPTION.add(MemuLabels5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 330, 70));
+        OPTION.add(slsn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 330, 70));
 
-        MemuLabels6.setBackground(new java.awt.Color(0, 161, 171));
+        cusln.setBackground(new java.awt.Color(32, 64, 81));
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
@@ -238,22 +366,27 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bill (6).png"))); // NOI18N
         jLabel15.setText(" BILL");
 
-        javax.swing.GroupLayout MemuLabels6Layout = new javax.swing.GroupLayout(MemuLabels6);
-        MemuLabels6.setLayout(MemuLabels6Layout);
-        MemuLabels6Layout.setHorizontalGroup(
-            MemuLabels6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MemuLabels6Layout.createSequentialGroup()
+        javax.swing.GroupLayout cuslnLayout = new javax.swing.GroupLayout(cusln);
+        cusln.setLayout(cuslnLayout);
+        cuslnLayout.setHorizontalGroup(
+            cuslnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cuslnLayout.createSequentialGroup()
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 71, Short.MAX_VALUE))
         );
-        MemuLabels6Layout.setVerticalGroup(
-            MemuLabels6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        cuslnLayout.setVerticalGroup(
+            cuslnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
-        OPTION.add(MemuLabels6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 330, 70));
+        OPTION.add(cusln, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 330, 70));
 
-        MemuLabels2.setBackground(new java.awt.Color(0, 161, 171));
+        prdtn.setBackground(new java.awt.Color(32, 64, 81));
+        prdtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                prdtnMouseClicked(evt);
+            }
+        });
 
         jLabel16.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
@@ -261,24 +394,24 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/stack.png"))); // NOI18N
         jLabel16.setText(" PRODUCTS");
 
-        javax.swing.GroupLayout MemuLabels2Layout = new javax.swing.GroupLayout(MemuLabels2);
-        MemuLabels2.setLayout(MemuLabels2Layout);
-        MemuLabels2Layout.setHorizontalGroup(
-            MemuLabels2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MemuLabels2Layout.createSequentialGroup()
+        javax.swing.GroupLayout prdtnLayout = new javax.swing.GroupLayout(prdtn);
+        prdtn.setLayout(prdtnLayout);
+        prdtnLayout.setHorizontalGroup(
+            prdtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(prdtnLayout.createSequentialGroup()
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 35, Short.MAX_VALUE))
         );
-        MemuLabels2Layout.setVerticalGroup(
-            MemuLabels2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MemuLabels2Layout.createSequentialGroup()
+        prdtnLayout.setVerticalGroup(
+            prdtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, prdtnLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        OPTION.add(MemuLabels2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 330, 70));
+        OPTION.add(prdtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 330, 70));
 
-        MemuLabels3.setBackground(new java.awt.Color(0, 161, 171));
+        purcn.setBackground(new java.awt.Color(32, 64, 81));
 
         jLabel17.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
@@ -286,22 +419,22 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/packages (5).png"))); // NOI18N
         jLabel17.setText(" PERCHASE");
 
-        javax.swing.GroupLayout MemuLabels3Layout = new javax.swing.GroupLayout(MemuLabels3);
-        MemuLabels3.setLayout(MemuLabels3Layout);
-        MemuLabels3Layout.setHorizontalGroup(
-            MemuLabels3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MemuLabels3Layout.createSequentialGroup()
+        javax.swing.GroupLayout purcnLayout = new javax.swing.GroupLayout(purcn);
+        purcn.setLayout(purcnLayout);
+        purcnLayout.setHorizontalGroup(
+            purcnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(purcnLayout.createSequentialGroup()
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 28, Short.MAX_VALUE))
         );
-        MemuLabels3Layout.setVerticalGroup(
-            MemuLabels3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MemuLabels3Layout.createSequentialGroup()
+        purcnLayout.setVerticalGroup(
+            purcnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, purcnLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        OPTION.add(MemuLabels3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 330, 70));
+        OPTION.add(purcn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 330, 70));
 
         Logout.setBackground(new java.awt.Color(255, 51, 0));
         Logout.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -316,8 +449,498 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel18.setText("VERSION : 1.0.1");
         OPTION.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 730, 320, -1));
 
+        jPanel1.add(OPTION, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 752));
+
         BODY.setBackground(new java.awt.Color(255, 255, 255));
         BODY.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        home.setBackground(new java.awt.Color(255, 255, 255));
+        home.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel43.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel43.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel92.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel92.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel92.setText("100");
+        jPanel43.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        jLabel93.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel43.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        home.add(jPanel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 280, 170));
+
+        jPanel44.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel44.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel94.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel44.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel95.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel95.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel95.setText("100");
+        jPanel44.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 90, 50));
+
+        home.add(jPanel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 280, 170));
+
+        jPanel45.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel45.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel96.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel96.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel96.setText("100");
+        jPanel45.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        jLabel97.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel45.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        home.add(jPanel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, 280, 170));
+
+        jPanel46.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel46.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel98.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel46.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel99.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel99.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel99.setText("100");
+        jPanel46.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        home.add(jPanel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 280, 170));
+
+        jPanel47.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel47.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel100.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel100.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel100.setText("100");
+        jPanel47.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 90, 50));
+
+        jLabel101.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel47.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        home.add(jPanel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 280, 170));
+
+        jPanel48.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel48.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel102.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel48.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        jLabel103.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel103.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel103.setText("100");
+        jPanel48.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        home.add(jPanel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 280, 170));
+
+        jPanel49.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel49.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel104.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel49.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel105.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel105.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel105.setText("100");
+        jPanel49.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 90, 50));
+
+        home.add(jPanel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, 280, 170));
+
+        jPanel50.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel50.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel106.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel50.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        jLabel107.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel107.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel107.setText("100");
+        jPanel50.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 90, 50));
+
+        home.add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 500, 280, 170));
+
+        jPanel51.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel108.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel51.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel109.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel109.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel109.setText("100");
+        jPanel51.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        home.add(jPanel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 280, 170));
+
+        BODY.add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 680));
+
+        product.setBackground(new java.awt.Color(204, 204, 204));
+        product.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel33.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel33.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel74.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel74.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel74.setText("100");
+        jPanel33.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        jLabel75.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel33.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        product.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 280, 170));
+
+        jPanel34.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel34.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel76.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel34.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel77.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel77.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel77.setText("100");
+        jPanel34.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 90, 50));
+
+        product.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 280, 170));
+
+        jPanel35.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel35.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel78.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel78.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel78.setText("100");
+        jPanel35.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        jLabel79.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel35.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        product.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, 280, 170));
+
+        jPanel36.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel36.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel80.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel36.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel81.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel81.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel81.setText("100");
+        jPanel36.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        product.add(jPanel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 280, 170));
+
+        jPanel37.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel37.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel82.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel82.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel82.setText("100");
+        jPanel37.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 90, 50));
+
+        jLabel83.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel37.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        product.add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 280, 170));
+
+        jPanel38.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel38.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel84.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel38.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        jLabel85.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel85.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel85.setText("100");
+        jPanel38.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        product.add(jPanel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 280, 170));
+
+        jPanel39.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel39.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel86.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel39.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel87.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel87.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel87.setText("100");
+        jPanel39.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 90, 50));
+
+        product.add(jPanel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, 280, 170));
+
+        jPanel40.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel40.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel88.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel40.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        jLabel89.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel89.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel89.setText("100");
+        jPanel40.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 90, 50));
+
+        product.add(jPanel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 500, 280, 170));
+
+        jPanel41.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel41.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel90.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel41.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel91.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel91.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel91.setText("100");
+        jPanel41.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        product.add(jPanel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 280, 170));
+
+        BODY.add(product, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 680));
+
+        purchase.setBackground(new java.awt.Color(255, 255, 255));
+        purchase.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel9.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel56.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel56.setText("100");
+        jPanel9.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        jLabel57.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel9.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        purchase.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 280, 170));
+
+        jPanel10.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel58.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel10.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel59.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel59.setText("100");
+        jPanel10.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 90, 50));
+
+        purchase.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 280, 170));
+
+        jPanel26.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel60.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel60.setText("100");
+        jPanel26.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        jLabel61.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel26.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        purchase.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, 280, 170));
+
+        jPanel27.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel62.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel27.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel63.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel63.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel63.setText("100");
+        jPanel27.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        purchase.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 280, 170));
+
+        jPanel28.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel64.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel64.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel64.setText("100");
+        jPanel28.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 90, 50));
+
+        jLabel65.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel28.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        purchase.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 280, 170));
+
+        jPanel29.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel29.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel66.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel29.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        jLabel67.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel67.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel67.setText("100");
+        jPanel29.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        purchase.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 280, 170));
+
+        jPanel30.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel30.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel68.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel30.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel69.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel69.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel69.setText("100");
+        jPanel30.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 90, 50));
+
+        purchase.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, 280, 170));
+
+        jPanel31.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel31.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel70.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel31.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        jLabel71.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel71.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel71.setText("100");
+        jPanel31.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 90, 50));
+
+        purchase.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 500, 280, 170));
+
+        jPanel32.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel32.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel72.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel32.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel73.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel73.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel73.setText("100");
+        jPanel32.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        purchase.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 280, 170));
+
+        BODY.add(purchase, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 680));
+
+        stock.setBackground(new java.awt.Color(204, 204, 204));
+        stock.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel4.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel38.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel38.setText("100");
+        jPanel4.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        jLabel39.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel4.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        stock.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 280, 170));
+
+        jPanel6.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel40.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel6.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel41.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel41.setText("100");
+        jPanel6.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 90, 50));
+
+        stock.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 280, 170));
+
+        jPanel19.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel42.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel42.setText("100");
+        jPanel19.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        jLabel43.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel19.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        stock.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, 280, 170));
+
+        jPanel20.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel44.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel20.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel45.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel45.setText("100");
+        jPanel20.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        stock.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 280, 170));
+
+        jPanel21.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel46.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel46.setText("100");
+        jPanel21.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 90, 50));
+
+        jLabel47.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel21.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        stock.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 280, 170));
+
+        jPanel22.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel48.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel22.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        jLabel49.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel49.setText("100");
+        jPanel22.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        stock.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 280, 170));
+
+        jPanel23.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel50.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel23.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel51.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel51.setText("100");
+        jPanel23.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 90, 50));
+
+        stock.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, 280, 170));
+
+        jPanel24.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel52.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel24.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
+
+        jLabel53.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel53.setText("100");
+        jPanel24.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 90, 50));
+
+        stock.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 500, 280, 170));
+
+        jPanel25.setBackground(new java.awt.Color(180, 242, 225));
+        jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel54.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jPanel25.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
+
+        jLabel55.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(32, 64, 81));
+        jLabel55.setText("100");
+        jPanel25.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
+
+        stock.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 280, 170));
+
+        BODY.add(stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 680));
 
         jPanel2.setBackground(new java.awt.Color(180, 242, 225));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -436,24 +1059,20 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
 
         BODY.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 280, 170));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(OPTION, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TIME, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BODY, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        javax.swing.GroupLayout salesLayout = new javax.swing.GroupLayout(sales);
+        sales.setLayout(salesLayout);
+        salesLayout.setHorizontalGroup(
+            salesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1080, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(OPTION, javax.swing.GroupLayout.DEFAULT_SIZE, 752, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(TIME, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(BODY, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        salesLayout.setVerticalGroup(
+            salesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 680, Short.MAX_VALUE)
         );
+
+        BODY.add(sales, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 680));
+
+        jPanel1.add(BODY, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 73, 1074, 679));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -469,6 +1088,37 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1407, 752));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void homenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homenMouseClicked
+        // TODO add your handling code here:
+          home.setVisible(true);
+        homen.setBackground(Color.decode("00A1AB"));
+        product.setVisible(false);
+        prdtn.setBackground(Color.decode("#204051"));
+        stock.setVisible(false);
+        stckn.setBackground(Color.decode("#204051"));
+        purchase.setVisible(false);
+        purcn.setBackground(Color.decode("#204051"));
+        sales.setVisible(false);
+        slsn.setBackground(Color.decode("#204051"));
+        cusln.setBackground(Color.decode("#204051"));
+       
+    }//GEN-LAST:event_homenMouseClicked
+
+    private void prdtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_prdtnMouseClicked
+        // TODO add your handling code here:
+          home.setVisible(true);
+        homen.setBackground(Color.decode("#204051"));
+        product.setVisible(false);
+        prdtn.setBackground(Color.decode("#00A1AB"));
+        stock.setVisible(false);
+        stckn.setBackground(Color.decode("#204051"));
+        purchase.setVisible(false);
+        purcn.setBackground(Color.decode("#204051"));
+        sales.setVisible(false);
+        slsn.setBackground(Color.decode("#204051"));
+        cusln.setBackground(Color.decode("#204051"));
+    }//GEN-LAST:event_prdtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -509,16 +1159,23 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JPanel BODY;
     private javax.swing.JLabel ID;
     private javax.swing.JButton Logout;
-    private javax.swing.JPanel MemuLabels1;
-    private javax.swing.JPanel MemuLabels2;
-    private javax.swing.JPanel MemuLabels3;
-    private javax.swing.JPanel MemuLabels4;
-    private javax.swing.JPanel MemuLabels5;
-    private javax.swing.JPanel MemuLabels6;
     private javax.swing.JLabel Name;
     private javax.swing.JPanel OPTION;
     private javax.swing.JPanel TIME;
     private javax.swing.JLabel Welcome;
+    private javax.swing.JPanel cusln;
+    private javax.swing.JPanel home;
+    private javax.swing.JPanel homen;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel103;
+    private javax.swing.JLabel jLabel104;
+    private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
+    private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -547,13 +1204,76 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
@@ -561,7 +1281,50 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
+    private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel32;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
+    private javax.swing.JPanel jPanel46;
+    private javax.swing.JPanel jPanel47;
+    private javax.swing.JPanel jPanel48;
+    private javax.swing.JPanel jPanel49;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel50;
+    private javax.swing.JPanel jPanel51;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel prdtn;
+    private javax.swing.JPanel product;
+    private javax.swing.JPanel purchase;
+    private javax.swing.JPanel purcn;
+    private javax.swing.JPanel sales;
+    private javax.swing.JPanel slsn;
+    private javax.swing.JPanel stckn;
+    private javax.swing.JPanel stock;
     // End of variables declaration//GEN-END:variables
 }
