@@ -487,7 +487,7 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
-     ADD_NEW_PRODUCT RAG=NEW 
+    // ADD_NEW_PRODUCT RAG= NEW 
     }//GEN-LAST:event_jLabel18MouseClicked
 
     /**
