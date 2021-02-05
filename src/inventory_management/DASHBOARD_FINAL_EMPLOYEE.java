@@ -327,7 +327,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel20.setText("100");
         jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 90, 50));
 
-        jLabel22.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jLabel22.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
 
         BODY.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 280, 170));
@@ -335,7 +335,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(180, 242, 225));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel23.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jLabel23.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
 
         jLabel30.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
@@ -353,7 +353,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel31.setText("100");
         jPanel12.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
 
-        jLabel24.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jLabel24.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel12.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
 
         BODY.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, 280, 170));
@@ -361,7 +361,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jPanel13.setBackground(new java.awt.Color(180, 242, 225));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel29.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jLabel29.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel13.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
 
         jLabel36.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
@@ -379,7 +379,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel21.setText("100");
         jPanel15.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 90, 50));
 
-        jLabel28.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jLabel28.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel15.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
 
         BODY.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 280, 170));
@@ -387,7 +387,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jPanel16.setBackground(new java.awt.Color(180, 242, 225));
         jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel25.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jLabel25.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel16.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
 
         jLabel32.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
@@ -400,7 +400,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jPanel17.setBackground(new java.awt.Color(180, 242, 225));
         jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel27.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jLabel27.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel17.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
 
         jLabel34.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
@@ -413,7 +413,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jPanel18.setBackground(new java.awt.Color(180, 242, 225));
         jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel26.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jLabel26.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel18.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 234, 146));
 
         jLabel33.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
@@ -426,7 +426,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jPanel14.setBackground(new java.awt.Color(180, 242, 225));
         jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel19.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jLabel19.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Sales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel14.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 234, 146));
 
         jLabel35.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N

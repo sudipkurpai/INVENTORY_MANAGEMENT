@@ -654,6 +654,11 @@
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder position="2" title="Sales">
+                          <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder thickness="2">
+                              <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
+                            </LineBorder>
+                          </Border>
                           <Font PropertyName="font" name="Dialog" size="18" style="1"/>
                           <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
                         </TitledBorder>
@@ -689,6 +694,11 @@
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder position="2" title="Sales">
+                          <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder thickness="2">
+                              <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
+                            </LineBorder>
+                          </Border>
                           <Font PropertyName="font" name="Dialog" size="18" style="1"/>
                           <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
                         </TitledBorder>
@@ -756,6 +766,11 @@
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder position="2" title="Sales">
+                          <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder thickness="2">
+                              <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
+                            </LineBorder>
+                          </Border>
                           <Font PropertyName="font" name="Dialog" size="18" style="1"/>
                           <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
                         </TitledBorder>
@@ -791,6 +806,11 @@
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder position="2" title="Sales">
+                          <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder thickness="2">
+                              <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
+                            </LineBorder>
+                          </Border>
                           <Font PropertyName="font" name="Dialog" size="18" style="1"/>
                           <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
                         </TitledBorder>
@@ -858,6 +878,11 @@
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder position="2" title="Sales">
+                          <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder thickness="2">
+                              <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
+                            </LineBorder>
+                          </Border>
                           <Font PropertyName="font" name="Dialog" size="18" style="1"/>
                           <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
                         </TitledBorder>
@@ -893,6 +918,11 @@
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder position="2" title="Sales">
+                          <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder thickness="2">
+                              <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
+                            </LineBorder>
+                          </Border>
                           <Font PropertyName="font" name="Dialog" size="18" style="1"/>
                           <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
                         </TitledBorder>
@@ -944,6 +974,11 @@
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder position="2" title="Sales">
+                          <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder thickness="2">
+                              <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
+                            </LineBorder>
+                          </Border>
                           <Font PropertyName="font" name="Dialog" size="18" style="1"/>
                           <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
                         </TitledBorder>
@@ -995,6 +1030,11 @@
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder position="2" title="Sales">
+                          <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder thickness="2">
+                              <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
+                            </LineBorder>
+                          </Border>
                           <Font PropertyName="font" name="Dialog" size="18" style="1"/>
                           <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
                         </TitledBorder>
@@ -1046,6 +1086,11 @@
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                         <TitledBorder position="2" title="Sales">
+                          <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder thickness="2">
+                              <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
+                            </LineBorder>
+                          </Border>
                           <Font PropertyName="font" name="Dialog" size="18" style="1"/>
                           <Color PropertyName="color" blue="51" green="40" red="20" type="rgb"/>
                         </TitledBorder>
