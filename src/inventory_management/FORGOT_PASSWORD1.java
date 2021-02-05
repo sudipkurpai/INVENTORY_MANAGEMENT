@@ -5,6 +5,9 @@
  */
 package inventory_management;
 
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author RAGHUNATH DAS
@@ -36,6 +39,7 @@ public class FORGOT_PASSWORD1 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -54,14 +58,10 @@ public class FORGOT_PASSWORD1 extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/hidden.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 40, 30));
 
-        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
         jPasswordField1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 450, 50));
 
-        jPasswordField2.setBackground(new java.awt.Color(255, 255, 255));
         jPasswordField2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jPasswordField2.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 450, 50));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -74,10 +74,23 @@ public class FORGOT_PASSWORD1 extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(0, 0, 255));
         jButton1.setText("Reset Password");
         jButton1.setBorder(null);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, 250, 40));
 
         jLabel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Reset Password ", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 30), new java.awt.Color(0, 0, 255))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 490, 450));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close3.png"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,6 +106,26 @@ public class FORGOT_PASSWORD1 extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(554, 517));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        LOGINFROM_MG dm = new LOGINFROM_MG();
+        dm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+           /* if(P.equals("")||C_P.equals("")){
+                JOptionPane.showMessageDialog(this, "Fill up all field first");
+            }else(REGISTRATION_DATAOBEJECT.validate(P, C_P)){
+                email.setBackground(Color.green);
+                email.setText(null);
+                pass.setBackground(Color.green);
+                pass.setText(null);*/
+                JOptionPane.showMessageDialog(null, "Password Reset Successfully");
+               
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -136,6 +169,7 @@ public class FORGOT_PASSWORD1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;

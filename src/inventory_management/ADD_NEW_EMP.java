@@ -41,13 +41,12 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         lastname = new javax.swing.JTextField();
         address = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        phone1 = new javax.swing.JTextField();
+        Emp_id = new javax.swing.JTextField();
         conf_pass = new javax.swing.JPasswordField();
         pass = new javax.swing.JPasswordField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        pass1 = new javax.swing.JPasswordField();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -65,6 +64,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
+        phone3 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,7 +82,6 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Ebrima", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Create New Employee !");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
@@ -102,22 +101,18 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel6.setText("Confirm Password");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 110, 20));
 
-        email.setBackground(new java.awt.Color(255, 255, 255));
         email.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         email.setBorder(null);
         jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 150, 20));
 
-        firstname.setBackground(new java.awt.Color(255, 255, 255));
         firstname.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         firstname.setBorder(null);
         jPanel2.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 150, 20));
 
-        lastname.setBackground(new java.awt.Color(255, 255, 255));
         lastname.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lastname.setBorder(null);
         jPanel2.add(lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 150, 20));
 
-        address.setBackground(new java.awt.Color(255, 255, 255));
         address.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         address.setBorder(null);
         jPanel2.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 340, 50));
@@ -125,17 +120,19 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, 40));
 
-        phone1.setBackground(new java.awt.Color(255, 255, 255));
-        phone1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        phone1.setBorder(null);
-        jPanel2.add(phone1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 150, 20));
+        Emp_id.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        Emp_id.setBorder(null);
+        Emp_id.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Emp_idActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Emp_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 150, 20));
 
-        conf_pass.setBackground(new java.awt.Color(255, 255, 255));
         conf_pass.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         conf_pass.setBorder(null);
         jPanel2.add(conf_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 150, 20));
 
-        pass.setBackground(new java.awt.Color(255, 255, 255));
         pass.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         pass.setBorder(null);
         jPanel2.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 150, 20));
@@ -154,11 +151,6 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Phone");
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 40, 20));
-
-        pass1.setBackground(new java.awt.Color(255, 255, 255));
-        pass1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        pass1.setBorder(null);
-        jPanel2.add(pass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 150, 20));
 
         jLabel13.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(107, 116, 113));
@@ -235,7 +227,6 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel24.setText("Date Of Birth");
         jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 90, 20));
 
-        phone2.setBackground(new java.awt.Color(255, 255, 255));
         phone2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         phone2.setBorder(null);
         jPanel2.add(phone2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 150, 20));
@@ -251,6 +242,10 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, -1, 40));
+
+        phone3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        phone3.setBorder(null);
+        jPanel2.add(phone3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 150, 20));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 12, 454, 580));
 
@@ -281,6 +276,10 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         dm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void Emp_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Emp_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Emp_idActionPerformed
 
     /**
      * @param args the command line arguments
@@ -319,6 +318,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Emp_id;
     private javax.swing.JTextField address;
     private javax.swing.JPasswordField conf_pass;
     private javax.swing.JPanel crt_emp;
@@ -353,8 +353,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField lastname;
     private javax.swing.JPasswordField pass;
-    private javax.swing.JPasswordField pass1;
-    private javax.swing.JTextField phone1;
     private javax.swing.JTextField phone2;
+    private javax.swing.JTextField phone3;
     // End of variables declaration//GEN-END:variables
 }

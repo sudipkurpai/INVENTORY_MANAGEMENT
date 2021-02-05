@@ -96,13 +96,13 @@ public class OPTION extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your hadling code here:
-       new LOGINFROM().setVisible(true);
+       new LOGINFROM_MG().setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
-        new LOGINFROM_MG().setVisible(true);
+        new LOGINFROM().setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
 

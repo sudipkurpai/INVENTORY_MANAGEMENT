@@ -47,7 +47,6 @@ public class LOGINFROM_MG extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Eras Bold ITC", 1, 50)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Login");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 180, 70));
 
@@ -62,23 +61,18 @@ public class LOGINFROM_MG extends javax.swing.JFrame {
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, 20));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rrrrrrr.png"))); // NOI18N
         jLabel3.setText(" Email / Phone");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 190, 40));
 
-        email.setBackground(new java.awt.Color(255, 255, 255));
         email.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        email.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 350, 50));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/key.png"))); // NOI18N
         jLabel4.setText(" Password");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 150, 50));
 
-        pass.setBackground(new java.awt.Color(255, 255, 255));
         pass.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         pass.setForeground(new java.awt.Color(51, 51, 51));
         jPanel2.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 350, 50));
@@ -86,6 +80,11 @@ public class LOGINFROM_MG extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(153, 0, 153));
         jLabel5.setText("Forget Password");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, 120, 20));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (39).png"))); // NOI18N
@@ -134,7 +133,7 @@ public class LOGINFROM_MG extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         //TODO add your handling code here:
-        /* String p_email = email.getText();
+         /*String p_email = email.getText();
         String p_pass = pass.getText();
         try {
             //  Data fetch from database
@@ -183,8 +182,8 @@ public class LOGINFROM_MG extends javax.swing.JFrame {
             }
         }catch (Exception e){
             System.out.println("Exception -"+e);
-        }  */
-        new DASHBOARD().setVisible(true);
+        } */ 
+        new DASHBOARD_M().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
@@ -194,6 +193,13 @@ public class LOGINFROM_MG extends javax.swing.JFrame {
         op.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        FORGOT_PASSWORD FP = new FORGOT_PASSWORD();
+        FP.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments
