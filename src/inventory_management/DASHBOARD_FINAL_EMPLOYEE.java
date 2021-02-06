@@ -359,6 +359,11 @@ CardLayout layout;
         OPTION.add(slsn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 330, 70));
 
         cusln.setBackground(new java.awt.Color(32, 64, 81));
+        cusln.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cuslnMouseClicked(evt);
+            }
+        });
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
@@ -1119,6 +1124,14 @@ CardLayout layout;
         slsn.setBackground(Color.decode("#204051"));
         cusln.setBackground(Color.decode("#204051"));
     }//GEN-LAST:event_prdtnMouseClicked
+
+    private void cuslnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cuslnMouseClicked
+        // TODO add your handling code here:
+       new BILL_PRINT().setVisible(true);
+       this.dispose();
+        
+        
+    }//GEN-LAST:event_cuslnMouseClicked
 
     /**
      * @param args the command line arguments
