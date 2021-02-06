@@ -30,6 +30,9 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -67,13 +70,20 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ADD NEW PRODUCT");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 60));
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -81,64 +91,54 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
                 jLabel18MouseClicked(evt);
             }
         });
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(892, 12, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel18)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jTextField7.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField7.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 169, 20));
+
+        jLabel19.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Product_search.png"))); // NOI18N
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 10, -1, 40));
+
+        jLabel20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("Product ID :");
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, -1, 60));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Transaction", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Transaction", 0, 2, new java.awt.Font("Dialog", 1, 12))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Current Date & Time :");
 
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Employee ID :");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Employee Name :");
 
         jLabel5.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("TransactionID :");
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
         jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -192,12 +192,9 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 740, 70));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Product ID :");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
 
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
         jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,12 +204,9 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 130, -1));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Product Name :");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 90, -1));
 
-        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField6.setForeground(new java.awt.Color(0, 0, 0));
         jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,13 +216,10 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 130, -1));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Description :");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 80, -1));
 
-        jTextField8.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField8.setForeground(new java.awt.Color(0, 0, 0));
         jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,12 +229,9 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jPanel2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 130, -1));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Standerd Cost :");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
 
-        jTextField9.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField9.setForeground(new java.awt.Color(0, 0, 0));
         jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,13 +241,10 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jPanel2.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 130, -1));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Unit Price :");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 70, -1));
 
-        jTextField10.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField10.setForeground(new java.awt.Color(0, 0, 0));
         jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -269,17 +254,13 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jPanel2.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 130, -1));
 
         jLabel11.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Mfg Date :");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 60, -1));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 30, 60, -1));
 
-        jTextField11.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField11.setForeground(new java.awt.Color(0, 0, 0));
         jTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextField11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -288,8 +269,6 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         });
         jPanel2.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 80, 130, -1));
 
-        jTextField12.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField12.setForeground(new java.awt.Color(0, 0, 0));
         jTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextField12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,17 +278,13 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jPanel2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, 130, -1));
 
         jLabel13.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Category :");
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 110, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Tolal :");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 50, -1));
 
-        jTextField13.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField13.setForeground(new java.awt.Color(0, 0, 0));
         jTextField13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextField13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -318,20 +293,15 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         });
         jPanel2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, 130, -1));
 
-        jTextPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTextPane1.setBorder(null);
-        jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(jTextPane1);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 130, 60));
 
         jLabel15.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Expiry Date :");
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 70, -1));
 
-        jTextField14.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField14.setForeground(new java.awt.Color(0, 0, 0));
         jTextField14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -341,13 +311,10 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jPanel2.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 130, -1));
 
         jLabel16.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("Brand :");
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, 50, -1));
 
-        jTextField15.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField15.setForeground(new java.awt.Color(0, 0, 0));
         jTextField15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -357,15 +324,14 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
         jPanel2.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 140, 130, -1));
 
         jLabel17.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Quantity :");
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, 60, -1));
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Reset.png"))); // NOI18N
+        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 130, 120, 50));
 
         jSeparator1.setForeground(new java.awt.Color(51, 0, 255));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 900, 20));
 
-        jTable1.setBackground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null},
@@ -427,22 +393,40 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 900, 310));
 
+        jLabel22.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("Quantity :");
+        jPanel2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, 60, -1));
+
+        jLabel23.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/New_button.png"))); // NOI18N
+        jLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 120, 50));
+
+        jLabel24.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Save.png"))); // NOI18N
+        jLabel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 70, 120, 50));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 920, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(920, 591));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
@@ -490,6 +474,10 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
     // ADD_NEW_PRODUCT RAG= NEW 
     }//GEN-LAST:event_jLabel18MouseClicked
 
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -536,7 +524,12 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -563,6 +556,7 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextPane jTextPane1;
