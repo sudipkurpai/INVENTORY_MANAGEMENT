@@ -266,7 +266,7 @@ CardLayout layout;
         Welcome.setForeground(new java.awt.Color(255, 255, 255));
         Welcome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Welcome.setText("Welcome");
-        OPTION.add(Welcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 63));
+        OPTION.add(Welcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 63));
 
         ID.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         ID.setForeground(new java.awt.Color(255, 255, 255));
