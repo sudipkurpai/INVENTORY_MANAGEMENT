@@ -303,9 +303,7 @@ CardLayout layout;
         stckn.setLayout(stcknLayout);
         stcknLayout.setHorizontalGroup(
             stcknLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(stcknLayout.createSequentialGroup()
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 61, Short.MAX_VALUE))
+            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
         );
         stcknLayout.setVerticalGroup(
             stcknLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,9 +336,7 @@ CardLayout layout;
         homer.setLayout(homerLayout);
         homerLayout.setHorizontalGroup(
             homerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(homerLayout.createSequentialGroup()
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 65, Short.MAX_VALUE))
+            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
         );
         homerLayout.setVerticalGroup(
             homerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -368,9 +364,7 @@ CardLayout layout;
         slsn.setLayout(slsnLayout);
         slsnLayout.setHorizontalGroup(
             slsnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(slsnLayout.createSequentialGroup()
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 67, Short.MAX_VALUE))
+            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
         );
         slsnLayout.setVerticalGroup(
             slsnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -398,9 +392,7 @@ CardLayout layout;
         bill.setLayout(billLayout);
         billLayout.setHorizontalGroup(
             billLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(billLayout.createSequentialGroup()
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 71, Short.MAX_VALUE))
+            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
         );
         billLayout.setVerticalGroup(
             billLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,9 +418,7 @@ CardLayout layout;
         prdtn.setLayout(prdtnLayout);
         prdtnLayout.setHorizontalGroup(
             prdtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(prdtnLayout.createSequentialGroup()
-                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 35, Short.MAX_VALUE))
+            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
         );
         prdtnLayout.setVerticalGroup(
             prdtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -456,9 +446,7 @@ CardLayout layout;
         purcn.setLayout(purcnLayout);
         purcnLayout.setHorizontalGroup(
             purcnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(purcnLayout.createSequentialGroup()
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 28, Short.MAX_VALUE))
+            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
         );
         purcnLayout.setVerticalGroup(
             purcnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1310,18 +1298,7 @@ CardLayout layout;
 
     private void homerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homerMouseClicked
         // TODO add your handling code here:
-          home.setVisible(true);
-        homer.setBackground(Color.decode("00A1AB"));
-        product.setVisible(false);
-        prdtn.setBackground(Color.decode("#204051"));
-        stock.setVisible(false);
-        stckn.setBackground(Color.decode("#204051"));
-        purchase.setVisible(false);
-        purcn.setBackground(Color.decode("#204051"));
-        sales.setVisible(false);
-        slsn.setBackground(Color.decode("#204051"));
-        c_bill.setVisible(false);
-        bill.setBackground(Color.decode("#204051"));
+         
        
     }//GEN-LAST:event_homerMouseClicked
 
@@ -1407,6 +1384,18 @@ CardLayout layout;
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
         // TODO add your handling code here:
+         home.setVisible(true);
+        homer.setBackground(Color.decode("#00A1AB"));
+        product.setVisible(false);
+        prdtn.setBackground(Color.decode("#204051"));
+        stock.setVisible(false);
+        stckn.setBackground(Color.decode("#204051"));
+        purchase.setVisible(false);
+        purcn.setBackground(Color.decode("#204051"));
+        sales.setVisible(false);
+        slsn.setBackground(Color.decode("#204051"));
+        c_bill.setVisible(false);
+        bill.setBackground(Color.decode("#204051"));
     }//GEN-LAST:event_jLabel13MouseClicked
 
     private void jPanel42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel42MouseClicked

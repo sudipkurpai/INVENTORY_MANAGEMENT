@@ -357,8 +357,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         if(fName.isEmpty()){
             JOptionPane.showMessageDialog(this, "Fill up all field first");
         }else if(password.equals(c_pass) ){
-            int i = ADD_NEW_EMP_DATAOBEJECT.inventory_management (fName, lName,ph, mail, password,c_pass, add, gen,emp,dob,td);
-            //(FIRST_NAME,LAST_NAME,EMAIL,MOBILE_NO,PASSWORD,CONFIRM_PASSWORD,ADDRESS,GENDER)
+            int i = ADD_NEW_EMP_DATAOBEJECT.inventory_management (fName, lName, mail, ph,emp, password,c_pass,td,dob, add, gen);
             System.out.println("++++++++++++++++"+emp_id);
             Emp_id.setText(emp);
             int j = ID_STORE_FETCH.insert_id(mng_Id, emp_id.toString());
