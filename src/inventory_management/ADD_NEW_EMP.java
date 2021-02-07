@@ -345,7 +345,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         
         //generate emp id
             BigInteger emp_id = new BigInteger(emp_Id);
-            BigInteger nxt = new BigInteger("2");
+            BigInteger nxt = new BigInteger("1");
             System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!"+emp_Id);
             System.out.println("#################"+emp_id);
             emp_id = emp_id.add(nxt);

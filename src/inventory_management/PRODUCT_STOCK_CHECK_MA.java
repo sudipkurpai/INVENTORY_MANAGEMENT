@@ -5,8 +5,6 @@
  */
 package inventory_management;
 
-import javax.swing.table.TableModel;
-
 /**
  *
  * @author maiti
@@ -96,7 +94,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jTextField16 = new javax.swing.JTextField();
-        Pur_Text = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
         jTextField14 = new javax.swing.JTextField();
         jTextField15 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
@@ -112,7 +110,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(0, 204, 102));
+        jPanel1.setBackground(new java.awt.Color(0, 64, 2));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -454,12 +452,9 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jTable2.setForeground(new java.awt.Color(0, 0, 0));
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Book", "Education", "10", "469", "542543", "3445"},
-                {"Pen", "Educatin", "16", "20", "3454", "4354"},
-                {"Mobile", "Eloctranic Device", "33", "9999", "43543", "2323"},
-                {"Fan", "Electric", "42", "2000", "3454", "6654"},
-                {"Light", "Eleteric", "17", "250", "454", "3534"},
-                {"T-shart", "Drash", "6", "5000", "34534", "23432"},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -492,11 +487,6 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
                 "Product Name", "Type", "Quantity ", "Price", "Amount", "Date"
             }
         ));
-        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTable2MouseClicked(evt);
-            }
-        });
         jScrollPane2.setViewportView(jTable2);
 
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 680, 190));
@@ -507,16 +497,16 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         jTextField16.setBorder(null);
         jPanel2.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 60, 160, 50));
 
-        Pur_Text.setBackground(new java.awt.Color(128, 0, 1));
-        Pur_Text.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
-        Pur_Text.setForeground(new java.awt.Color(255, 255, 255));
-        Pur_Text.setBorder(null);
-        Pur_Text.addActionListener(new java.awt.event.ActionListener() {
+        jTextField13.setBackground(new java.awt.Color(128, 0, 1));
+        jTextField13.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
+        jTextField13.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField13.setBorder(null);
+        jTextField13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pur_TextActionPerformed(evt);
+                jTextField13ActionPerformed(evt);
             }
         });
-        jPanel2.add(Pur_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 160, 50));
+        jPanel2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 160, 50));
 
         jTextField14.setBackground(new java.awt.Color(127, 128, 0));
         jTextField14.setFont(new java.awt.Font("Dialog", 1, 15)); // NOI18N
@@ -648,23 +638,9 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void Pur_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pur_TextActionPerformed
+    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Pur_TextActionPerformed
-
-    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
-        // TODO add your handling code here:
-        int i = jTable2.getSelectedRow();
-        TableModel model =jTable2.getModel();
-         Pur_Text.setText(model.getValueAt(i,1).toString());
-         jTextField14.setText(model.getValueAt(i,2).toString());
-         jTextField15.setText(model.getValueAt(i,3).toString());
-         jTextField16.setText(model.getValueAt(i,4).toString());
-         jTextField12.setText(model.getValueAt(i,5).toString());
-         
-         
-         
-    }//GEN-LAST:event_jTable2MouseClicked
+    }//GEN-LAST:event_jTextField13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -702,7 +678,6 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Pur_Text;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -770,6 +745,7 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
@@ -782,10 +758,4 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
-
-    private static class DefaultTableModel {
-
-        public DefaultTableModel() {
-        }
-    }
 }
