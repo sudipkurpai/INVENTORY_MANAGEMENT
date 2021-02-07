@@ -123,6 +123,8 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         //TODO add your handling code here:
         String p_email = email.getText();
         String p_pass = pass.getText();
+        String name= null;
+        String mng_Id = null;
         try {
             //  Data fetch from database
             String sql = "Select * from register Where Email = ?";
@@ -133,8 +135,14 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
             if(rs.next()){
                 String eml =rs.getString("Email");
                 System.out.println("EMAILLLLLLLL "+eml);
-                String pss =rs.getString("Password");
-                System.out.println("PASSSSSSSSSS "+pss);
+                String fname =rs.getString("FIRST_NAME");
+                System.out.println("FIRST NAME "+fname);
+                String lname =rs.getString("LAST_NAME");
+                System.out.println("LAST NAME "+lname);
+                name = fname+" "+lname;
+                System.out.println("FULL NAME "+name);
+                mng_Id =rs.getString("MNG_ID");
+                System.out.println("MNGGGGGGGGGGGGG "+mng_Id);
                 rs.close();
                 ps.close();
             }else{
@@ -158,7 +166,9 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
                 pass.setBackground(Color.green);
                 pass.setText(null);
                 JOptionPane.showMessageDialog(null, "Login Successfully");
-                new DASHBOARD_M().setVisible(true);
+                DASHBOARD_M dm = new DASHBOARD_M();
+                dm.setVisible(true);
+                dm.mngname(name,mng_Id);
                 this.dispose();
             }else{
                 //JOptionPane.showMessageDialog(LOG_IN.this,"You are not a valid user plese create your account","Login Error",JOptionPane.ERROR_MESSAGE);

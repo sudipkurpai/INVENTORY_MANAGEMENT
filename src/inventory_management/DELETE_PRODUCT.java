@@ -260,7 +260,8 @@ public class DELETE_PRODUCT extends javax.swing.JFrame {
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // TODO add your handling code here:
-        System.exit(0);
+        new DASHBOARD_FINAL_EMPLOYEE().setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
 
     /**

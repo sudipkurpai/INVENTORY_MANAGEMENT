@@ -471,7 +471,8 @@ public class ADD_NEW_PRODUCT extends javax.swing.JFrame {
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
-    // ADD_NEW_PRODUCT RAG= NEW 
+    new DASHBOARD_FINAL_EMPLOYEE().setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_jLabel18MouseClicked
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed

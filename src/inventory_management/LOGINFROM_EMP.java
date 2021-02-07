@@ -140,7 +140,9 @@ public class LOGINFROM_EMP extends javax.swing.JFrame {
         //TODO add your handling code here:
          String emp_Id = emp.getText();
         String p_pass = pass.getText();
-      /*  try {
+        String name = null;
+        String emp_id = null;
+        try {
              //Data fetch from database
             String sql = "Select * from employee_register Where EMP_ID = ?";
             Connection con=DATABASE_CONNECTION.getConnection();
@@ -152,12 +154,23 @@ public class LOGINFROM_EMP extends javax.swing.JFrame {
                 System.out.println("EMpppppp "+emp);
                 String pss =rs.getString("Password");
                 System.out.println("PASSSSSSSSSS "+pss);
+                String fname =rs.getString("FIRST_NAME");
+                System.out.println("FIRST_NAME "+fname);
+                String lname =rs.getString("LAST_NAME");
+                System.out.println("LAST_NAME "+lname);
+                name = fname+" "+lname;
+                System.out.println("FULL_NAME "+name);
+                emp_id =rs.getString("EMP_ID");
+                System.out.println("empoooooooo"+ emp_id);
+                
+              
+                
                 rs.close();
                 ps.close();
             }else{
                 emp.setBackground(Color.red);
                 emp.setText(null);
-                pass.setBackground(Color.red);
+                
                 pass.setText(null);
                 JOptionPane.showMessageDialog(null, "Enter Correct User Name");
                 emp.setBackground(Color.white);
@@ -165,7 +178,7 @@ public class LOGINFROM_EMP extends javax.swing.JFrame {
             }
         }catch(Exception e){
             System.out.println("error"+e);
-        }*/
+        }
         try{
             //ganesh
             if(emp_Id.equals("")||p_pass.equals("")){
@@ -178,8 +191,11 @@ public class LOGINFROM_EMP extends javax.swing.JFrame {
                 pass.setBackground(Color.green);
                 pass.setText(null);
                 JOptionPane.showMessageDialog(null, "Login Successfully");
-                new DASHBOARD_FINAL_EMPLOYEE().setVisible(true);
+                DASHBOARD_FINAL_EMPLOYEE dme = new DASHBOARD_FINAL_EMPLOYEE();
+                dme.setVisible(true);
+                dme.empname(name,emp_id);
                 this.dispose();
+                
             }
             //sudip
             else{

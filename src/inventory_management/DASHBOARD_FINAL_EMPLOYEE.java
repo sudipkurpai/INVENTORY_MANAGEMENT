@@ -24,7 +24,10 @@ CardLayout layout;
     public DASHBOARD_FINAL_EMPLOYEE() {
         initComponents();
     }
-
+    void empname(String fullname,String mng_Id){
+            Name.setText("Name:- "+fullname);
+            ID.setText("ID:- "+mng_Id);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

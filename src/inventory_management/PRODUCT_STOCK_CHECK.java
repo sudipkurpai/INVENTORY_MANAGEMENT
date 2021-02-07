@@ -250,7 +250,8 @@ public class PRODUCT_STOCK_CHECK extends javax.swing.JFrame {
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
-         System.exit(0);
+         new DASHBOARD_FINAL_EMPLOYEE().setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_jLabel18MouseClicked
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
