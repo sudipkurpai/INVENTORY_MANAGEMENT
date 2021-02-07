@@ -49,7 +49,7 @@ public class ADD_NEW_EMP_DATAOBEJECT {
         boolean status =false;
         try{
             Connection con=DATABASE_CONNECTION.getConnection();
-            PreparedStatement ps=con.prepareStatement("select * from employee_register where Email = ? and Password=?");
+            PreparedStatement ps=con.prepareStatement("select * from employee_register where Emp_Id = ? and Password=?");
             ps.setString(1, email);
             ps.setString(2, password);
             ResultSet rs=ps.executeQuery();

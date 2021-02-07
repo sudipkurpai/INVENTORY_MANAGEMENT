@@ -109,7 +109,7 @@ public class RESET_PASSWORD extends javax.swing.JFrame {
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
-        LOGINFROM_MG dm = new LOGINFROM_MG();
+        LOGINFROM_EMP dm = new LOGINFROM_EMP();
         dm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel9MouseClicked

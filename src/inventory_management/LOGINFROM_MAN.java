@@ -13,12 +13,12 @@ import java.awt.Color;
  *
  * @author RAGHUNATH DAS
  */
-public class LOGINFROM extends javax.swing.JFrame {
+public class LOGINFROM_MAN extends javax.swing.JFrame {
 
     /**
      * Creates new form LOGINfROM
      */
-    public LOGINFROM() {
+    public LOGINFROM_MAN() {
         initComponents();
     }
 
@@ -53,28 +53,22 @@ public class LOGINFROM extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Eras Bold ITC", 1, 50)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Login");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 180, 70));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rrrrrrr.png"))); // NOI18N
         jLabel3.setText(" Email / Phone");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 190, 40));
 
-        email.setBackground(new java.awt.Color(255, 255, 255));
         email.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        email.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 350, 50));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/key.png"))); // NOI18N
         jLabel4.setText(" Password");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 150, 50));
 
-        pass.setBackground(new java.awt.Color(255, 255, 255));
         pass.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         pass.setForeground(new java.awt.Color(51, 51, 51));
         jPanel2.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 350, 50));
@@ -203,21 +197,23 @@ public class LOGINFROM extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGINFROM_MAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGINFROM_MAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGINFROM_MAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGINFROM_MAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LOGINFROM().setVisible(true);
+                new LOGINFROM_MAN().setVisible(true);
             }
         });
     }
