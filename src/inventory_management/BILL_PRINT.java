@@ -64,7 +64,7 @@ public class BILL_PRINT extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(94, 55, 146));
+        jPanel1.setBackground(new java.awt.Color(32, 64, 81));
 
         jLabel1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
