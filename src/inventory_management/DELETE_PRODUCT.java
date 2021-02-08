@@ -59,7 +59,7 @@ public class DELETE_PRODUCT extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(14, 73, 181));
+        jPanel2.setBackground(new java.awt.Color(32, 64, 81));
 
         jLabel1.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));

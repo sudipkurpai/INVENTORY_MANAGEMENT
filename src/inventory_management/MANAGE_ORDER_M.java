@@ -45,7 +45,7 @@ public class MANAGE_ORDER_M extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(14, 73, 181));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 102));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 30)); // NOI18N

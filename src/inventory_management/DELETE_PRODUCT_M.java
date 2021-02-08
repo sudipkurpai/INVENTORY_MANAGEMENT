@@ -55,8 +55,9 @@ public class DELETE_PRODUCT_M extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(14, 73, 181));
+        jPanel2.setBackground(new java.awt.Color(0, 204, 102));
 
+        jLabel1.setBackground(new java.awt.Color(0, 204, 102));
         jLabel1.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

@@ -38,7 +38,7 @@ public class LOGOUT extends javax.swing.JFrame {
         setBackground(new java.awt.Color(94, 55, 146));
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 204));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 102));
         jPanel1.setForeground(new java.awt.Color(94, 55, 146));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/EXIT.png"))); // NOI18N

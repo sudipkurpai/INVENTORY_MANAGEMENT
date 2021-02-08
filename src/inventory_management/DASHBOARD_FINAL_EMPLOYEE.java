@@ -1400,7 +1400,7 @@ CardLayout layout;
 
     private void jPanel42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel42MouseClicked
         // TODO add your handling code here:
-        ADD_NEW_PRODUCT anp = new ADD_NEW_PRODUCT();
+        ADD_NEW_PRODUCT_MA anp = new ADD_NEW_PRODUCT_MA();
         anp.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel42MouseClicked
