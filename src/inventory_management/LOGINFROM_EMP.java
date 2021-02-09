@@ -9,19 +9,47 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
+import javax.swing.Timer;
 /**
  *
  * @author RAGHUNATH DAS
  */
 public class LOGINFROM_EMP extends javax.swing.JFrame {
 
+    String date=null;
+    String time = null;
+    
     /**
      * Creates new form LOGINFROM_MG
      */
     public LOGINFROM_EMP() {
         initComponents();
+        date();
+        time();
     }
+    
+    void date (){
+      Date d=new Date ();
+      SimpleDateFormat s=new SimpleDateFormat("dd-MM-yyyy");
+      date=(s.format(d));     
+      
+  }
+  void time(){
+     new Timer(0,new ActionListener(){
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            Date d=new Date ();
+            SimpleDateFormat s=new SimpleDateFormat("hh:mm:ss a");
+            time=(s.format(d));              
+         }
+     }).start();
+      
+  }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -193,7 +221,7 @@ public class LOGINFROM_EMP extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Login Successfully");
                 DASHBOARD_FINAL_EMPLOYEE dme = new DASHBOARD_FINAL_EMPLOYEE();
                 dme.setVisible(true);
-                dme.empname(name,emp_id);
+                dme.empname(name,emp_id,time,date);
                 this.dispose();
                 
             }

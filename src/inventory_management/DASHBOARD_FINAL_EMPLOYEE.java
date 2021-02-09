@@ -31,26 +31,29 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
       time();
     }
 
-    void empname(String fullname, String mng_Id) {
+    void empname(String fullname, String mng_Id,String Date, String Time) {
         Name.setText("Name:- " + fullname);
         ID.setText("ID:- " + mng_Id);
+        loginDate.setText(Date);
+        loginTime.setText(Time);
     }
   void date (){
       Date d=new Date ();
       SimpleDateFormat s=new SimpleDateFormat("dd-MM-yyyy");
-      showDate.setText(s.format(d));
+      showDate.setText(s.format(d));     
+      //
       
   }
   void time(){
-     
      new Timer(0,new ActionListener(){
          @Override
          public void actionPerformed(ActionEvent e) {
             Date d=new Date ();
             SimpleDateFormat s=new SimpleDateFormat("hh:mm:ss a");
-            showTime.setText(s.format(d));   
+            showTime.setText(s.format(d));              
          }
      }).start();
+      
   }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -64,9 +67,9 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         TIME = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        loginTime = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        loginDate = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         showTime = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -236,20 +239,20 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel2.setText("Login Time :");
         TIME.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 120, 50));
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("00:05 am");
-        TIME.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 15, 100, 40));
+        loginTime.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        loginTime.setForeground(new java.awt.Color(255, 255, 255));
+        loginTime.setText("00:05 am");
+        TIME.add(loginTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 15, 130, 40));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Login Date :");
         TIME.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 15, 120, 40));
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("05-02-2021");
-        TIME.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 15, 110, 40));
+        loginDate.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        loginDate.setForeground(new java.awt.Color(255, 255, 255));
+        loginDate.setText("05-02-2021");
+        TIME.add(loginDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 15, 110, 40));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -1507,7 +1510,6 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -1526,7 +1528,6 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
@@ -1594,6 +1595,8 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel71;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JLabel loginDate;
+    private javax.swing.JLabel loginTime;
     private javax.swing.JPanel prdtn;
     private javax.swing.JPanel product;
     private javax.swing.JPanel purchase;
