@@ -4,26 +4,53 @@
  * and open the template in the editor.
  */
 package inventory_management;
-import java.awt.BorderLayout;
+
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.Timer;
+
 /**
  *
  * @author ganesh pradhan
  */
 public class DASHBOARD_M extends javax.swing.JFrame {
- CardLayout layout;
-        public DASHBOARD_M() {
+
+    CardLayout layout;
+
+    public DASHBOARD_M() {
         initComponents();
+        date();
+        time();
     }
-        void mngname(String fullname,String mng_Id){
-            mng_name.setText("Name:- "+fullname);
-            mng_id.setText("ID:- "+mng_Id);
-       }
+
+    void mngname(String fullname, String mng_Id) {
+        mng_name.setText("Name:- " + fullname);
+        mng_id.setText("ID:- " + mng_Id);
+    }
+
+    void date() {
+        Date d = new Date();
+        SimpleDateFormat s = new SimpleDateFormat("EEEE dd-MMM-yyyy");
+        date.setText(s.format(d));
+    }
+
+    void time() {
+        new Timer(0, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Date d = new Date();
+                SimpleDateFormat s = new SimpleDateFormat("hh:mm:ss a");
+                Showtime.setText(s.format(d));
+            }
+        }
+        ).start();
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -126,7 +153,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         date = new javax.swing.JLabel();
-        time = new javax.swing.JLabel();
+        Showtime = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         time1 = new javax.swing.JLabel();
         time2 = new javax.swing.JLabel();
@@ -1328,9 +1355,9 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         date.setForeground(new java.awt.Color(255, 255, 255));
         date.setText("04-02-2021");
 
-        time.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        time.setForeground(new java.awt.Color(255, 255, 255));
-        time.setText("08:20 PM");
+        Showtime.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        Showtime.setForeground(new java.awt.Color(255, 255, 255));
+        Showtime.setText("08:20 PM");
 
         jLabel19.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
@@ -1369,7 +1396,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Showtime, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1394,7 +1421,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                         .addGroup(timebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-                            .addComponent(time, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Showtime, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(time2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -2327,7 +2354,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
     private void cuslnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cuslnMouseClicked
         // TODO add your handling code here:
-         product.setVisible(false);
+        product.setVisible(false);
         prdtn.setBackground(Color.decode("#00CC66"));
         home.setVisible(false);
         homen.setBackground(Color.decode("#00CC66"));
@@ -2345,7 +2372,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
     private void mngenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mngenMouseClicked
         // TODO add your handling code here:
-         product.setVisible(false);
+        product.setVisible(false);
         prdtn.setBackground(Color.decode("#00CC66"));
         home.setVisible(false);
         homen.setBackground(Color.decode("#00CC66"));
@@ -2373,7 +2400,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         LOGOUT L = new LOGOUT();
         L.setVisible(true);
         this.dispose();
-     
+
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void jLabel97MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel97MouseClicked
@@ -2397,7 +2424,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        /*try {
+ /*try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -2420,6 +2447,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new DASHBOARD_M().setVisible(true);
             }
@@ -2427,6 +2455,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Showtime;
     private javax.swing.JPanel add_emp;
     private javax.swing.JPanel add_emp1;
     private javax.swing.JPanel bill;
@@ -2607,9 +2636,16 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     private javax.swing.JPanel slsn;
     private javax.swing.JPanel stckn;
     private javax.swing.JPanel stock;
-    private javax.swing.JLabel time;
     private javax.swing.JLabel time1;
     private javax.swing.JLabel time2;
     private javax.swing.JPanel timebar;
     // End of variables declaration//GEN-END:variables
+
+    void Date() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void Time() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

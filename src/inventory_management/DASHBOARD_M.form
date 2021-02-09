@@ -2016,7 +2016,7 @@
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="time" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="Showtime" min="-2" pref="86" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -2045,7 +2045,7 @@
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="date" pref="36" max="32767" attributes="0"/>
                                   <Component id="jLabel1" alignment="0" pref="36" max="32767" attributes="0"/>
-                                  <Component id="time" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="Showtime" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
                                   <Component id="time2" alignment="0" max="32767" attributes="0"/>
                               </Group>
@@ -2090,7 +2090,7 @@
                 <Property name="text" type="java.lang.String" value="04-02-2021"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="time">
+            <Component class="javax.swing.JLabel" name="Showtime">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="16" style="1"/>
