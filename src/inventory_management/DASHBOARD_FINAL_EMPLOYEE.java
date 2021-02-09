@@ -4,30 +4,58 @@
  * and open the template in the editor.
  */
 package inventory_management;
-import java.awt.BorderLayout;
+
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
+import java.awt.event.ActionListener;
+import java.util.Date;
+import javax.swing.Timer;
 
 /**
  *
  * @author RAGHUNATH DAS
  */
 public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
-CardLayout layout;
+
+    CardLayout layout;
+
     /**
      * Creates new form DASHBOARD_FINAL_EMPLOYEE
      */
     public DASHBOARD_FINAL_EMPLOYEE() {
         initComponents();
+     //   date();
+       // time();
     }
-    void empname(String fullname,String mng_Id){
-            Name.setText("Name:- "+fullname);
-            ID.setText("ID:- "+mng_Id);
+
+    void empname(String fullname, String mng_Id) {
+        Name.setText("Name:- " + fullname);
+        ID.setText("ID:- " + mng_Id);
     }
+/*
+    void date() {
+        Date d = new Date();
+        simpleDateFormat s = new simpleDateFormat("EEEE dd-MMM-yyyy");
+        showDate.setText(s.format(d));
+    }
+
+    void time() {
+        new Timer(0, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Date d = new Date();
+                simpleDateFormat s = new simpleDateFormat("hh:mm:ss a");
+                showTime.setText(s.format(d));
+
+         
+           } 
+        
+        
+        }
+               
+    }*
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,9 +72,9 @@ CardLayout layout;
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        showTime = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        showDate = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         OPTION = new javax.swing.JPanel();
         Welcome = new javax.swing.JLabel();
@@ -227,24 +255,29 @@ CardLayout layout;
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Time :");
-        TIME.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 60, 50));
+        TIME.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 60, 50));
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("00:05 am");
-        TIME.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, 100, 50));
+        showTime.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        showTime.setForeground(new java.awt.Color(255, 255, 255));
+        showTime.setText("00:05 am");
+        TIME.add(showTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, 150, 50));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Date :");
-        TIME.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 70, 50));
+        TIME.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 70, 50));
 
-        jLabel9.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("05-02-2021");
-        TIME.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 120, 50));
+        showDate.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        showDate.setForeground(new java.awt.Color(255, 255, 255));
+        showDate.setText("05-02-2021");
+        TIME.add(showDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 10, 210, 50));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/minimize.png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
         TIME.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 20, -1, -1));
 
         jPanel1.add(TIME, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 0, 1090, 73));
@@ -1188,13 +1221,13 @@ CardLayout layout;
 
     private void homerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homerMouseClicked
         // TODO add your handling code here:
-         
-       
+
+
     }//GEN-LAST:event_homerMouseClicked
 
     private void prdtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_prdtnMouseClicked
         // TODO add your handling code here:
-          home.setVisible(false);
+        home.setVisible(false);
         homer.setBackground(Color.decode("#204051"));
         product.setVisible(true);
         prdtn.setBackground(Color.decode("#00A1AB"));
@@ -1204,13 +1237,13 @@ CardLayout layout;
         purcn.setBackground(Color.decode("#204051"));
         sales.setVisible(false);
         slsn.setBackground(Color.decode("#204051"));
-         c_bill.setVisible(false);
+        c_bill.setVisible(false);
         bill.setBackground(Color.decode("#204051"));
     }//GEN-LAST:event_prdtnMouseClicked
 
     private void purcnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_purcnMouseClicked
         // TODO add your handling code here:
-          home.setVisible(false);
+        home.setVisible(false);
         homer.setBackground(Color.decode("#204051"));
         product.setVisible(false);
         prdtn.setBackground(Color.decode("#204051"));
@@ -1220,13 +1253,13 @@ CardLayout layout;
         purcn.setBackground(Color.decode("#00A1AB"));
         sales.setVisible(false);
         slsn.setBackground(Color.decode("#204051"));
-         c_bill.setVisible(false);
+        c_bill.setVisible(false);
         bill.setBackground(Color.decode("#204051"));
     }//GEN-LAST:event_purcnMouseClicked
 
     private void stcknMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stcknMouseClicked
         // TODO add your handling code here:
-         home.setVisible(false);
+        home.setVisible(false);
         homer.setBackground(Color.decode("#204051"));
         product.setVisible(false);
         prdtn.setBackground(Color.decode("#204051"));
@@ -1236,7 +1269,7 @@ CardLayout layout;
         purcn.setBackground(Color.decode("#204051"));
         sales.setVisible(false);
         slsn.setBackground(Color.decode("#204051"));
-         c_bill.setVisible(false);
+        c_bill.setVisible(false);
         bill.setBackground(Color.decode("#204051"));
     }//GEN-LAST:event_stcknMouseClicked
 
@@ -1252,13 +1285,13 @@ CardLayout layout;
         purcn.setBackground(Color.decode("#204051"));
         sales.setVisible(true);
         slsn.setBackground(Color.decode("#00A1AB"));
-         c_bill.setVisible(false);
+        c_bill.setVisible(false);
         bill.setBackground(Color.decode("#204051"));
     }//GEN-LAST:event_slsnMouseClicked
 
     private void billMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billMouseClicked
         // TODO add your handling code here:
-         home.setVisible(false);
+        home.setVisible(false);
         homer.setBackground(Color.decode("#204051"));
         product.setVisible(false);
         prdtn.setBackground(Color.decode("#204051"));
@@ -1268,13 +1301,13 @@ CardLayout layout;
         purcn.setBackground(Color.decode("#204051"));
         sales.setVisible(false);
         slsn.setBackground(Color.decode("#204051"));
-         c_bill.setVisible(true);
+        c_bill.setVisible(true);
         bill.setBackground(Color.decode("#00A1AB"));
     }//GEN-LAST:event_billMouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
         // TODO add your handling code here:
-         home.setVisible(true);
+        home.setVisible(true);
         homer.setBackground(Color.decode("#00A1AB"));
         product.setVisible(false);
         prdtn.setBackground(Color.decode("#204051"));
@@ -1298,28 +1331,28 @@ CardLayout layout;
     private void jPanel53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel53MouseClicked
         // TODO add your handling code here:
         SEARCH_PRODUCT sp = new SEARCH_PRODUCT();
-       sp.setVisible(true);
+        sp.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel53MouseClicked
 
     private void jPanel71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel71MouseClicked
         // TODO add your handling code here:
         SEARCH_PRODUCT sp = new SEARCH_PRODUCT();
-       sp.setVisible(true);
+        sp.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel71MouseClicked
 
     private void jPanel67MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel67MouseClicked
         // TODO add your handling code here:
-         PRODUCT_STOCK_CHECK psc = new PRODUCT_STOCK_CHECK();
-       psc.setVisible(true);
+        PRODUCT_STOCK_CHECK psc = new PRODUCT_STOCK_CHECK();
+        psc.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel67MouseClicked
 
     private void jPanel68MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel68MouseClicked
         // TODO add your handling code here:
         MANAGE_ORDER_EMP moe = new MANAGE_ORDER_EMP();
-       moe.setVisible(true);
+        moe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel68MouseClicked
 
@@ -1332,17 +1365,22 @@ CardLayout layout;
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
         // TODO add your handling code here:
-    PRODUCT_STOCK_CHECK psc = new PRODUCT_STOCK_CHECK();
+        PRODUCT_STOCK_CHECK psc = new PRODUCT_STOCK_CHECK();
         psc.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel4MouseClicked
 
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
         // TODO add your handling code here:
-       END_STOCK_REPORT esr = new END_STOCK_REPORT();
+        END_STOCK_REPORT esr = new END_STOCK_REPORT();
         esr.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel6MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        // TODO add your handling code here:
+        this.setState(Frame.ICONIFIED);
+    }//GEN-LAST:event_jLabel10MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1476,9 +1514,7 @@ CardLayout layout;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
@@ -1534,6 +1570,8 @@ CardLayout layout;
     private javax.swing.JPanel purchase;
     private javax.swing.JPanel purcn;
     private javax.swing.JPanel sales;
+    private javax.swing.JLabel showDate;
+    private javax.swing.JLabel showTime;
     private javax.swing.JPanel slsn;
     private javax.swing.JPanel stckn;
     private javax.swing.JPanel stock;
