@@ -6,11 +6,16 @@
 package inventory_management;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import java.math.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.Timer;
 /**
  *
  * @author Sudip Maiti
@@ -19,14 +24,45 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
 
     String mng_Id = null;
     String emp_Id = null;
+    String Name = null;
+    String ID = null;
+    String date=null;
+    String time = null;
     /**
      * Creates new form REGISTRATION
      */
     public ADD_NEW_EMP() {
         initComponents();
         id_create();
+        date();
+        time();
     }
+    void mngname(String fullname, String mng_Id) 
+    {
+        Name = fullname;
+        ID = mng_Id;
+        System.out.println("Fullname"+Name);
+        System.out.println("idddddddddddd"+ID);
+    }
+    void date (){
+      Date d=new Date ();
+      SimpleDateFormat s=new SimpleDateFormat("dd-MM-yyyy");
+      date=(s.format(d));     
+      
+  }
+  void time(){
+     new Timer(0,new ActionListener(){
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            Date d=new Date ();
+            SimpleDateFormat s=new SimpleDateFormat("hh:mm:ss a");
+            time=(s.format(d));              
+         }
+     }).start();
+      
+  }
     //FETCH LAST ID FROM DATABASE AND STORE THE DATA IN GLOBAL VARIABLE
+    
     void id_create(){
          try{
             Connection con=DATABASE_CONNECTION.getConnection();
@@ -322,7 +358,9 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        DASHBOARD_M dm = new DASHBOARD_M();
+        DASHBOARD_M dm = new DASHBOARD_M();      
+                dm.setVisible(true);
+                dm.mngname(Name,ID);
         dm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
@@ -343,6 +381,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         String dob = DOB.getText();
         String td = "";   
         
+        
         //generate emp id
             BigInteger emp_id = new BigInteger(emp_Id);
             BigInteger nxt = new BigInteger("1");
@@ -351,25 +390,25 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
             emp_id = emp_id.add(nxt);
             System.out.println("%%%%%%%%%%%%%%%%%%%%%%"+emp_id);
             String emp = "INVEE"+emp_id.toString();
-            System.out.println("%%%%%%%%%%%%%%%%%%%%%%"+emp);
+            System.out.println("%%%%%%%%%%%%%%%%%%%%%%"+emp);            
         ///////////////////////////////////////////////////////////
         
         if(fName.isEmpty()){
             JOptionPane.showMessageDialog(this, "Fill up all field first");
         }else if(password.equals(c_pass) ){
-            int i = ADD_NEW_EMP_DATAOBEJECT.inventory_management (fName, lName, mail, ph,emp, password,c_pass,td,dob, add, gen);
+            int i = ADD_NEW_EMP_DATAOBEJECT.inventory_management (fName, lName, mail, ph,emp, password,c_pass,td,dob, add, gen,Name,ID,date,time);
             System.out.println("++++++++++++++++"+emp_id);
             Emp_id.setText(emp);
             int j = ID_STORE_FETCH.insert_id(mng_Id, emp_id.toString());
            if(i>0 || j>0){
                 System.out.println("Data inserted");
                 
-                JOptionPane.showMessageDialog(this, "Your Account Sucessfully Created"); 
-                new DASHBOARD_M().setVisible(true);
-                this.dispose();
+                JOptionPane.showMessageDialog(this, "Add Employee Successfully"); 
+                firstname.setText("");
+                
            }else{
                 System.out.println("Data NOT inserted");
-                JOptionPane.showMessageDialog(this, "Your Account Not Created"); 
+                JOptionPane.showMessageDialog(this, "Eployee Can Not Added"); 
            }
         }else {
             JOptionPane.showMessageDialog(this, "Both Password Not Same");

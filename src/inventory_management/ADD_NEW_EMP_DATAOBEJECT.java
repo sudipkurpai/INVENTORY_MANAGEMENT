@@ -15,12 +15,13 @@ import java.sql.*;
  */
 public class ADD_NEW_EMP_DATAOBEJECT {
     public static int inventory_management (String FIRST_NAME, String LAST_NAME, String EMAIL, 
-            String MOBILE_NO, String EMP_ID, String PASSWORD, String CONFIRM_PASSWORD, String T_D, String DOB,String ADDRESS, String GENDER){
+            String MOBILE_NO, String EMP_ID, String PASSWORD, String CONFIRM_PASSWORD, String T_D,
+            String DOB,String ADDRESS, String GENDER,String EMP_ADD_MNG_NAME,String EMP_ADD_MNG_ID, String ADD_TIME,String ADD_DATE){
         int status=0;
               try{
                    Connection con=DATABASE_CONNECTION.getConnection();  
                    PreparedStatement ps=con.prepareStatement("INSERT INTO employee_register (FIRST_NAME,LAST_NAME,EMAIL,MOBILE_NO,"
-                           + "EMP_ID,PASSWORD,CONFIRM_PASSWORD,T_D,DOB,ADDRESS,GENDER) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+                           + "EMP_ID,PASSWORD,CONFIRM_PASSWORD,T_D,DOB,ADDRESS,GENDER,EMP_ADD_MNG_NAME,EMP_ADD_MNG_ID,ADD_TIME,ADD_DATE) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
                    ps.setString(1, FIRST_NAME);
                    ps.setString(2, LAST_NAME);
                    ps.setString(3, EMAIL);
@@ -32,8 +33,10 @@ public class ADD_NEW_EMP_DATAOBEJECT {
                    ps.setString(9, DOB);
                    ps.setString(10, ADDRESS);
                    ps.setString(11, GENDER);
-                   
-                   
+                   ps.setString(12, EMP_ADD_MNG_NAME);
+                   ps.setString(13, EMP_ADD_MNG_ID);
+                   ps.setString(14, ADD_TIME);
+                   ps.setString(15, ADD_DATE);                   
                    status=ps.executeUpdate();
                    con.close();
               }catch(Exception e){
