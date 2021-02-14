@@ -8,6 +8,11 @@ package inventory_management;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.jar.Attributes;
+import javax.swing.Timer;
 
 /**
  *
@@ -15,13 +20,35 @@ import java.awt.Color;
  */
 public class LOGINFROM_MAN extends javax.swing.JFrame {
 
+    String date=null;
+    String time = null;
+    
     /**
      * Creates new form LOGINfROM
      */
     public LOGINFROM_MAN() {
         initComponents();
+        date();
+        time();
     }
-
+    
+    void date (){
+      java.util.Date d=new java.util.Date ();
+      SimpleDateFormat s=new SimpleDateFormat("dd-MM-yyyy");
+      date=(s.format(d));     
+      
+  }
+  void time(){
+     new Timer(0,new ActionListener(){
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            java.util.Date d=new java.util.Date ();
+            SimpleDateFormat s=new SimpleDateFormat("hh:mm:ss a");
+            time=(s.format(d));              
+         }
+     }).start();
+      
+  }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -125,6 +152,8 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         String p_pass = pass.getText();
         String name= null;
         String mng_Id = null;
+        String eml= null;
+        String phone = null;
         try {
             //  Data fetch from database
             String sql = "Select * from register Where Email = ?";
@@ -133,8 +162,10 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
             ps.setString(1,p_email);
             ResultSet rs=ps.executeQuery();
             if(rs.next()){
-                String eml =rs.getString("Email");
+                eml =rs.getString("Email");
                 System.out.println("EMAILLLLLLLL "+eml);
+                phone =rs.getString("MOBILE_NO");
+                System.out.println("EMAILLLLLLLL "+phone);
                 String fname =rs.getString("FIRST_NAME");
                 System.out.println("FIRST NAME "+fname);
                 String lname =rs.getString("LAST_NAME");
@@ -161,14 +192,15 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
             if(p_email.equals("")||p_pass.equals("")){
                 JOptionPane.showMessageDialog(this, "Fill up all field first");
             }else if(REGISTRATION_DATAOBEJECT.validate(p_email, p_pass)){
+                MAN_SEASION_DATAOBJECT.man_isert_session(name,mng_Id,phone,eml,time,"",date,"");
                 email.setBackground(Color.green);
                 email.setText(null);
                 pass.setBackground(Color.green);
                 pass.setText(null);
                 JOptionPane.showMessageDialog(null, "Login Successfully");
                 DASHBOARD_M dm = new DASHBOARD_M();
-                dm.setVisible(true);
-                dm.mngname(name,mng_Id);
+                dm.setVisible(true);               
+                         
                 this.dispose();
             }else{
                 //JOptionPane.showMessageDialog(LOG_IN.this,"You are not a valid user plese create your account","Login Error",JOptionPane.ERROR_MESSAGE);

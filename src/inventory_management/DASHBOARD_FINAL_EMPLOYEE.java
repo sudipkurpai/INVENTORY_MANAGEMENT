@@ -21,7 +21,9 @@ import javax.swing.Timer;
 public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
 
     CardLayout layout;
-
+    String eml= null;
+    String ph = null;
+    
     /**
      * Creates new form DASHBOARD_FINAL_EMPLOYEE
      */
@@ -31,11 +33,14 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
       time();
     }
 
-    void empname(String fullname, String mng_Id,String Date, String Time) {
-        Name.setText("Name:- " + fullname);
-        ID.setText("ID:- " + mng_Id);
+    void empname(String fullname, String mng_Id,String email, String phone,String Date, String Time) {
+        Name.setText( fullname);
+        ID.setText( mng_Id);
+        eml = email;
+        ph = phone;
         loginDate.setText(Date);
         loginTime.setText(Time);
+        
     }
   void date (){
       Date d=new Date ();
@@ -513,6 +518,11 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Logout");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -1410,6 +1420,13 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setState(Frame.ICONIFIED);
     }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+      LOGOUT_E le = new LOGOUT_E();
+        le.setVisible(true);
+        this.dispose();  
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments

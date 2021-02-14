@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.jar.Attributes.Name;
 import javax.swing.Timer;
 
 /**
@@ -21,6 +22,8 @@ import javax.swing.Timer;
 public class DASHBOARD_M extends javax.swing.JFrame {
 
     CardLayout layout;
+    String eml= null;
+    String ph = null;
 
     public DASHBOARD_M() {
         initComponents();
@@ -28,10 +31,15 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         time();
     }
 
-    void mngname(String fullname, String mng_Id) {
+  
+    
+     void mngname(String fullname, String mng_Id,String email, String phone, String Date, String Time) {
         mng_name.setText(fullname);
         mng_id.setText(mng_Id);
-        
+        eml = email;
+        ph = phone;
+        time2.setText(Date);
+        time1.setText(Time);
     }
      
     void date() {
@@ -2430,7 +2438,21 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
         // TODO add your handling code here:
+        String llTime=time1.getText();
+        String llDate = time2.getText();
+        String logoutTime=Showtime.getText();
+        String logoutDate = date.getText();
+        System.out.println("TTTTTTTTTTTTTTTTTTTTT"+logoutTime);
+        System.out.println("DDDDDDDDDDDDDDDDDD"+logoutDate);
+        System.out.println("LLLLLLLLLTTTTTT"+llTime);
+        System.out.println("LLLLLLLLLDDDDDDD"+llDate);
         LOGOUT L = new LOGOUT();
+        int i =MAN_SEASION_DATAOBJECT.man_update_session(logoutTime, logoutDate, llTime, llDate);
+        if(i>0){
+            System.out.println("DATA INSERTED");
+        }else{
+             System.out.println("ERRORRRRRRRRRRRRRRRRRRRr");
+        }
         L.setVisible(true);
         this.dispose();
 
@@ -2686,6 +2708,10 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     }
 
     void Time() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void man_s(String name, String mng_Id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

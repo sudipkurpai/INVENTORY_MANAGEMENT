@@ -166,10 +166,13 @@ public class LOGINFROM_EMP extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         //TODO add your handling code here:
-         String emp_Id = emp.getText();
+        String emp_Id = emp.getText();
         String p_pass = pass.getText();
         String name = null;
-        String emp_id = null;
+        String emp_id = null;       
+        String eml = null;
+        String phone = null;
+        
         try {
              //Data fetch from database
             String sql = "Select * from employee_register Where EMP_ID = ?";
@@ -214,6 +217,7 @@ public class LOGINFROM_EMP extends javax.swing.JFrame {
             }
             //raghu
             else if(ADD_NEW_EMP_DATAOBEJECT.validate(emp_Id, p_pass)){
+                EMP_SEASSION_DATAOBJECT.Emp_data_insert(name,emp_Id,phone,"",time,"",date,"");                
                 emp.setBackground(Color.green);
                 emp.setText(null);
                 pass.setBackground(Color.green);
@@ -221,7 +225,7 @@ public class LOGINFROM_EMP extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Login Successfully");
                 DASHBOARD_FINAL_EMPLOYEE dme = new DASHBOARD_FINAL_EMPLOYEE();
                 dme.setVisible(true);
-                dme.empname(name,emp_id,time,date);
+                dme.empname(name,emp_Id,eml,phone,date,time);
                 this.dispose();
                 
             }
