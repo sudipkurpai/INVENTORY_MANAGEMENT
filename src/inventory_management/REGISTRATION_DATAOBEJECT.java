@@ -19,8 +19,8 @@ public class REGISTRATION_DATAOBEJECT {
         int status=0;
               try{
                    Connection con=DATABASE_CONNECTION.getConnection();  
-                   PreparedStatement ps=con.prepareStatement("INSERT INTO register(FIRST_NAME,LAST_NAME,EMAIL,MOBILE_NO,"
-                           + "PASSWORD,CONFIRM_PASSWORD,ADDRESS,GENDER) VALUES (?,?,?,?,?,?,?,?)");
+                   PreparedStatement ps=con.prepareStatement("update register SET FIRST_NAME = ? ,LAST_NAME = ? ,EMAIL = ?,MOBILE_NO = ?,"
+                           + "PASSWORD = ?,CONFIRM_PASSWORD = ?,ADDRESS = ?,GENDER = ? ) ");
                    ps.setString(1, FIRST_NAME);
                    ps.setString(2, LAST_NAME);
                    ps.setString(3, EMAIL);

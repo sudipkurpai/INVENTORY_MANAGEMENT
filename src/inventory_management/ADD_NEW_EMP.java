@@ -358,7 +358,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        /*DASHBOARD_M dm = new DASHBOARD_M();      
+      /*  DASHBOARD_M dm = new DASHBOARD_M();      
                 dm.setVisible(true);
                 dm.mngname(Name,ID);
         dm.setVisible(true);
