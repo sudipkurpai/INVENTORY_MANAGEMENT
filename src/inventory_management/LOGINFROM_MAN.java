@@ -199,6 +199,7 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
                 pass.setText(null);
                 JOptionPane.showMessageDialog(null, "Login Successfully");
                 DASHBOARD_M dm = new DASHBOARD_M();
+                dm.mngname(name,mng_Id,eml,phone,date,time);  
                 dm.setVisible(true);               
                          
                 this.dispose();
