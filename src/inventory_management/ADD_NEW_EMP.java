@@ -360,11 +360,19 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         address.setBackground(new java.awt.Color(255, 255, 255));
         address.setColumns(10);
         address.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        address.setForeground(new java.awt.Color(128, 128, 128));
+        address.setForeground(new java.awt.Color(0, 0, 0));
         address.setRows(5);
         address.setText("Address");
         address.setBorder(null);
         address.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        address.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                addressFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                addressFocusLost(evt);
+            }
+        });
         jScrollPane1.setViewportView(address);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 560, -1));
@@ -458,17 +466,17 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
         String fName = conf_pass.getText();
         String lName = lastname.getText();
-        String ph = "";
+        String ph = phone3.getText();
         String mail = email.getText();
         String password = pass.getText();
         String c_pass = conf_pass.getText();
         String add = address.getText();
-        String gen = "";
+        String gen = jComboBox1.getSelectedItem().toString() ;
         
+        SimpleDateFormat s=new SimpleDateFormat("dd-MM-yyyy");
+        String dob = s.format(DOB.getDate());
+        System.out.println("!@##%$$%$"+dob);
         
-        
-        String dob = DOB.getDate().toString();
-        String td = "";
 
         //generate emp id
        
@@ -477,7 +485,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         if(fName.isEmpty()){
             JOptionPane.showMessageDialog(this, "Fill up all field first");
         }else if(password.equals(c_pass) ){
-            int i = ADD_NEW_EMP_DATAOBEJECT.inventory_management (fName, lName, mail, ph,emp, password,c_pass,td,dob, add, gen,Name,ID,date,time);
+            int i = ADD_NEW_EMP_DATAOBEJECT.inventory_management (fName, lName, mail, ph,emp, password,c_pass,dob, add, gen,Name,ID,date,time);
             
             int j = ID_STORE_FETCH.insert_id(mng_Id, emp_id.toString());
             if(i>0 || j>0){
@@ -628,6 +636,24 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     private void Emp_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Emp_idActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Emp_idActionPerformed
+
+    private void addressFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressFocusGained
+        // TODO add your handling code here:
+        if(address.getText().equals("Address")){
+            //address.setVisible(true);
+            address.setText("");
+            address.setForeground(new Color(000,000,000));
+        }
+    }//GEN-LAST:event_addressFocusGained
+
+    private void addressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressFocusLost
+        // TODO add your handling code here:
+        if(address.getText().equals("")){
+            
+            address.setText("Address");
+            address.setForeground(new Color(128,128,128));
+        }
+    }//GEN-LAST:event_addressFocusLost
 
     /**
      * @param args the command line arguments
