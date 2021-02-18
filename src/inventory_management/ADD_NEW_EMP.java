@@ -95,6 +95,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        phone3 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -127,7 +128,6 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        phone3 = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel23 = new javax.swing.JLabel();
@@ -145,6 +145,10 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        phone3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        phone3.setBorder(null);
+        jPanel2.add(phone3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 150, 20));
 
         jLabel1.setFont(new java.awt.Font("Ebrima", 1, 24)); // NOI18N
         jLabel1.setText("Create New Employee !");
@@ -192,12 +196,13 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
 
         Emp_id.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         Emp_id.setBorder(null);
+        Emp_id.setEnabled(false);
         Emp_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Emp_idActionPerformed(evt);
             }
         });
-        jPanel2.add(Emp_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 150, 20));
+        jPanel2.add(Emp_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 530, 150, 20));
 
         conf_pass.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         conf_pass.setBorder(null);
@@ -232,7 +237,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(107, 116, 113));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Gender");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 60, 20));
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 60, 20));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, 40));
@@ -277,7 +282,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 80, 20));
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
-        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, -1, 40));
+        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, -1, 40));
 
         jLabel4.setBackground(new java.awt.Color(51, 255, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -315,14 +320,10 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jLabel26.setForeground(new java.awt.Color(107, 116, 113));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel26.setText("Employee ID");
-        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 90, 20));
+        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 90, 20));
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded 2 .png"))); // NOI18N
         jPanel2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, -1, 40));
-
-        phone3.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        phone3.setBorder(null);
-        jPanel2.add(phone3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 150, 20));
 
         jLabel29.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(107, 116, 113));
@@ -331,7 +332,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         jPanel2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 70, 20));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other", " " }));
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 160, -1));
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 170, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 12, 454, 580));
 
@@ -350,7 +351,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setSize(new java.awt.Dimension(895, 606));
@@ -358,11 +359,11 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-      /*  DASHBOARD_M dm = new DASHBOARD_M();      
+        DASHBOARD_M dm = new DASHBOARD_M();      
                 dm.setVisible(true);
                 dm.mngname(Name,ID);
         dm.setVisible(true);
-        this.dispose();*/
+        this.dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void Emp_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Emp_idActionPerformed

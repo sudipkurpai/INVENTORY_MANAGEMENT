@@ -31,7 +31,9 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         date();
         time();
     }
-    
+    void hint (){
+       // email.setUI(new JTextFieldHintUI("Enter Email ID",Color.GRAY));
+    }
     void date (){
       java.util.Date d=new java.util.Date ();
       SimpleDateFormat s=new SimpleDateFormat("dd-MM-yyyy");
@@ -94,7 +96,7 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/key.png"))); // NOI18N
         jLabel4.setText(" Password");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 150, 50));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 150, 40));
 
         pass.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         pass.setForeground(new java.awt.Color(51, 51, 51));
@@ -105,16 +107,21 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         jLabel5.setText("Forget Password");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, 120, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (39).png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/log in_new.png"))); // NOI18N
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (37).png"))); // NOI18N
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, -1, -1));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Clear_new.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 150, -1));
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -192,14 +199,17 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
             if(p_email.equals("")||p_pass.equals("")){
                 JOptionPane.showMessageDialog(this, "Fill up all field first");
             }else if(REGISTRATION_DATAOBEJECT.validate(p_email, p_pass)){
-                MAN_SEASION_DATAOBJECT.man_isert_session(name,mng_Id,phone,eml,time,"",date,"");
+                String timeee = time;
+                System.out.println("11111111111111" +timeee);
+                MAN_SEASION_DATAOBJECT.man_isert_session(name,mng_Id,phone,eml,timeee,"",date,"");
                 email.setBackground(Color.green);
                 email.setText(null);
                 pass.setBackground(Color.green);
                 pass.setText(null);
                 JOptionPane.showMessageDialog(null, "Login Successfully");
                 DASHBOARD_M dm = new DASHBOARD_M();
-                dm.mngname(name,mng_Id,eml,phone,date,time);  
+                System.out.println("2222222222222222" +timeee);
+                dm.mngname(name,mng_Id,eml,phone,date,timeee);  
                 dm.setVisible(true);               
                          
                 this.dispose();
@@ -222,6 +232,12 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         op.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // TODO add your handling code here:
+        email.setText("");
+        pass.setText("");
+    }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
      * @param args the command line arguments

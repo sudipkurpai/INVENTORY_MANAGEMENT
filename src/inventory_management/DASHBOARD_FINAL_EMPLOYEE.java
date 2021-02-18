@@ -138,9 +138,6 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jPanel55 = new javax.swing.JPanel();
         jLabel128 = new javax.swing.JLabel();
         jLabel130 = new javax.swing.JLabel();
-        jPanel56 = new javax.swing.JPanel();
-        jLabel132 = new javax.swing.JLabel();
-        jLabel133 = new javax.swing.JLabel();
         jPanel57 = new javax.swing.JPanel();
         jLabel135 = new javax.swing.JLabel();
         jLabel134 = new javax.swing.JLabel();
@@ -360,7 +357,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/home.png"))); // NOI18N
-        jLabel13.setText("       HOME");
+        jLabel13.setText(" HOME");
         jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel13MouseClicked(evt);
@@ -698,31 +695,18 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
 
         c_bill.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 280, 170));
 
-        jPanel56.setBackground(new java.awt.Color(180, 242, 225));
-        jPanel56.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel132.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
-        jLabel132.setForeground(new java.awt.Color(32, 64, 81));
-        jLabel132.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/edit.png"))); // NOI18N
-        jPanel56.add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 80, 80));
-
-        jLabel133.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Modify Bill", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
-        jPanel56.add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 220, 140));
-
-        c_bill.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 110, 280, 170));
-
         jPanel57.setBackground(new java.awt.Color(180, 242, 225));
         jPanel57.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel135.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel135.setForeground(new java.awt.Color(32, 64, 81));
-        jLabel135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cash-register.png"))); // NOI18N
+        jLabel135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Cancle_bill(1).png"))); // NOI18N
         jPanel57.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 70, 70));
 
-        jLabel134.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Delete Bill", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
+        jLabel134.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Cancel Bill", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel57.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 10, 230, 146));
 
-        c_bill.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 280, 170));
+        c_bill.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 110, 280, 170));
 
         jPanel58.setBackground(new java.awt.Color(180, 242, 225));
         jPanel58.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -735,7 +719,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel137.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "Today Bill", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel58.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 220, 146));
 
-        c_bill.add(jPanel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, 280, 170));
+        c_bill.add(jPanel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 280, 170));
 
         jPanel59.setBackground(new java.awt.Color(180, 242, 225));
         jPanel59.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -748,7 +732,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel138.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(32, 64, 81), 2), "All Bill", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(32, 64, 81))); // NOI18N
         jPanel59.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 220, 146));
 
-        c_bill.add(jPanel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 420, 280, 170));
+        c_bill.add(jPanel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, 280, 170));
 
         BODY.add(c_bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 680));
 
@@ -1507,8 +1491,6 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel130;
     private javax.swing.JLabel jLabel131;
-    private javax.swing.JLabel jLabel132;
-    private javax.swing.JLabel jLabel133;
     private javax.swing.JLabel jLabel134;
     private javax.swing.JLabel jLabel135;
     private javax.swing.JLabel jLabel136;
@@ -1599,7 +1581,6 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel53;
     private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel55;
-    private javax.swing.JPanel jPanel56;
     private javax.swing.JPanel jPanel57;
     private javax.swing.JPanel jPanel58;
     private javax.swing.JPanel jPanel59;

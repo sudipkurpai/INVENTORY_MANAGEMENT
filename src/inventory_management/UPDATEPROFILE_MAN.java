@@ -16,16 +16,33 @@ import javax.swing.JOptionPane;
  */
 public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
 
+    String mng_Id = null;
+    String emp_Id = null;
+    String Name = null;
+    String ID = null;
+    String date=null;
+    String time = null;
+    
     
 
     /**
      * Creates new form UPDATEPROFILE
      */
     public UPDATEPROFILE_MAN() {
-        initComponents();
-     // Update_Profile();
+       initComponents();
+       
     }
 
+     void mngname(String name, String mng_Id) 
+    {
+        Name = name;
+        ID = mng_Id;
+        System.out.println("Fullname"+Name);
+        System.out.println("idddddddddddd"+ID);
+        MNG_ID.setText(ID);
+        fullname.setText(Name);
+        Update_Profile();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,9 +56,9 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        firstname = new javax.swing.JTextField();
+        fullname = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        lastname = new javax.swing.JTextField();
+        MNG_ID = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         addr = new javax.swing.JTextField();
@@ -72,7 +89,7 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("First Name");
+        jLabel3.setText("Full Name");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
@@ -81,20 +98,21 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
         jLabel2.setText("Update Profile");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, 1400, 40));
 
-        firstname.setBackground(new java.awt.Color(255, 255, 255));
-        firstname.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        firstname.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel1.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 420, 40));
+        fullname.setBackground(new java.awt.Color(255, 255, 255));
+        fullname.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        fullname.setForeground(new java.awt.Color(0, 0, 0));
+        fullname.setEnabled(false);
+        jPanel1.add(fullname, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 420, 40));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Last Name");
+        jLabel4.setText("ID");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 90, 130, 20));
 
-        lastname.setBackground(new java.awt.Color(255, 255, 255));
-        lastname.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        lastname.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel1.add(lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 120, 450, 40));
+        MNG_ID.setBackground(new java.awt.Color(255, 255, 255));
+        MNG_ID.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        MNG_ID.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(MNG_ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 120, 450, 40));
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -115,6 +133,7 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
         email.setBackground(new java.awt.Color(255, 255, 255));
         email.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         email.setForeground(new java.awt.Color(0, 0, 0));
+        email.setEnabled(false);
         jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 250, 450, 40));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -125,6 +144,7 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
         phone.setBackground(new java.awt.Color(255, 255, 255));
         phone.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         phone.setForeground(new java.awt.Color(0, 0, 0));
+        phone.setEnabled(false);
         jPanel1.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 420, 40));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -134,7 +154,7 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
 
         dob.setBackground(new java.awt.Color(255, 255, 255));
         dob.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        dob.setForeground(new java.awt.Color(255, 255, 255));
+        dob.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 420, 40));
 
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -145,7 +165,7 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
         gen.setBackground(new java.awt.Color(255, 255, 255));
         gen.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         gen.setForeground(new java.awt.Color(0, 0, 0));
-        gen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Femail", "Others" }));
+        gen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
         jPanel1.add(gen, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 370, 450, 40));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (11).png"))); // NOI18N
@@ -157,6 +177,11 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 640, -1, -1));
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (13).png"))); // NOI18N
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 640, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/raghu2.jpg"))); // NOI18N
@@ -176,16 +201,29 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1400, 787));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    /* void Update_Profile(){
-         try{
+     void Update_Profile(){
+         System.out.println("!!!!!!!!56!");
+         String mng_ID = MNG_ID.getText();
+        
+         try{   
+            String sql = "Select * from register Where MNG_ID = ?";
             Connection con=DATABASE_CONNECTION.getConnection();
-            PreparedStatement ps=con.prepareStatement("select * from register");         
+            PreparedStatement ps=con.prepareStatement(sql);
+            ps.setString(1,mng_ID);
             ResultSet rs=ps.executeQuery();
             if(rs.next()){
-                mng_Id=rs.getString("MNG_ID");
-                System.out.println("MANAGER ID "+mng_Id);
-                emp_Id=rs.getString("EMP_ID");
-                System.out.println("EMPLOYEE ID "+emp_Id);
+                String eml=rs.getString("EMAIL");
+                String mob=rs.getString("MOBILE_NO"); 
+                String db=rs.getString("DOB");
+                String gn=rs.getString("GENDER");
+                String add =rs.getString("ADDRESS");
+                email.setText(eml);
+                phone.setText(mob);
+                dob.setText(db);
+                gen.setSelectedItem(gn);
+                addr.setText(add);
+                
+                
                 rs.close();
                 ps.close();
             }else{
@@ -194,7 +232,7 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
             con.close();
            }
         catch(Exception e){System.out.println(e);}
-    } */
+    } 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         // TODO add your handling code here:
         new DASHBOARD_M().setVisible(true);
@@ -204,19 +242,17 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
         // TODO add your handling code here:
         
-        String fName = firstname.getText();
-        String lName = lastname.getText();
-        String ph = phone.getText();
-        String mail = email.getText();
-        String password ="";
-        String c_pass = "";
+        
+        
+        
         String DOB = dob.getText();      
         String add = addr.getText();
-        String gen = "";
+        String gen2 = gen.getSelectedItem().toString();
+        System.out.println("@@@@@@@@@ "+gen2);
         
         
         
-        int i = UPDATEPROFILE_M_DATAOBJECT.updateprofile_m(fName,lName,ph,mail,password,c_pass,DOB,add,gen);
+        int i = UPDATEPROFILE_M_DATAOBJECT.updateprofile_m(DOB,add,gen2,ID);
             //(FIRST_NAME,LAST_NAME,EMAIL,MOBILE_NO,PASSWORD,CONFIRM_PASSWORD,ADDRESS,GENDER)
            if(i>0){
                 System.out.println("Data inserted");
@@ -228,6 +264,10 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Your Profile Not Update Sucessfully"); 
            }
     }//GEN-LAST:event_jLabel16MouseClicked
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel18MouseClicked
 
     /**
      * @param args the command line arguments
@@ -268,10 +308,11 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField MNG_ID;
     private javax.swing.JTextField addr;
     private javax.swing.JTextField dob;
     private javax.swing.JTextField email;
-    private javax.swing.JTextField firstname;
+    private javax.swing.JTextField fullname;
     private javax.swing.JComboBox<String> gen;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -287,7 +328,6 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField lastname;
     private javax.swing.JTextField phone;
     // End of variables declaration//GEN-END:variables
 }

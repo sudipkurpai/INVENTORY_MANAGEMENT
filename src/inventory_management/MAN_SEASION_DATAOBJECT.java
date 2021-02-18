@@ -42,30 +42,24 @@ public class MAN_SEASION_DATAOBJECT {
 
 //INSERT INTO `register`(`FIRST_NAME`, `LAST_NAME`, `EMAIL`, `MOBILE_NO`, `PASSWORD`, `CONFIRM_PASSWORD`, `ADDRESS`, `GENDER`) 
     }
-     public static int man_update_session (String LAST_LOGOUT_TIME, String LAST_LOGOUT_DATE, 
-             String LAST_LOGIN_TIME, String LAST_LOGIN_DATE){
+    public static int updateprofile_m ( String logout_time,String Logout_date, String Login_time,String Login_Date){
         int status=0;
          System.out.println("0000000000000000000000");
               try{
                   System.out.println("11111");
                    Connection con=DATABASE_CONNECTION.getConnection(); 
-                   System.out.println("22222222222");
-                   String Sql = "UPDATE manager_session SET LAST_LOGOUT_TIME = ?, LAST_LOGOUT_DATE = ?"
-                           + " WHERE LAST_LOGIN_TIME = ? AND LAST_LOGIN_DATE = ?";
-                   PreparedStatement ps=con.prepareStatement(Sql);
-//UPDATE manager_session SET LAST_LOGOUT_TIME = '85565' , LAST_LOGOUT_DATE='155' WHERE LAST_LOGIN_TIME ='09:26:03 PM' AND LAST_LOGIN_DATE ='13-02-2021';
-                   ps.setString(1, LAST_LOGOUT_TIME);
-                   ps.setString(2, LAST_LOGOUT_DATE);
-                   ps.setString(3, LAST_LOGIN_TIME);
-                   ps.setString(4, LAST_LOGIN_DATE);
-                   System.out.println("333333333333");
+                   PreparedStatement ps=con.prepareStatement("UPDATE manager_session set LAST_LOGOUT_TIME =? ,LAST_LOGOUT_DATE =? where LAST_LOGIN_TIME =? AND LAST_LOGIN_DATE =?");
+                   ps.setString(1,logout_time);
+                   ps.setString(2, Logout_date);
+                   ps.setString(3, Login_time);
+                   ps.setString(4, Login_Date);                   
                    status=ps.executeUpdate();
                    System.out.println("444444444444444");
                    con.close();
               }catch(SQLException e){
                   System.out.println(e);
               }
-              System.out.println("UPDATE SESSION ----------------"+status);
+              System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!"+status);
               return status;
 
 //INSERT INTO `register`(`FIRST_NAME`, `LAST_NAME`, `EMAIL`, `MOBILE_NO`, `PASSWORD`, `CONFIRM_PASSWORD`, `ADDRESS`, `GENDER`) 
