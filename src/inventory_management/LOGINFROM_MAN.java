@@ -28,11 +28,12 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
      */
     public LOGINFROM_MAN() {
         initComponents();
+        open.setVisible(false);
         date();
         time();
     }
     void hint (){
-       // email.setUI(new JTextFieldHintUI("Enter Email ID",Color.GRAY));
+        
     }
     void date (){
       java.util.Date d=new java.util.Date ();
@@ -71,6 +72,8 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        hide = new javax.swing.JLabel();
+        open = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -91,6 +94,16 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 190, 40));
 
         email.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        email.setForeground(new java.awt.Color(128, 128, 128));
+        email.setText("Enter Your Email ID");
+        email.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                emailFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                emailFocusLost(evt);
+            }
+        });
         jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 350, 50));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -99,7 +112,17 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 150, 40));
 
         pass.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        pass.setForeground(new java.awt.Color(51, 51, 51));
+        pass.setForeground(new java.awt.Color(128, 128, 128));
+        pass.setText("Enter Your Password");
+        pass.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        pass.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                passFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passFocusLost(evt);
+            }
+        });
         jPanel2.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 350, 50));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -132,6 +155,24 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, 20));
+
+        hide.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/visibility (1).png"))); // NOI18N
+        hide.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                hideMousePressed(evt);
+            }
+        });
+        jPanel2.add(hide, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 40, 50));
+
+        open.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        open.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/visibility (2).png"))); // NOI18N
+        open.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                openMousePressed(evt);
+            }
+        });
+        jPanel2.add(open, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 305, 40, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/raghu1.jpg"))); // NOI18N
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -239,6 +280,52 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         pass.setText("");
     }//GEN-LAST:event_jLabel7MouseClicked
 
+    private void emailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusGained
+        // TODO add your handling code here:
+        if(email.getText().equals("Enter Your Email ID")){
+             email.setText("");
+             email.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_emailFocusGained
+
+    private void emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusLost
+        // TODO add your handling code here:
+        if(email.getText().equals("")){
+             email.setText("Enter Your Email ID");
+             email.setForeground(new Color(128,128,128));
+        }
+    }//GEN-LAST:event_emailFocusLost
+
+    private void passFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passFocusGained
+        // TODO add your handling code here:
+         if(pass.getText().equals("Enter Your Password")){
+             pass.setText("");
+             pass.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_passFocusGained
+
+    private void passFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passFocusLost
+        // TODO add your handling code here:
+         if(pass.getText().equals("")){
+             pass.setText("Enter Your Password");
+             pass.setForeground(new Color(128,128,128));
+        }
+    }//GEN-LAST:event_passFocusLost
+
+    private void openMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openMousePressed
+        // TODO add your handling code here:
+        hide.setVisible(true);
+        open.setVisible(false);
+        pass.setEchoChar('*');
+    }//GEN-LAST:event_openMousePressed
+
+    private void hideMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hideMousePressed
+        // TODO add your handling code here:
+        open.setVisible(true);
+        hide.setVisible(false);
+        pass.setEchoChar((char)0);
+    }//GEN-LAST:event_hideMousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -279,6 +366,7 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField email;
+    private javax.swing.JLabel hide;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -289,6 +377,7 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel open;
     private javax.swing.JPasswordField pass;
     // End of variables declaration//GEN-END:variables
 }

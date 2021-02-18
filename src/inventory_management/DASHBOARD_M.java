@@ -2872,19 +2872,5 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     private javax.swing.JPanel timebar;
     // End of variables declaration//GEN-END:variables
 
-    void Date() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void Time() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void man_s(String name, String mng_Id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void mngname(String Name, String ID) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
