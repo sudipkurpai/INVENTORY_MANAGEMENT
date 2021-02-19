@@ -96,7 +96,7 @@ public class OPTION extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your hadling code here:
-       new LOGINFROM_MAN().setVisible(true);
+       new LOGINFROM().setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 

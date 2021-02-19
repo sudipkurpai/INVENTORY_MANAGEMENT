@@ -18,7 +18,7 @@ import javax.swing.Timer;
  *
  * @author RAGHUNATH DAS
  */
-public class LOGINFROM_MAN extends javax.swing.JFrame {
+public class LOGI extends javax.swing.JFrame {
 
     String date=null;
     String time = null;
@@ -26,7 +26,7 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
     /**
      * Creates new form LOGINfROM
      */
-    public LOGINFROM_MAN() {
+    public LOGI() {
         initComponents();
         open.setVisible(false);
         date();
@@ -69,9 +69,9 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         pass = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        Log_in = new javax.swing.JLabel();
+        Clear = new javax.swing.JLabel();
+        Close = new javax.swing.JLabel();
         hide = new javax.swing.JLabel();
         open = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -104,6 +104,11 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
                 emailFocusLost(evt);
             }
         });
+        email.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailActionPerformed(evt);
+            }
+        });
         jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 350, 50));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -130,31 +135,31 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         jLabel5.setText("Forget Password");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, 120, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/log in_new.png"))); // NOI18N
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        Log_in.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/log in_new.png"))); // NOI18N
+        Log_in.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                Log_inMouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, -1, -1));
+        jPanel2.add(Log_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Clear_new.png"))); // NOI18N
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+        Clear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Clear_new.png"))); // NOI18N
+        Clear.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
+                ClearMouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 150, -1));
+        jPanel2.add(Clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 150, -1));
 
-        jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        Close.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        Close.setForeground(new java.awt.Color(255, 255, 255));
+        Close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
+        Close.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
+                CloseMouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, 20));
+        jPanel2.add(Close, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, 20));
 
         hide.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         hide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/visibility (1).png"))); // NOI18N
@@ -194,7 +199,7 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void Log_inMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Log_inMouseClicked
         //TODO add your handling code here:
         String p_email = email.getText();
         String p_pass = pass.getText();
@@ -265,20 +270,20 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         }catch (Exception e){
             System.out.println("Exception -"+e);
         }  
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_Log_inMouseClicked
 
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+    private void CloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseMouseClicked
         // TODO add your handling code here:
         OPTION op = new OPTION();
         op.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }//GEN-LAST:event_CloseMouseClicked
 
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+    private void ClearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearMouseClicked
         // TODO add your handling code here:
         email.setText("");
         pass.setText("");
-    }//GEN-LAST:event_jLabel7MouseClicked
+    }//GEN-LAST:event_ClearMouseClicked
 
     private void emailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusGained
         // TODO add your handling code here:
@@ -326,6 +331,10 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         pass.setEchoChar((char)0);
     }//GEN-LAST:event_hideMousePressed
 
+    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -343,14 +352,26 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM_MAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM_MAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM_MAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LOGINFROM_MAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LOGI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -359,12 +380,15 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LOGINFROM_MAN().setVisible(true);
+                new LOGI().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Clear;
+    private javax.swing.JLabel Close;
+    private javax.swing.JLabel Log_in;
     private javax.swing.JTextField email;
     private javax.swing.JLabel hide;
     private javax.swing.JLabel jLabel1;
@@ -372,9 +396,6 @@ public class LOGINFROM_MAN extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel open;

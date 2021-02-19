@@ -5,6 +5,8 @@
  */
 package inventory_management;
 
+import java.awt.Color;
+
 /**
  *
  * @author ganesh pradhan
@@ -16,6 +18,10 @@ public class Employee_Login extends javax.swing.JFrame {
      */
     public Employee_Login() {
         initComponents();
+        Epassword.setVisible(false);
+        Eemail.setVisible(false);
+
+
     }
 
     /**
@@ -35,11 +41,11 @@ public class Employee_Login extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        Eemail = new javax.swing.JLabel();
+        ID = new javax.swing.JTextField();
+        Epassword = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        password = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
@@ -103,32 +109,48 @@ public class Employee_Login extends javax.swing.JFrame {
         jLabel2.setText("Log in or Sign Up");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 163, -1));
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Employee ID");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 223, 145, 24));
+        Eemail.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Eemail.setForeground(new java.awt.Color(0, 0, 0));
+        Eemail.setText("Employee ID");
+        jPanel3.add(Eemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 223, 145, 24));
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(153, 153, 153));
-        jTextField1.setText("Employee ID");
-        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 253, 290, 29));
+        ID.setBackground(new java.awt.Color(255, 255, 255));
+        ID.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        ID.setForeground(new java.awt.Color(153, 153, 153));
+        ID.setText("Employee ID");
+        ID.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
+        ID.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                IDFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                IDFocusLost(evt);
+            }
+        });
+        jPanel3.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 253, 290, 29));
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Password");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 309, 132, 24));
+        Epassword.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Epassword.setForeground(new java.awt.Color(0, 0, 0));
+        Epassword.setText("Password");
+        jPanel3.add(Epassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 309, 132, 24));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/visibility (1).png"))); // NOI18N
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 50, 30));
 
-        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
-        jPasswordField1.setForeground(new java.awt.Color(153, 153, 153));
-        jPasswordField1.setText("jPasswordField1");
-        jPasswordField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
-        jPanel3.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 339, 290, 30));
+        password.setBackground(new java.awt.Color(255, 255, 255));
+        password.setForeground(new java.awt.Color(153, 153, 153));
+        password.setText("jPasswordField1");
+        password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+        password.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                passwordFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                passwordFocusLost(evt);
+            }
+        });
+        jPanel3.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 339, 290, 30));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 51, 153));
@@ -140,6 +162,11 @@ public class Employee_Login extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Login");
         jButton1.setBorder(null);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 300, 40));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -193,6 +220,53 @@ public class Employee_Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void IDFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_IDFocusGained
+        // TODO add your handling code here:
+        if(ID.getText().equals("Email")){
+            Eemail.setVisible(true);
+            ID.setText("");
+            ID.setForeground(new Color(000,000,000));
+        }
+    }//GEN-LAST:event_IDFocusGained
+
+    private void IDFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_IDFocusLost
+        // TODO add your handling code here:
+          if(ID.getText().equals("")){
+            Eemail.setVisible(false);
+            ID.setText("");
+            ID.setForeground(new Color(128,128,128));
+        }else{
+            Eemail.setVisible(true);
+        }
+    }//GEN-LAST:event_IDFocusLost
+
+    private void passwordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusGained
+        // TODO add your handling code here:
+          if(password.getText().equals("Password")){
+            Epassword.setVisible(true);
+            password.setText("");
+            password.setEchoChar('*');
+            password.setForeground(new Color(000,000,000));
+        }
+    }//GEN-LAST:event_passwordFocusGained
+
+    private void passwordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusLost
+        // TODO add your handling code here:
+         if(password.getText().equals("")){
+            Epassword.setVisible(false);
+            password.setText("Password");
+            password.setEchoChar((char)0);
+            password.setForeground(new Color(128,128,128));
+        }else{
+            Epassword.setVisible(true);
+        }
+    }//GEN-LAST:event_passwordFocusLost
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -229,13 +303,14 @@ public class Employee_Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Eemail;
+    private javax.swing.JLabel Epassword;
+    private javax.swing.JTextField ID;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -245,7 +320,6 @@ public class Employee_Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField password;
     // End of variables declaration//GEN-END:variables
 }
