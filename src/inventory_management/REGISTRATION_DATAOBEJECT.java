@@ -39,13 +39,13 @@ public class REGISTRATION_DATAOBEJECT {
 
 //INSERT INTO `register`(`FIRST_NAME`, `LAST_NAME`, `EMAIL`, `MOBILE_NO`, `PASSWORD`, `CONFIRM_PASSWORD`, `ADDRESS`, `GENDER`) 
     }
-    public static boolean validate(String email,String password) throws SQLException
+    public static boolean validate(String mngid,String password) throws SQLException
     {
         boolean status =false;
         try{
             Connection con=DATABASE_CONNECTION.getConnection();
-            PreparedStatement ps=con.prepareStatement("select * from register where Email = ? and Password=?");
-            ps.setString(1, email);
+            PreparedStatement ps=con.prepareStatement("select * from register where MNG_ID = ? and Password=?");
+            ps.setString(1, mngid);
             ps.setString(2, password);
             ResultSet rs=ps.executeQuery();
             status=rs.next();
