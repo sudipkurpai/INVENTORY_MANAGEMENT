@@ -266,7 +266,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         timebar.setBackground(new java.awt.Color(0, 204, 102));
@@ -274,44 +274,44 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         timebar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(252, 228, 0));
         jLabel1.setText("DATE :");
-        timebar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, -1, 20));
+        timebar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, -1, 20));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(252, 228, 0));
         jLabel2.setText("TIME :");
-        timebar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, -1, 20));
+        timebar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, -1, 20));
 
         date.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         date.setForeground(new java.awt.Color(255, 255, 255));
         date.setText("04-02-2021");
-        timebar.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 90, 20));
+        timebar.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 130, 20));
 
         Showtime.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         Showtime.setForeground(new java.awt.Color(255, 255, 255));
         Showtime.setText("08:20 PM");
-        timebar.add(Showtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 106, 20));
+        timebar.add(Showtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, 106, 20));
 
         jLabel19.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setForeground(new java.awt.Color(42, 42, 255));
         jLabel19.setText("LOGIN TIME :");
-        timebar.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 20, -1, -1));
+        timebar.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 20, 110, -1));
 
         time1.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         time1.setForeground(new java.awt.Color(255, 255, 255));
         time1.setText("08:20 PM");
-        timebar.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 112, 20));
+        timebar.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 20, 100, 20));
 
         time2.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         time2.setForeground(new java.awt.Color(255, 255, 255));
         time2.setText("04-02-2021");
-        timebar.add(time2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 86, 20));
+        timebar.add(time2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 86, 20));
 
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setForeground(new java.awt.Color(42, 42, 255));
         jLabel20.setText("LOGIN DATE :");
-        timebar.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, 20));
+        timebar.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, 20));
 
         jLabel24.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
@@ -595,7 +595,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
             }
         });
 
-        jLabel41.setIcon(new javax.swing.ImageIcon("C:\\Users\\Sudip Maiti\\Desktop\\icons\\stock_11.png")); // NOI18N
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/stock_11.png"))); // NOI18N
 
         javax.swing.GroupLayout add_emp1Layout = new javax.swing.GroupLayout(add_emp1);
         add_emp1.setLayout(add_emp1Layout);
@@ -967,7 +967,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         });
 
         jLabel83.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/employee .png"))); // NOI18N
+        jLabel83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/student-profile.png"))); // NOI18N
 
         jLabel122.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel122.setForeground(new java.awt.Color(0, 204, 102));

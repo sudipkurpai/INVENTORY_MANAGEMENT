@@ -102,6 +102,8 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         BODY = new javax.swing.JPanel();
         home = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -201,42 +203,42 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         TIME.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 204, 255));
         jLabel2.setText("Login Time :");
         TIME.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 70));
 
         loginTime.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        loginTime.setForeground(new java.awt.Color(255, 255, 255));
+        loginTime.setForeground(new java.awt.Color(0, 204, 255));
         loginTime.setText("00:05 am");
         TIME.add(loginTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 110, 70));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 204, 255));
         jLabel4.setText("Login Date :");
         TIME.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, -1, 70));
 
         loginDate.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        loginDate.setForeground(new java.awt.Color(255, 255, 255));
+        loginDate.setForeground(new java.awt.Color(0, 204, 255));
         loginDate.setText("05-02-2021");
         TIME.add(loginDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 110, 70));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 0));
         jLabel6.setText("Time :");
         TIME.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 50, 70));
 
         showTime.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        showTime.setForeground(new java.awt.Color(255, 255, 255));
+        showTime.setForeground(new java.awt.Color(255, 255, 0));
         showTime.setText("00:05 am");
         TIME.add(showTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 130, 70));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 0));
         jLabel8.setText("Date :");
         TIME.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 50, 70));
 
         showDate.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        showDate.setForeground(new java.awt.Color(255, 255, 255));
+        showDate.setForeground(new java.awt.Color(255, 255, 0));
         showDate.setText("05-02-2021");
         TIME.add(showDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 0, 110, 70));
 
@@ -246,7 +248,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
                 jLabel10MouseClicked(evt);
             }
         });
-        TIME.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 30, 30));
+        TIME.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, 30, 30));
 
         jPanel1.add(TIME, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 810, 73));
 
@@ -261,13 +263,13 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
 
         ID.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         ID.setForeground(new java.awt.Color(255, 255, 255));
-        ID.setText("ID : 123456");
-        OPTION.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 280, 30));
+        ID.setText(" 123456");
+        OPTION.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 210, 30));
 
         Name.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Name.setForeground(new java.awt.Color(255, 255, 255));
-        Name.setText("Name : Raghunath");
-        OPTION.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 280, 30));
+        Name.setText(" Raghunath");
+        OPTION.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 210, 30));
 
         jLabel18.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
@@ -489,6 +491,16 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         );
 
         OPTION.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 600, 240, 40));
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("ID :");
+        OPTION.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, 30));
+
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Name :");
+        OPTION.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, 30));
 
         jPanel1.add(OPTION, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 690));
 
@@ -1730,7 +1742,9 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;

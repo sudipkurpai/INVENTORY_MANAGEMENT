@@ -394,7 +394,7 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
             //raghu
             else if(ADD_NEW_EMP_DATAOBEJECT.validate(emp_Id, p_pass)){
                 EMP_SEASSION_DATAOBJECT.Emp_data_insert(name,emp_Id,phone,"",time,"",date,"");                
-                emp.setBackground(Color.green);
+                emp.setForeground(Color.green);
                 emp.setText(null);
                 pass.setBackground(Color.green);
                 pass.setText(null);
