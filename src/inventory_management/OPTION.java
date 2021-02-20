@@ -102,7 +102,7 @@ public class OPTION extends javax.swing.JFrame {
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
-        new LOGINFROM_EMP().setVisible(true);
+        new LOGIN_EMPLOYEE().setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
 

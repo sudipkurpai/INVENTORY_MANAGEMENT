@@ -75,7 +75,7 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         Mpassword = new javax.swing.JLabel();
         Memail = new javax.swing.JLabel();
-        email = new javax.swing.JTextField();
+        emp = new javax.swing.JTextField();
         open = new javax.swing.JLabel();
         hide = new javax.swing.JLabel();
         pass = new javax.swing.JPasswordField();
@@ -114,26 +114,26 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
         Memail.setText("Manager ID");
         jPanel2.add(Memail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 330, -1));
 
-        email.setBackground(new java.awt.Color(255, 255, 255));
-        email.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        email.setForeground(new java.awt.Color(128, 128, 128));
-        email.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        email.setText("Manager ID");
-        email.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(128, 128, 128)));
-        email.addFocusListener(new java.awt.event.FocusAdapter() {
+        emp.setBackground(new java.awt.Color(255, 255, 255));
+        emp.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        emp.setForeground(new java.awt.Color(128, 128, 128));
+        emp.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        emp.setText("Manager ID");
+        emp.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(128, 128, 128)));
+        emp.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                emailFocusGained(evt);
+                empFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                emailFocusLost(evt);
+                empFocusLost(evt);
             }
         });
-        email.addActionListener(new java.awt.event.ActionListener() {
+        emp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
+                empActionPerformed(evt);
             }
         });
-        jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 329, 40));
+        jPanel2.add(emp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 329, 40));
 
         open.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         open.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/visibility (2).png"))); // NOI18N
@@ -322,9 +322,9 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+    private void empActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
+    }//GEN-LAST:event_empActionPerformed
 
     private void openMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openMousePressed
         // TODO add your handling code here:
@@ -342,92 +342,104 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
 
     private void Log_inMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Log_inMouseClicked
         // TODO add your handling code here:
-         String p_email = email.getText();
+         String emp_Id = emp.getText();
         String p_pass = pass.getText();
-        String name= null;
-        String mng_Id = null;
-        String eml= null;
+        String name = null;
+        String emp_id = null;       
+        String eml = null;
         String phone = null;
+        
         try {
-            //  Data fetch from database
-            String sql = "Select * from register Where MNG_ID = ?";
+             //Data fetch from database
+            String sql = "Select * from employee_register Where EMP_ID = ?";
             Connection con=DATABASE_CONNECTION.getConnection();
             PreparedStatement ps=con.prepareStatement(sql);
-            ps.setString(1,p_email);
+            ps.setString(1,emp_Id);
             ResultSet rs=ps.executeQuery();
             if(rs.next()){
-                eml =rs.getString("Email");
-                System.out.println("EMAILLLLLLLL "+eml);
-                phone =rs.getString("MOBILE_NO");
-                System.out.println("EMAILLLLLLLL "+phone);
+                String emi =rs.getString("EMP_ID");
+                System.out.println("EMpppppp "+emp);
+                String pss =rs.getString("Password");
+                System.out.println("PASSSSSSSSSS "+pss);
                 String fname =rs.getString("FIRST_NAME");
-                System.out.println("FIRST NAME "+fname);
+                System.out.println("FIRST_NAME "+fname);
                 String lname =rs.getString("LAST_NAME");
-                System.out.println("LAST NAME "+lname);
+                System.out.println("LAST_NAME "+lname);
                 name = fname+" "+lname;
-                System.out.println("FULL NAME "+name);
-                mng_Id =rs.getString("MNG_ID");
-                System.out.println("MNGGGGGGGGGGGGG "+mng_Id);
+                System.out.println("FULL_NAME "+name);
+                emp_id =rs.getString("EMP_ID");
+                System.out.println("empoooooooo"+ emp_id);
+                
+              
+                
                 rs.close();
                 ps.close();
             }else{
-                //JOptionPane.showMessageDialog(null, "Enter Correct User Name");
-                System.out.println("Enter Correct User Name");
+                emp.setBackground(Color.red);
+                emp.setText(null);
+                
+                pass.setText(null);
+                JOptionPane.showMessageDialog(null, "Enter Correct User Name");
+                emp.setBackground(Color.white);
+                pass.setBackground(Color.white);
             }
         }catch(Exception e){
             System.out.println("error"+e);
         }
         try{
-            if(p_email.equals("")||p_pass.equals("")){
+            //ganesh
+            if(emp_Id.equals("")||p_pass.equals("")){
                 JOptionPane.showMessageDialog(this, "Fill up all field first");
-            }else if(REGISTRATION_DATAOBEJECT.validate(p_email, p_pass)){
-                String timeee = time;
-                System.out.println("11111111111111" +timeee);
-                MAN_SEASION_DATAOBJECT.man_isert_session(name,mng_Id,phone,eml,timeee,"",date,"");
-                email.setForeground(Color.GREEN);
-                pass.setForeground(Color.GREEN);                
+            }
+            //raghu
+            else if(ADD_NEW_EMP_DATAOBEJECT.validate(emp_Id, p_pass)){
+                EMP_SEASSION_DATAOBJECT.Emp_data_insert(name,emp_Id,phone,"",time,"",date,"");                
+                emp.setBackground(Color.green);
+                emp.setText(null);
+                pass.setBackground(Color.green);
+                pass.setText(null);
                 JOptionPane.showMessageDialog(null, "Login Successfully");
-                DASHBOARD_M dm = new DASHBOARD_M();
-                System.out.println("2222222222222222" +timeee);
-                dm.mngname(name,mng_Id,eml,phone,date,timeee);  
-                dm.setVisible(true);              
-                         
+                DASHBOARD_FINAL_EMPLOYEE dme = new DASHBOARD_FINAL_EMPLOYEE();
+                dme.setVisible(true);
+                dme.empname(name,emp_Id,eml,phone,date,time);
                 this.dispose();
-            }else{
-                email.setForeground(Color.RED);
-                pass.setForeground(Color.RED);
-                JOptionPane.showMessageDialog(null,"Enter Correct Details", "Login Error", JOptionPane.ERROR_MESSAGE);
-                email.setText("Manager ID");
-                pass.setText("Password");
-                 pass.setEchoChar((char)0);
-                email.setForeground(new Color(128,128,128));
-                pass.setForeground(new Color(128,128,128));
+                
+            }
+            //sudip
+            else{
+                //JOptionPane.showMessageDialog(LOG_IN.this,"You are not a valid user plese create your account","Login Error",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Login Error");
+                emp.setBackground(Color.red);
+                emp.setText(null);
+                pass.setBackground(Color.red);
+                pass.setText(null);
+                
             }
         }catch (Exception e){
             System.out.println("Exception -"+e);
-        }  
+        }   
      
     }//GEN-LAST:event_Log_inMouseClicked
 
-    private void emailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusGained
+    private void empFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_empFocusGained
         // TODO add your handling code here:
-        if(email.getText().equals("Manager ID")){
+        if(emp.getText().equals("Manager ID")){
             Memail.setVisible(true);
-            email.setText("");
-            email.setForeground(new Color(000,000,000));
+            emp.setText("");
+            emp.setForeground(new Color(000,000,000));
         }
-    }//GEN-LAST:event_emailFocusGained
+    }//GEN-LAST:event_empFocusGained
 
-    private void emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusLost
+    private void empFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_empFocusLost
         // TODO add your handling code here:
-         if(email.getText().equals("")){
+         if(emp.getText().equals("")){
             Memail.setVisible(false);
-            email.setText("Manager ID");
-            email.setForeground(new Color(128,128,128));
+            emp.setText("Manager ID");
+            emp.setForeground(new Color(128,128,128));
         }else{
-            email.setVisible(true);
+            emp.setVisible(true);
         }
-    }//GEN-LAST:event_emailFocusLost
+    }//GEN-LAST:event_empFocusLost
 
     private void passFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passFocusGained
         // TODO add your handling code here:
@@ -462,10 +474,10 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
         // TODO add your handling code here:
         Mpassword.setVisible(false);
         Memail.setVisible(false);
-        email.setText("Manager ID");
+        emp.setText("Manager ID");
         pass.setText("Password");
         pass.setEchoChar((char)0);
-        email.setForeground(new Color(128,128,128));
+        emp.setForeground(new Color(128,128,128));
         pass.setForeground(new Color(128,128,128));
     }//GEN-LAST:event_jPanel4MouseClicked
 
@@ -523,7 +535,7 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JLabel Log_in;
     private javax.swing.JLabel Memail;
     private javax.swing.JLabel Mpassword;
-    private javax.swing.JTextField email;
+    private javax.swing.JTextField emp;
     private javax.swing.JLabel hide;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
