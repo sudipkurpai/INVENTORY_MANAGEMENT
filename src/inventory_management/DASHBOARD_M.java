@@ -712,7 +712,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         jLabel117.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel117.setText("Sold Report");
 
-        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/article.png"))); // NOI18N
+        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Sold-report.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel73Layout = new javax.swing.GroupLayout(jPanel73);
         jPanel73.setLayout(jPanel73Layout);
