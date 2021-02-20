@@ -286,7 +286,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         date.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         date.setForeground(new java.awt.Color(255, 255, 255));
         date.setText("04-02-2021");
-        timebar.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 116, 20));
+        timebar.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 90, 20));
 
         Showtime.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         Showtime.setForeground(new java.awt.Color(255, 255, 255));
