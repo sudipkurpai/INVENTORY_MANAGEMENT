@@ -422,7 +422,7 @@ public class LOGINFROM extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,"Enter Correct Details", "Login Error", JOptionPane.ERROR_MESSAGE);
                 email.setText("Manager ID");
                 pass.setText("Password");
-                 pass.setEchoChar((char)0);
+                pass.setEchoChar((char)0);
                 email.setForeground(new Color(128,128,128));
                 pass.setForeground(new Color(128,128,128));
             }

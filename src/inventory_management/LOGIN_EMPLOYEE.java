@@ -111,14 +111,14 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
         Memail.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         Memail.setForeground(new java.awt.Color(128, 128, 128));
         Memail.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Memail.setText("Manager ID");
+        Memail.setText("Employee ID");
         jPanel2.add(Memail, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 330, -1));
 
         emp.setBackground(new java.awt.Color(255, 255, 255));
         emp.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         emp.setForeground(new java.awt.Color(128, 128, 128));
         emp.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        emp.setText("Manager ID");
+        emp.setText("Employee ID");
         emp.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(128, 128, 128)));
         emp.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -368,20 +368,11 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
                 name = fname+" "+lname;
                 System.out.println("FULL_NAME "+name);
                 emp_id =rs.getString("EMP_ID");
-                System.out.println("empoooooooo"+ emp_id);
-                
-              
-                
+                System.out.println("empoooooooo"+ emp_id);            
                 rs.close();
                 ps.close();
             }else{
-                emp.setBackground(Color.red);
-                emp.setText(null);
-                
-                pass.setText(null);
-                JOptionPane.showMessageDialog(null, "Enter Correct User Name");
-                emp.setBackground(Color.white);
-                pass.setBackground(Color.white);
+                System.out.println("Enter Correct User Name");
             }
         }catch(Exception e){
             System.out.println("error"+e);
@@ -393,11 +384,9 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
             }
             //raghu
             else if(ADD_NEW_EMP_DATAOBEJECT.validate(emp_Id, p_pass)){
-                EMP_SEASSION_DATAOBJECT.Emp_data_insert(name,emp_Id,phone,"",time,"",date,"");                
-                emp.setForeground(Color.green);
-                emp.setText(null);
-                pass.setBackground(Color.green);
-                pass.setText(null);
+                EMP_SEASSION_DATAOBJECT.Emp_data_insert(name,emp_Id,phone,"",time,"",date,""); 
+                emp.setForeground(Color.GREEN);
+                pass.setForeground(Color.GREEN); 
                 JOptionPane.showMessageDialog(null, "Login Successfully");
                 DASHBOARD_FINAL_EMPLOYEE dme = new DASHBOARD_FINAL_EMPLOYEE();
                 dme.setVisible(true);
@@ -407,13 +396,16 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
             }
             //sudip
             else{
-                //JOptionPane.showMessageDialog(LOG_IN.this,"You are not a valid user plese create your account","Login Error",JOptionPane.ERROR_MESSAGE);
-                JOptionPane.showMessageDialog(null, "Login Error");
-                emp.setBackground(Color.red);
-                emp.setText(null);
-                pass.setBackground(Color.red);
-                pass.setText(null);
-                
+                emp.setForeground(Color.RED);
+                pass.setForeground(Color.RED);
+                JOptionPane.showMessageDialog(null,"Enter Correct Details", "Login Error", JOptionPane.ERROR_MESSAGE);
+                emp.setText("Employee ID");
+                pass.setText("Password");
+                pass.setEchoChar((char)0);
+                Mpassword.setVisible(false);
+                Memail.setVisible(false);
+                emp.setForeground(new Color(128,128,128));
+                pass.setForeground(new Color(128,128,128));
             }
         }catch (Exception e){
             System.out.println("Exception -"+e);
@@ -423,7 +415,7 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
 
     private void empFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_empFocusGained
         // TODO add your handling code here:
-        if(emp.getText().equals("Manager ID")){
+        if(emp.getText().equals("Employee ID")){
             Memail.setVisible(true);
             emp.setText("");
             emp.setForeground(new Color(000,000,000));
@@ -434,7 +426,7 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
         // TODO add your handling code here:
          if(emp.getText().equals("")){
             Memail.setVisible(false);
-            emp.setText("Manager ID");
+            emp.setText("Employee ID");
             emp.setForeground(new Color(128,128,128));
         }else{
             emp.setVisible(true);
