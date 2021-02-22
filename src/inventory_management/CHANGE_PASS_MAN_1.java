@@ -37,6 +37,10 @@ public class CHANGE_PASS_MAN_1 extends javax.swing.JFrame {
         pass1 = new javax.swing.JPasswordField();
         jLabel17 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        open1 = new javax.swing.JLabel();
+        hide1 = new javax.swing.JLabel();
+        open2 = new javax.swing.JLabel();
+        hide2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -65,7 +69,7 @@ public class CHANGE_PASS_MAN_1 extends javax.swing.JFrame {
                 passFocusLost(evt);
             }
         });
-        jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, -1));
+        jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 350, -1));
 
         jPanel2.setBackground(new java.awt.Color(0, 204, 102));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -94,7 +98,7 @@ public class CHANGE_PASS_MAN_1 extends javax.swing.JFrame {
                 pass1FocusLost(evt);
             }
         });
-        jPanel1.add(pass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
+        jPanel1.add(pass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 350, -1));
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/key_1.png"))); // NOI18N
@@ -105,6 +109,50 @@ public class CHANGE_PASS_MAN_1 extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/key_1.png"))); // NOI18N
         jLabel13.setPreferredSize(new java.awt.Dimension(40, 40));
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
+
+        open1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        open1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/visibility (2).png"))); // NOI18N
+        open1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 204, 102)));
+        open1.setPreferredSize(new java.awt.Dimension(24, 33));
+        open1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                open1MousePressed(evt);
+            }
+        });
+        jPanel1.add(open1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 40, 40));
+
+        hide1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hide1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/visibility (1).png"))); // NOI18N
+        hide1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 204, 102)));
+        hide1.setPreferredSize(new java.awt.Dimension(24, 33));
+        hide1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                hide1MousePressed(evt);
+            }
+        });
+        jPanel1.add(hide1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 40, 40));
+
+        open2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        open2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/visibility (2).png"))); // NOI18N
+        open2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 204, 102)));
+        open2.setPreferredSize(new java.awt.Dimension(24, 33));
+        open2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                open2MousePressed(evt);
+            }
+        });
+        jPanel1.add(open2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 40, 40));
+
+        hide2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hide2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/visibility (1).png"))); // NOI18N
+        hide2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 204, 102)));
+        hide2.setPreferredSize(new java.awt.Dimension(24, 33));
+        hide2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                hide2MousePressed(evt);
+            }
+        });
+        jPanel1.add(hide2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -167,6 +215,34 @@ public class CHANGE_PASS_MAN_1 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_pass1FocusGained
 
+    private void open1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_open1MousePressed
+        // TODO add your handling code here:
+        hide1.setVisible(true);
+        open1.setVisible(false);
+        pass1.setEchoChar('*');
+    }//GEN-LAST:event_open1MousePressed
+
+    private void hide1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hide1MousePressed
+        // TODO add your handling code here:
+        open1.setVisible(true);
+        hide1.setVisible(false);
+        pass1.setEchoChar((char)0);
+    }//GEN-LAST:event_hide1MousePressed
+
+    private void open2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_open2MousePressed
+        // TODO add your handling code here:
+        hide2.setVisible(true);
+        open2.setVisible(false);
+        pass.setEchoChar('*');
+    }//GEN-LAST:event_open2MousePressed
+
+    private void hide2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hide2MousePressed
+        // TODO add your handling code here:
+        open2.setVisible(true);
+        hide2.setVisible(false);
+        pass.setEchoChar((char)0);
+    }//GEN-LAST:event_hide2MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -204,12 +280,16 @@ public class CHANGE_PASS_MAN_1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel hide1;
+    private javax.swing.JLabel hide2;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel open1;
+    private javax.swing.JLabel open2;
     private javax.swing.JPasswordField pass;
     private javax.swing.JPasswordField pass1;
     // End of variables declaration//GEN-END:variables

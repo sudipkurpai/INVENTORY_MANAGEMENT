@@ -1945,7 +1945,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jPanel65">
+            <Container class="javax.swing.JPanel" name="LOGOUTaa">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="ff" type="rgb"/>
@@ -3744,7 +3744,7 @@
                       <EmptySpace pref="76" max="32767" attributes="0"/>
                       <Component id="add_emp2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                      <Component id="add_emp4" min="-2" max="-2" attributes="0"/>
+                      <Component id="change_pass" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="316" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -3754,7 +3754,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="add_emp4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="change_pass" alignment="0" max="32767" attributes="0"/>
                           <Component id="add_emp2" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -3821,14 +3821,14 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="add_emp4">
+            <Container class="javax.swing.JPanel" name="change_pass">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="ff" red="cc" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="add_emp4MouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="change_passMouseClicked"/>
               </Events>
 
               <Layout>

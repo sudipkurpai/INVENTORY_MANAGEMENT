@@ -10,8 +10,12 @@ import java.awt.Color;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
 /**
@@ -38,14 +42,14 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         ID.setText( mng_Id);
         eml = email;
         ph = phone;
-        loginDate.setText(Date);
-        loginTime.setText(Time);
+        time2.setText(Date);
+        time1.setText(Time);
         
     }
   void date (){
       Date d=new Date ();
       SimpleDateFormat s=new SimpleDateFormat("dd-MM-yyyy");
-      showDate.setText(s.format(d));     
+      date.setText(s.format(d));     
       //
       
   }
@@ -55,7 +59,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
          public void actionPerformed(ActionEvent e) {
             Date d=new Date ();
             SimpleDateFormat s=new SimpleDateFormat("hh:mm:ss a");
-            showTime.setText(s.format(d));              
+            Showtime.setText(s.format(d));              
          }
      }).start();
       
@@ -72,13 +76,13 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         TIME = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        loginTime = new javax.swing.JLabel();
+        time1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        loginDate = new javax.swing.JLabel();
+        time2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        showTime = new javax.swing.JLabel();
+        Showtime = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        showDate = new javax.swing.JLabel();
+        date = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         OPTION = new javax.swing.JPanel();
         Welcome = new javax.swing.JLabel();
@@ -207,40 +211,40 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         jLabel2.setText("Login Time :");
         TIME.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 70));
 
-        loginTime.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        loginTime.setForeground(new java.awt.Color(0, 204, 255));
-        loginTime.setText("00:05 am");
-        TIME.add(loginTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 110, 70));
+        time1.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        time1.setForeground(new java.awt.Color(0, 204, 255));
+        time1.setText("00:05 am");
+        TIME.add(time1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 110, 70));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 204, 255));
         jLabel4.setText("Login Date :");
         TIME.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, -1, 70));
 
-        loginDate.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        loginDate.setForeground(new java.awt.Color(0, 204, 255));
-        loginDate.setText("05-02-2021");
-        TIME.add(loginDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 110, 70));
+        time2.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        time2.setForeground(new java.awt.Color(0, 204, 255));
+        time2.setText("05-02-2021");
+        TIME.add(time2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 110, 70));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 0));
         jLabel6.setText("Time :");
         TIME.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 50, 70));
 
-        showTime.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        showTime.setForeground(new java.awt.Color(255, 255, 0));
-        showTime.setText("00:05 am");
-        TIME.add(showTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 130, 70));
+        Showtime.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        Showtime.setForeground(new java.awt.Color(255, 255, 0));
+        Showtime.setText("00:05 am");
+        TIME.add(Showtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 130, 70));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 0));
         jLabel8.setText("Date :");
         TIME.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 50, 70));
 
-        showDate.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        showDate.setForeground(new java.awt.Color(255, 255, 0));
-        showDate.setText("05-02-2021");
-        TIME.add(showDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 0, 110, 70));
+        date.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        date.setForeground(new java.awt.Color(255, 255, 0));
+        date.setText("05-02-2021");
+        TIME.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 0, 110, 70));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/minimize.png"))); // NOI18N
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1560,12 +1564,57 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        // TODO add your handling code here:
-      LOGOUT_E le = new LOGOUT_E();
-        le.setVisible(true);
-        this.dispose();  
+        // TODO add your handling code here:        
+        int Yes = JOptionPane.showConfirmDialog(null, "Are Your Sure Want to Log Out ?");
+        if(Yes == 0){
+            session();
+            LOGOUT Ll = new LOGOUT(); 
+            Ll.setVisible(true);
+            this.dispose();
+        }else{
+             int No=0;
+                if (No == 0){
+                }
+        }
     }//GEN-LAST:event_jLabel1MouseClicked
 
+    private void session() {
+       int status=0;
+        String llTime=time1.getText();
+        String llDate = time2.getText();
+        String logoutTime=Showtime.getText();
+        String logoutDate = date.getText();
+        System.out.println("TTTTTTTTTTTTTTTTTTTTT"+logoutTime);
+        System.out.println("DDDDDDDDDDDDDDDDDD"+logoutDate);
+        System.out.println("LLLLLLLLLTTTTTT"+llTime);
+        System.out.println("LLLLLLLLLDDDDDDD"+llDate); 
+        try {
+            //  Data fetch from database
+            System.out.println("@@@@@@@@@@");
+            Connection con=DATABASE_CONNECTION.getConnection();
+            System.out.println("CONNNNNNNN" +con);
+            PreparedStatement ps=con.prepareStatement("UPDATE emp_session SET LAST_LOGOUT_TIME =?,LAST_LOGOUT_DATE =? WHERE LAST_LOGIN_TIME =?");
+            System.out.println("!!!!!!!!!!!!!!!!!!" +ps);
+            
+            ps.setString(1,logoutTime);
+            System.out.println("!111111111" +logoutTime);
+            ps.setString(2, logoutDate);
+            System.out.println("!222222222" +logoutDate);
+            ps.setString(3, llTime);
+            System.out.println("!333333333" +llTime);
+            System.out.println("$$$$$$$$$$$$$$$"+status);
+            status = ps.executeUpdate();
+            System.out.println("UPDSATE/////////// "+status);
+            if(status>0){
+                 System.out.println("DATA INSERTED");
+            }else{
+                 System.out.println("ERRORRRRRRRRRRRRRRRRRRRr");
+            }
+        }catch(SQLException e){
+            System.out.println("error"+e);
+        }
+    }
+    
     private void jLabel132MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel132MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel132MouseClicked
@@ -1682,10 +1731,12 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JLabel ID;
     private javax.swing.JLabel Name;
     private javax.swing.JPanel OPTION;
+    private javax.swing.JLabel Showtime;
     private javax.swing.JPanel TIME;
     private javax.swing.JLabel Welcome;
     private javax.swing.JPanel bill;
     private javax.swing.JPanel c_bill;
+    private javax.swing.JLabel date;
     private javax.swing.JPanel home;
     private javax.swing.JPanel homer;
     private javax.swing.JLabel jLabel1;
@@ -1790,15 +1841,15 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel79;
     private javax.swing.JPanel jPanel80;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JLabel loginDate;
-    private javax.swing.JLabel loginTime;
     private javax.swing.JPanel prdtn;
     private javax.swing.JPanel product;
     private javax.swing.JPanel sales;
-    private javax.swing.JLabel showDate;
-    private javax.swing.JLabel showTime;
     private javax.swing.JPanel slsn;
     private javax.swing.JPanel stckn;
     private javax.swing.JPanel stock;
+    private javax.swing.JLabel time1;
+    private javax.swing.JLabel time2;
     // End of variables declaration//GEN-END:variables
+
+    
 }

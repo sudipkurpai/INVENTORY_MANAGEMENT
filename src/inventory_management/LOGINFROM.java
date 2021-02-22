@@ -33,7 +33,7 @@ public class LOGINFROM extends javax.swing.JFrame {
         time();
         Mpassword.setVisible(false);
         Memail.setVisible(false);
-         pass.setEchoChar((char)0);
+        pass.setEchoChar((char)0);
     }
     void hint (){
         
@@ -365,7 +365,7 @@ public class LOGINFROM extends javax.swing.JFrame {
 
     private void Log_inMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Log_inMouseClicked
         // TODO add your handling code here:
-         String p_email = email.getText();
+        String p_email = email.getText();
         String p_pass = pass.getText();
         String name= null;
         String mng_Id = null;
@@ -410,8 +410,10 @@ public class LOGINFROM extends javax.swing.JFrame {
                 email.setForeground(Color.GREEN);
                 pass.setForeground(Color.GREEN);                
                 JOptionPane.showMessageDialog(null, "Login Successfully");
+                
                 DASHBOARD_M dm = new DASHBOARD_M();
                 System.out.println("2222222222222222" +timeee);
+                
                 dm.mngname(name,mng_Id,eml,phone,date,timeee);  
                 dm.setVisible(true);              
                          

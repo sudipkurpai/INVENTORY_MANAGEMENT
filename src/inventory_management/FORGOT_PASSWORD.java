@@ -111,7 +111,7 @@ public class FORGOT_PASSWORD extends javax.swing.JFrame {
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
-        LOGINFROM_EMP dm = new LOGINFROM_EMP();
+       LOGIN_EMPLOYEE dm = new LOGIN_EMPLOYEE();
         dm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel9MouseClicked

@@ -49,7 +49,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
      
     void date() {
         Date d = new Date();
-        SimpleDateFormat s = new SimpleDateFormat("dd-MMM-yyyy");
+        SimpleDateFormat s = new SimpleDateFormat("dd-MM-yyyy");
         date.setText(s.format(d));
     }
 
@@ -164,7 +164,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         cusln = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jPanel65 = new javax.swing.JPanel();
+        LOGOUTaa = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         mng_id = new javax.swing.JLabel();
@@ -259,7 +259,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         add_emp2 = new javax.swing.JPanel();
         jLabel105 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
-        add_emp4 = new javax.swing.JPanel();
+        change_pass = new javax.swing.JPanel();
         jLabel121 = new javax.swing.JLabel();
         jLabel84 = new javax.swing.JLabel();
 
@@ -1261,7 +1261,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
         navbar.add(cusln, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 426, 310, -1));
 
-        jPanel65.setBackground(new java.awt.Color(255, 51, 51));
+        LOGOUTaa.setBackground(new java.awt.Color(255, 51, 51));
 
         jLabel22.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
@@ -1273,21 +1273,21 @@ public class DASHBOARD_M extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel65Layout = new javax.swing.GroupLayout(jPanel65);
-        jPanel65.setLayout(jPanel65Layout);
-        jPanel65Layout.setHorizontalGroup(
-            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout LOGOUTaaLayout = new javax.swing.GroupLayout(LOGOUTaa);
+        LOGOUTaa.setLayout(LOGOUTaaLayout);
+        LOGOUTaaLayout.setHorizontalGroup(
+            LOGOUTaaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
         );
-        jPanel65Layout.setVerticalGroup(
-            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel65Layout.createSequentialGroup()
+        LOGOUTaaLayout.setVerticalGroup(
+            LOGOUTaaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LOGOUTaaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel22)
                 .addContainerGap())
         );
 
-        navbar.add(jPanel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 592, -1, -1));
+        navbar.add(LOGOUTaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 592, -1, -1));
 
         jLabel23.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
@@ -2208,10 +2208,10 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        add_emp4.setBackground(new java.awt.Color(204, 255, 204));
-        add_emp4.addMouseListener(new java.awt.event.MouseAdapter() {
+        change_pass.setBackground(new java.awt.Color(204, 255, 204));
+        change_pass.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                add_emp4MouseClicked(evt);
+                change_passMouseClicked(evt);
             }
         });
 
@@ -2228,16 +2228,16 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         jLabel84.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/padlock.png"))); // NOI18N
 
-        javax.swing.GroupLayout add_emp4Layout = new javax.swing.GroupLayout(add_emp4);
-        add_emp4.setLayout(add_emp4Layout);
-        add_emp4Layout.setHorizontalGroup(
-            add_emp4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout change_passLayout = new javax.swing.GroupLayout(change_pass);
+        change_pass.setLayout(change_passLayout);
+        change_passLayout.setHorizontalGroup(
+            change_passLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel121, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
             .addComponent(jLabel84, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        add_emp4Layout.setVerticalGroup(
-            add_emp4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, add_emp4Layout.createSequentialGroup()
+        change_passLayout.setVerticalGroup(
+            change_passLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, change_passLayout.createSequentialGroup()
                 .addComponent(jLabel84, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel121)
@@ -2252,7 +2252,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                 .addContainerGap(76, Short.MAX_VALUE)
                 .addComponent(add_emp2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78)
-                .addComponent(add_emp4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(change_pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(316, 316, 316))
         );
         UpdateLayout.setVerticalGroup(
@@ -2260,7 +2260,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
             .addGroup(UpdateLayout.createSequentialGroup()
                 .addGap(63, 63, 63)
                 .addGroup(UpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(add_emp4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(change_pass, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(add_emp2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -2417,15 +2417,12 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
         // TODO add your handling code here:
-        /*int status=0;
+        int status=0;
         String llTime=time1.getText();
         String llDate = time2.getText();
         String logoutTime=Showtime.getText();
         String logoutDate = date.getText();
-        System.out.println("TTTTTTTTTTTTTTTTTTTTT"+logoutTime);
-        System.out.println("DDDDDDDDDDDDDDDDDD"+logoutDate);
-        System.out.println("LLLLLLLLLTTTTTT"+llTime);
-        System.out.println("LLLLLLLLLDDDDDDD"+llDate);
+        
         LOGOUT L = new LOGOUT();  
         try {
             //  Data fetch from database
@@ -2436,14 +2433,13 @@ public class DASHBOARD_M extends javax.swing.JFrame {
             System.out.println("!!!!!!!!!!!!!!!!!!" +ps);
             
             ps.setString(1,logoutTime);
-            System.out.println("!111111111" +logoutTime);
+            
             ps.setString(2, logoutDate);
-            System.out.println("!222222222" +logoutDate);
+            
             ps.setString(3, llTime);
-            System.out.println("!333333333" +llTime);
-            System.out.println("$$$$$$$$$$$$$$$"+status);
+           
             status = ps.executeUpdate();
-            System.out.println("UPDSATE/////////// "+status);
+           
             if(status>0){
                 
             }else{
@@ -2453,14 +2449,13 @@ public class DASHBOARD_M extends javax.swing.JFrame {
             System.out.println("error"+e);
         }
         
-        L.setVisible(true);
-        this.dispose();*/
+       
         
         int Yes = JOptionPane.showConfirmDialog(null, "Are Your Sure Want to Log Out ?");
         if(Yes == 0){
             session();
-            LOGOUT L = new LOGOUT(); 
-            L.setVisible(true);
+            LOGOUT Ll = new LOGOUT(); 
+            Ll.setVisible(true);
             this.dispose();
         }else{
              int No=0;
@@ -2477,10 +2472,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         String llDate = time2.getText();
         String logoutTime=Showtime.getText();
         String logoutDate = date.getText();
-        System.out.println("TTTTTTTTTTTTTTTTTTTTT"+logoutTime);
-        System.out.println("DDDDDDDDDDDDDDDDDD"+logoutDate);
-        System.out.println("LLLLLLLLLTTTTTT"+llTime);
-        System.out.println("LLLLLLLLLDDDDDDD"+llDate);
+       
         status = MAN_SEASION_DATAOBJECT.updateprofile_m(logoutTime, logoutDate, llTime, llDate);
         if(status>0){
         System.out.println("data Incerted");    
@@ -2569,9 +2561,22 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel121MouseClicked
 
-    private void add_emp4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_add_emp4MouseClicked
+    private void change_passMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_change_passMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_add_emp4MouseClicked
+        CHANGE_PASS_MAN cp = new CHANGE_PASS_MAN();
+         String name = mng_name.getText();
+        String ID = mng_id.getText();
+         String t1 = time1.getText();
+          String d1 = time2.getText();
+          
+        
+          
+        //String Eml = eml.ge
+         cp.change(name, ID, eml,t1,d1,ph);
+         cp.setVisible(true);
+        this.dispose();
+       
+    }//GEN-LAST:event_change_passMouseClicked
 
     private void jPanel54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel54MouseClicked
         // TODO add your handling code here:
@@ -2664,6 +2669,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel LOGOUTaa;
     private javax.swing.JLabel Showtime;
     private javax.swing.JPanel UPD_PRO;
     private javax.swing.JPanel Update;
@@ -2671,8 +2677,8 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     private javax.swing.JPanel add_emp1;
     private javax.swing.JPanel add_emp2;
     private javax.swing.JPanel add_emp3;
-    private javax.swing.JPanel add_emp4;
     private javax.swing.JPanel bill;
+    private javax.swing.JPanel change_pass;
     private javax.swing.JPanel cusln;
     private javax.swing.JLabel date;
     private javax.swing.JPanel home;
@@ -2820,7 +2826,6 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel62;
     private javax.swing.JPanel jPanel63;
     private javax.swing.JPanel jPanel64;
-    private javax.swing.JPanel jPanel65;
     private javax.swing.JPanel jPanel66;
     private javax.swing.JPanel jPanel67;
     private javax.swing.JPanel jPanel68;

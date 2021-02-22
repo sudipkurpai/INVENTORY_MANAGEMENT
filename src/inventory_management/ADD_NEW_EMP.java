@@ -470,6 +470,9 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         Close_b.setText("×");
         Close_b.setPreferredSize(new java.awt.Dimension(40, 40));
         Close_b.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Close_bMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 Close_bMouseEntered(evt);
             }
@@ -781,6 +784,13 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         Close_bb.setBackground(new Color(255, 255, 255));
         Close_b.setForeground(new Color(14,73,181));
     }//GEN-LAST:event_Close_bMouseExited
+
+    private void Close_bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Close_bMouseClicked
+        // TODO add your handling code here:
+        DASHBOARD_M dm = new DASHBOARD_M ();
+        dm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Close_bMouseClicked
 
     /**
      * @param args the command line arguments

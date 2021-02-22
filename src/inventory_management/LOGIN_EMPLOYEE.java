@@ -33,7 +33,7 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
         time();
         Mpassword.setVisible(false);
         Memail.setVisible(false);
-         pass.setEchoChar((char)0);
+        pass.setEchoChar((char)0);
     }
     void hint (){
         
@@ -342,7 +342,7 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
 
     private void Log_inMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Log_inMouseClicked
         // TODO add your handling code here:
-         String emp_Id = emp.getText();
+        String emp_Id = emp.getText();
         String p_pass = pass.getText();
         String name = null;
         String emp_id = null;       
@@ -368,7 +368,11 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
                 name = fname+" "+lname;
                 System.out.println("FULL_NAME "+name);
                 emp_id =rs.getString("EMP_ID");
-                System.out.println("empoooooooo"+ emp_id);            
+                System.out.println("empoooooooo"+ emp_id);  
+                eml =rs.getString("EMAIL");
+                System.out.println("EMAILLLLLLLL "+eml);
+                phone =rs.getString("MOBILE_NO");
+                System.out.println("EMAILLLLLLLL "+phone);
                 rs.close();
                 ps.close();
             }else{
@@ -384,13 +388,14 @@ public class LOGIN_EMPLOYEE extends javax.swing.JFrame {
             }
             //raghu
             else if(ADD_NEW_EMP_DATAOBEJECT.validate(emp_Id, p_pass)){
-                EMP_SEASSION_DATAOBJECT.Emp_data_insert(name,emp_Id,phone,"",time,"",date,""); 
+                String t = time;
+                EMP_SESSION_DATAOBJECT.emp_insert_session(name, emp_id, eml, phone, t,"",date,"");
                 emp.setForeground(Color.GREEN);
                 pass.setForeground(Color.GREEN); 
                 JOptionPane.showMessageDialog(null, "Login Successfully");
                 DASHBOARD_FINAL_EMPLOYEE dme = new DASHBOARD_FINAL_EMPLOYEE();
                 dme.setVisible(true);
-                dme.empname(name,emp_Id,eml,phone,date,time);
+                dme.empname(name,emp_Id,eml,phone,date,t);
                 this.dispose();
                 
             }
