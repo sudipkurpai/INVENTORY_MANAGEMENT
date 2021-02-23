@@ -1537,13 +1537,13 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
 
     private void c_in_search_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c_in_search_productMouseClicked
         // TODO add your handling code here:
-        SEARCH_PRODUCT sp = new SEARCH_PRODUCT();
+        SEARCH_PRODUCT spe = new SEARCH_PRODUCT();
         String name = Name.getText();
         String Id = ID.getText();
         String t1 = time1.getText();
         String d1 = time2.getText();
-        sp.sp(name, Id, eml, ph,d1, t1);
-        sp.setVisible(true);
+        spe.sp(name, Id, eml, ph, d1, t1);
+        spe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_c_in_search_productMouseClicked
 
@@ -1568,12 +1568,12 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
 
     private void c_in_manage_productMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c_in_manage_productMouseClicked
         // TODO add your handling code here:
-        MANAGE_ORDER_EMP moe = new MANAGE_ORDER_EMP();
+        MANAGE_PRODUCT1 moe = new MANAGE_PRODUCT1();
          String name = Name.getText();
         String Id = ID.getText();
         String t1 = time1.getText();
         String d1 = time2.getText();
-        moe.empmno(name, Id, eml, ph, d1, t1);
+        moe.mp(name, Id, eml, ph, d1, t1);
         moe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_c_in_manage_productMouseClicked
