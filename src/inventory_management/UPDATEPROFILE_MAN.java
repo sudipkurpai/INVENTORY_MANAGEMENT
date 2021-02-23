@@ -19,6 +19,8 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
     String mng_Id = null;
     String emp_Id = null;
     String Name = null;
+    String Phone = null;
+    String Email = null;
     String ID = null;
     String date=null;
     String time = null;
@@ -33,14 +35,16 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
        
     }
 
-     void mngname(String name, String mng_Id) 
+     void mngname(String name, String mng_Id,String Phone, String email,String t1,String d1) 
     {
         Name = name;
         ID = mng_Id;
+        Phone = Phone;
         System.out.println("Fullname"+Name);
         System.out.println("idddddddddddd"+ID);
         MNG_ID.setText(ID);
         fullname.setText(Name);
+        
         Update_Profile();
     }
     /**
@@ -235,7 +239,11 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
     } 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         // TODO add your handling code here:
-        new DASHBOARD_M().setVisible(true);
+       DASHBOARD_M dm = new DASHBOARD_M();
+       
+       
+       dm.mngname(Name,ID,Email,Phone,date,time);
+       dm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel19MouseClicked
 

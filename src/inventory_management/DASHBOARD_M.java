@@ -256,7 +256,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         jLabel139 = new javax.swing.JLabel();
         jLabel125 = new javax.swing.JLabel();
         Update = new javax.swing.JPanel();
-        add_emp2 = new javax.swing.JPanel();
+        salf_update = new javax.swing.JPanel();
         jLabel105 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
         change_pass = new javax.swing.JPanel();
@@ -1403,6 +1403,11 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         product.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel26.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel26MouseClicked(evt);
+            }
+        });
 
         jLabel107.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel107.setForeground(new java.awt.Color(0, 204, 102));
@@ -1429,6 +1434,11 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         );
 
         jPanel29.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel29.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel29MouseClicked(evt);
+            }
+        });
 
         jLabel108.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel108.setForeground(new java.awt.Color(0, 204, 102));
@@ -1455,6 +1465,11 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         );
 
         jPanel30.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel30MouseClicked(evt);
+            }
+        });
 
         jLabel109.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel109.setForeground(new java.awt.Color(0, 204, 102));
@@ -1485,6 +1500,11 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         );
 
         jPanel66.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel66.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel66MouseClicked(evt);
+            }
+        });
 
         jLabel110.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel110.setForeground(new java.awt.Color(0, 204, 102));
@@ -1511,6 +1531,11 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         );
 
         jPanel67.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel67.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel67MouseClicked(evt);
+            }
+        });
 
         jLabel111.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel111.setForeground(new java.awt.Color(0, 204, 102));
@@ -1538,6 +1563,11 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
         jPanel68.setBackground(new java.awt.Color(204, 255, 204));
         jPanel68.setPreferredSize(new java.awt.Dimension(170, 50));
+        jPanel68.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel68MouseClicked(evt);
+            }
+        });
 
         jLabel112.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel112.setForeground(new java.awt.Color(0, 204, 102));
@@ -2169,10 +2199,10 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         Update.setBackground(new java.awt.Color(255, 255, 255));
         Update.setPreferredSize(new java.awt.Dimension(810, 6));
 
-        add_emp2.setBackground(new java.awt.Color(204, 255, 204));
-        add_emp2.addMouseListener(new java.awt.event.MouseAdapter() {
+        salf_update.setBackground(new java.awt.Color(204, 255, 204));
+        salf_update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                add_emp2MouseClicked(evt);
+                salf_updateMouseClicked(evt);
             }
         });
 
@@ -2188,19 +2218,19 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
         jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/edit_pro.png"))); // NOI18N
 
-        javax.swing.GroupLayout add_emp2Layout = new javax.swing.GroupLayout(add_emp2);
-        add_emp2.setLayout(add_emp2Layout);
-        add_emp2Layout.setHorizontalGroup(
-            add_emp2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout salf_updateLayout = new javax.swing.GroupLayout(salf_update);
+        salf_update.setLayout(salf_updateLayout);
+        salf_updateLayout.setHorizontalGroup(
+            salf_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel105, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-            .addGroup(add_emp2Layout.createSequentialGroup()
+            .addGroup(salf_updateLayout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(jLabel82)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        add_emp2Layout.setVerticalGroup(
-            add_emp2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, add_emp2Layout.createSequentialGroup()
+        salf_updateLayout.setVerticalGroup(
+            salf_updateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, salf_updateLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel82)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
@@ -2250,7 +2280,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
             UpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UpdateLayout.createSequentialGroup()
                 .addContainerGap(76, Short.MAX_VALUE)
-                .addComponent(add_emp2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(salf_update, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78)
                 .addComponent(change_pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(316, 316, 316))
@@ -2261,8 +2291,8 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                 .addGap(63, 63, 63)
                 .addGroup(UpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(change_pass, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(add_emp2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(salf_update, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(430, Short.MAX_VALUE))
         );
 
         jPanel1.add(Update, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 810, 630));
@@ -2406,12 +2436,15 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         // TODO add your handling code here:      
         
         ADD_NEW_EMP ane = new ADD_NEW_EMP();
-        ane.setVisible(true);
+        
   
        String Name = mng_name.getText();
        String ID = mng_id.getText();
-        ane.mngname(Name, ID);
-        
+        String t1 = time1.getText();
+         String d1 = time2.getText();
+       
+       ane.mngname(Name, ID, eml, ph, t1, d1);
+        ane.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_add_empMouseClicked
 
@@ -2543,15 +2576,17 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel105MouseClicked
 
-    private void add_emp2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_add_emp2MouseClicked
+    private void salf_updateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salf_updateMouseClicked
         // TODO add your handling code here:
         UPDATEPROFILE_MAN upm = new UPDATEPROFILE_MAN();
         String Name = mng_name.getText();
         String ID = mng_id.getText();
-        upm.mngname(Name, ID);
+         String t1 = time1.getText();
+         String d1 = time2.getText();
+        upm.mngname(Name, ID, eml,t1,d1,ph);
         upm.setVisible (true);
         this.dispose();
-    }//GEN-LAST:event_add_emp2MouseClicked
+    }//GEN-LAST:event_salf_updateMouseClicked
 
     private void add_emp3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_add_emp3MouseClicked
         // TODO add your handling code here:
@@ -2565,13 +2600,9 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         // TODO add your handling code here:
         CHANGE_PASS_MAN cp = new CHANGE_PASS_MAN();
          String name = mng_name.getText();
-        String ID = mng_id.getText();
+         String ID = mng_id.getText();
          String t1 = time1.getText();
-          String d1 = time2.getText();
-          
-        
-          
-        //String Eml = eml.ge
+         String d1 = time2.getText();
          cp.change(name, ID, eml,t1,d1,ph);
          cp.setVisible(true);
         this.dispose();
@@ -2580,7 +2611,12 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
     private void jPanel54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel54MouseClicked
         // TODO add your handling code here:
-        BILL_PRINT bp = new BILL_PRINT();
+        BILL_PRINT_MA bp = new BILL_PRINT_MA();
+         String name = mng_name.getText();
+         String ID = mng_id.getText();
+         String t1 = time1.getText();
+         String d1 = time2.getText();
+         bp.bpm(name, ID, eml,t1,d1,ph);
         bp.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel54MouseClicked
@@ -2629,6 +2665,79 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel132MouseClicked
 
+    private void jPanel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel26MouseClicked
+        // TODO add your handling code here:
+        ADD_NEW_PRODUCT_MA anp = new ADD_NEW_PRODUCT_MA();
+        String name = mng_name.getText();
+        String ID = mng_id.getText();
+        String t1 = time1.getText();
+        String d1 = time2.getText();
+        anp.anp(name, ID, eml,t1,d1,ph);
+        anp.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jPanel26MouseClicked
+
+    private void jPanel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel30MouseClicked
+        // TODO add your handling code here:
+       /* SEARCH_PRODUCT_M spm = new SEARCH_PRODUCT_M();
+        String name = mng_name.getText();
+        String ID = mng_id.getText();
+        String t1 = time1.getText();
+        String d1 = time2.getText();
+        spm.snp(name, ID, eml,t1,d1,ph);
+        
+        spm.setVisible(true);
+        this.dispose(); */
+    }//GEN-LAST:event_jPanel30MouseClicked
+
+    private void jPanel29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel29MouseClicked
+        // TODO add your handling code here:
+        PRODUCT_DETAILS_M pdm = new PRODUCT_DETAILS_M();
+        String name = mng_name.getText();
+        String ID = mng_id.getText();
+        String t1 = time1.getText();
+        String d1 = time2.getText();
+        pdm.pdm(name, ID, eml,t1,d1,ph);
+        pdm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jPanel29MouseClicked
+
+    private void jPanel66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel66MouseClicked
+        // TODO add your handling code here:
+        DELETE_PRODUCT_M dpm = new  DELETE_PRODUCT_M();
+        String name = mng_name.getText();
+        String ID = mng_id.getText();
+        String t1 = time1.getText();
+        String d1 = time2.getText();
+        dpm.dp(name, ID, eml,t1,d1,ph);
+        dpm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jPanel66MouseClicked
+
+    private void jPanel67MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel67MouseClicked
+        // TODO add your handling code here:
+        PRODUCT_STOCK_CHECK_MA psc = new  PRODUCT_STOCK_CHECK_MA();
+        String name = mng_name.getText();
+        String ID = mng_id.getText();
+        String t1 = time1.getText();
+        String d1 = time2.getText();
+        psc.psc(name, ID, eml,t1,d1,ph);
+        psc.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jPanel67MouseClicked
+
+    private void jPanel68MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel68MouseClicked
+        // TODO add your handling code here:
+        MANAGE_PRODUCT_MA mpm = new  MANAGE_PRODUCT_MA ();
+        String name = mng_name.getText();
+        String ID = mng_id.getText();
+        String t1 = time1.getText();
+        String d1 = time2.getText();
+        mpm.mpm(name, ID, eml,t1,d1,ph);
+        mpm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jPanel68MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2675,7 +2784,6 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     private javax.swing.JPanel Update;
     private javax.swing.JPanel add_emp;
     private javax.swing.JPanel add_emp1;
-    private javax.swing.JPanel add_emp2;
     private javax.swing.JPanel add_emp3;
     private javax.swing.JPanel bill;
     private javax.swing.JPanel change_pass;
@@ -2850,6 +2958,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     private javax.swing.JPanel report;
     private javax.swing.JPanel rprt;
     private javax.swing.JPanel sales;
+    private javax.swing.JPanel salf_update;
     private javax.swing.JPanel slsn;
     private javax.swing.JPanel stckn;
     private javax.swing.JPanel stock;

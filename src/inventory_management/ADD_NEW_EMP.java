@@ -50,7 +50,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         date();
         time();
     }
-    void mngname(String fullname, String mng_Id) 
+    void mngname(String fullname, String mng_Id,String eml, String phone,String time1,String time2 ) 
     {
         Name = fullname;
         ID = mng_Id;
@@ -788,6 +788,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     private void Close_bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Close_bMouseClicked
         // TODO add your handling code here:
         DASHBOARD_M dm = new DASHBOARD_M ();
+        dm.mngname(Name, mng_Id, emp_Id, Name, date, time);
         dm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Close_bMouseClicked

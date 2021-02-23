@@ -10,14 +10,27 @@ package inventory_management;
  * @author Sudip Maiti
  */
 public class ADD_NEW_PRODUCT_MA extends javax.swing.JFrame {
-
+     String time = null;
+     String date = null;
+     String ph = null;
+     String Name = null;
+     String Id = null;
+     String emll = null;
     /**
      * Creates new form ADD_NEW_PRODUCT
      */
     public ADD_NEW_PRODUCT_MA() {
         initComponents();
     }
-
+ void anp (String fullname, String mng_Id,String email,String t1,String d1,String p) {
+        Name = fullname;
+        Id = mng_Id;
+        emll = email;
+        time = t1;
+        date = d1;
+        ph= p;
+        
+ }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -471,7 +484,10 @@ public class ADD_NEW_PRODUCT_MA extends javax.swing.JFrame {
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
-    new DASHBOARD_FINAL_EMPLOYEE().setVisible(true);
+        
+    DASHBOARD_M dm = new DASHBOARD_M();
+    dm.mngname(Name,Id,emll,ph,date,time);
+    dm.setVisible(true);
     this.dispose();
     }//GEN-LAST:event_jLabel18MouseClicked
 

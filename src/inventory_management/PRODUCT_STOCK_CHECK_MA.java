@@ -10,12 +10,26 @@ package inventory_management;
  * @author maiti
  */
 public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
+    String time = null;
+     String date = null;
+     String ph = null;
+     String Name = null;
+     String Id = null;
+     String emll = null;
 
     /**
      * Creates new form PRODUCT_STOCK_CHECK_MA
      */
     public PRODUCT_STOCK_CHECK_MA() {
         initComponents();
+    }
+    void psc (String fullname, String mng_Id,String email,String t1,String d1,String p) {
+        Name = fullname;
+        Id = mng_Id;
+        emll = email;
+        time = t1;
+        date = d1;
+        ph= p;
     }
 
     /**
@@ -627,7 +641,10 @@ public class PRODUCT_STOCK_CHECK_MA extends javax.swing.JFrame {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
-        System.exit(0);
+        DASHBOARD_M dm = new DASHBOARD_M();
+    dm.mngname(Name,Id,emll,ph,date,time);
+    dm.setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed

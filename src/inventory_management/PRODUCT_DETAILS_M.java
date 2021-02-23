@@ -5,11 +5,19 @@
  */
 package inventory_management;
 
+
 /**
  *
  * @author ganesh pradhan
  */
 public class PRODUCT_DETAILS_M extends javax.swing.JFrame {
+   
+     String time = null;
+     String date = null;
+     String ph = null;
+     String Name = null;
+     String Id = null;
+     String emll = null;
 
     /**
      * Creates new form PRODUCT_DETAILS_M
@@ -17,7 +25,14 @@ public class PRODUCT_DETAILS_M extends javax.swing.JFrame {
     public PRODUCT_DETAILS_M() {
         initComponents();
     }
-
+      void pdm (String fullname, String mng_Id,String email,String t1,String d1,String p) {
+        Name = fullname;
+        Id = mng_Id;
+        emll = email;
+        time = t1;
+        date = d1;
+        ph= p;
+        }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,6 +45,7 @@ public class PRODUCT_DETAILS_M extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -48,15 +64,30 @@ public class PRODUCT_DETAILS_M extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("PRODUCT DETAILS");
 
+        jButton1.setBackground(new java.awt.Color(0, 204, 102));
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton1.setText("X");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1220, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1135, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
+                .addComponent(jButton1))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jButton1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, 60));
@@ -150,6 +181,14 @@ public class PRODUCT_DETAILS_M extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        DASHBOARD_M dm = new DASHBOARD_M();
+        dm.mngname(Name, Id, emll, ph, date, time);
+        dm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -186,6 +225,7 @@ public class PRODUCT_DETAILS_M extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

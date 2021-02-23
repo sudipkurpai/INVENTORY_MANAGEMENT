@@ -10,6 +10,12 @@ package inventory_management;
  * @author RAGHUNATH DAS
  */
 public class MANAGE_PRODUCT_MA extends javax.swing.JFrame {
+     String time = null;
+     String date = null;
+     String ph = null;
+     String Name = null;
+     String Id = null;
+     String emll = null;
 
     /**
      * Creates new form DEMO
@@ -17,7 +23,14 @@ public class MANAGE_PRODUCT_MA extends javax.swing.JFrame {
     public MANAGE_PRODUCT_MA() {
         initComponents();
     }
-
+        void mpm (String fullname, String mng_Id,String email,String t1,String d1,String p) {
+        Name = fullname;
+        Id = mng_Id;
+        emll = email;
+        time = t1;
+        date = d1;
+        ph= p;
+        }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -191,6 +204,11 @@ public class MANAGE_PRODUCT_MA extends javax.swing.JFrame {
         jLabel12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/close (1).png"))); // NOI18N
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -240,6 +258,14 @@ public class MANAGE_PRODUCT_MA extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        // TODO add your handling code here:
+        DASHBOARD_M dm = new DASHBOARD_M();
+    dm.mngname(Name,Id,emll,ph,date,time);
+    dm.setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_jLabel14MouseClicked
 
     /**
      * @param args the command line arguments

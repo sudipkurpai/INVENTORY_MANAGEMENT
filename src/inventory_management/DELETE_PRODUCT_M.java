@@ -10,6 +10,12 @@ package inventory_management;
  * @author ganesh pradhan
  */
 public class DELETE_PRODUCT_M extends javax.swing.JFrame {
+     String time = null;
+     String date = null;
+     String ph = null;
+     String Name = null;
+     String Id = null;
+     String emll = null;
 
     /**
      * Creates new form DELETE_PRODUCT_M
@@ -17,6 +23,15 @@ public class DELETE_PRODUCT_M extends javax.swing.JFrame {
     public DELETE_PRODUCT_M() {
         initComponents();
     }
+    void dp (String fullname, String mng_Id,String email,String t1,String d1,String p) {
+        Name = fullname;
+        Id = mng_Id;
+        emll = email;
+        time = t1;
+        date = d1;
+        ph= p;
+        
+ }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -225,7 +240,12 @@ public class DELETE_PRODUCT_M extends javax.swing.JFrame {
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // TODO add your handling code here:
-        System.exit(0);
+        DASHBOARD_M dm = new DASHBOARD_M();
+        dm.mngname(Name, Id, emll, ph, date, time);
+        dm.setVisible(true);
+        this.dispose();
+                      
+      
     }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
