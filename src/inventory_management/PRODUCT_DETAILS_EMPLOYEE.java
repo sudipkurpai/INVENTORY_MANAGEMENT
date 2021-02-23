@@ -10,13 +10,27 @@ package inventory_management;
  * @author RAGHUNATH DAS
  */
 public class PRODUCT_DETAILS_EMPLOYEE extends javax.swing.JFrame {
-
-    /**
-     * Creates new form PRODUCT_DETAILS_EMPLOYEE
+    String Name = null;
+    String ID = null;
+    String eml = null;
+    String ph = null;
+    String time2 = null;
+    String time1 = null;
+     
+     /* Creates new form PRODUCT_DETAILS_EMPLOYEE
      */
     public PRODUCT_DETAILS_EMPLOYEE() {
         initComponents();
     }
+       void pdee (String fullname, String emp_Id,String email, String phone,String Date, String Time){
+        Name = fullname;
+        ID = emp_Id;
+        eml = email;
+        ph = phone;
+        time2=Date;
+        time1 = Time;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -79,26 +93,25 @@ public class PRODUCT_DETAILS_EMPLOYEE extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addGap(50, 50, 50)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addGap(52, 52, 52)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addGap(12, 12, 12))
-                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(12, 12, 12))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -208,7 +221,10 @@ public class PRODUCT_DETAILS_EMPLOYEE extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        new DASHBOARD_FINAL_EMPLOYEE().setVisible(true);
+        
+        DASHBOARD_FINAL_EMPLOYEE dfe = new DASHBOARD_FINAL_EMPLOYEE ();
+        dfe.empname(Name, ID, eml, ph, time2, time1);
+       dfe.setVisible(true);
     this.dispose();
     }//GEN-LAST:event_jButton1MouseClicked
 

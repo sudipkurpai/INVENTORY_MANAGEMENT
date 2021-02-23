@@ -10,12 +10,27 @@ package inventory_management;
  * @author RAGHUNATH DAS
  */
 public class SEARCH_PRODUCT extends javax.swing.JFrame {
+     String Name = null;
+    String ID = null;
+    String eml = null;
+    String ph = null;
+    String time2 = null;
+    String time1 = null;
 
     /**
      * Creates new form Mng_product
      */
     public SEARCH_PRODUCT() {
         initComponents();
+    }
+         void sp (String fullname, String emp_Id,String email, String phone,String Date, String Time){
+        Name = fullname;
+        ID = emp_Id;
+        eml = email;
+        ph = phone;
+        time2=Date;
+        time1 = Time;
+    
     }
 
     /**
@@ -57,6 +72,11 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 30, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
@@ -230,6 +250,15 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
     this.dispose();
    
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        // TODO add your handling code here:
+       DASHBOARD_FINAL_EMPLOYEE dfm = new DASHBOARD_FINAL_EMPLOYEE ();
+        dfm.empname(Name, ID, eml, ph, time2, time1);
+       dfm.setVisible(true);
+    this.dispose();
+        
+    }//GEN-LAST:event_jPanel2MouseClicked
 
     /**
      * @param args the command line arguments
