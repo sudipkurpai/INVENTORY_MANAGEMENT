@@ -5,31 +5,54 @@
  */
 package inventory_management;
 
+import java.sql.*;
+
+
 /**
  *
  * @author RAGHUNATH DAS
  */
 public class SEARCH_PRODUCT extends javax.swing.JFrame {
-     String Name = null;
+   String Name = null;
     String ID = null;
     String eml = null;
     String ph = null;
     String time2 = null;
     String time1 = null;
+      
+    public static Statement st;
+            public static Connection conn;
+            public static prepareStatement getData;
+    
+    static{
+        String url ="http://localhost/phpmyadmin/sql.php?server=1&db=inventory_management&table=add_new_product&pos=0";
+         class.forName("com.mysql.jdbc.Driver");
+    }
+            
+            
+ 
+                
+                
+            
+ 
+            
+             
 
     /**
      * Creates new form Mng_product
      */
     public SEARCH_PRODUCT() {
-        initComponents();
+        initComponents(); 
     }
-         void sp (String fullname, String emp_Id,String email, String phone,String Date, String Time){
+    
+         void sp (String fullname, String emp_Id,String email, String phone,String Time,String Date ){
         Name = fullname;
         ID = emp_Id;
         eml = email;
         ph = phone;
-        time2=Date;
         time1 = Time;
+        time2=Date;
+        
     
     }
 
@@ -45,7 +68,6 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -53,6 +75,7 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -68,9 +91,6 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/RaghuSearch.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, 65));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (23).png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 30, -1, -1));
-
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -82,11 +102,6 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("x");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -188,7 +203,7 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1160, 760));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 1160, 760));
 
         jButton1.setBackground(new java.awt.Color(51, 255, 51));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
@@ -226,6 +241,17 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 930, 140, 40));
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 0, 0));
+        jButton4.setText("Search");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 40, 120, 40));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1160, 1240));
 
         setSize(new java.awt.Dimension(1155, 1003));
@@ -244,13 +270,6 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        // TODO add your handling code here:
-        new DASHBOARD_FINAL_EMPLOYEE().setVisible(true);
-    this.dispose();
-   
-    }//GEN-LAST:event_jLabel3MouseClicked
-
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
         // TODO add your handling code here:
        DASHBOARD_FINAL_EMPLOYEE dfm = new DASHBOARD_FINAL_EMPLOYEE ();
@@ -260,6 +279,16 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jPanel2MouseClicked
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        try{
+         getData=conn.prepareStatement("Select product_id,prodct_name,Description,Mfg_date,Exp_date,Quantity,Category,Brand from add_new_product where id=?");
+            int id = Integer.parseInt(textid.getext());
+            
+        }catch(){
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+    }
     /**
      * @param args the command line arguments
      */
@@ -299,8 +328,8 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
@@ -308,4 +337,10 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    private static class prepareStatement {
+
+        public prepareStatement() {
+        }
+    }
 }
