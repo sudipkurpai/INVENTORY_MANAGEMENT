@@ -30,6 +30,7 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
     String time = null;
     BigInteger emp_id =null;
     String emp =null;
+    String Transaction_Id = null;
     /**
      * Creates new form REGISTRATION
      */
@@ -90,6 +91,8 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
                 System.out.println("MANAGER ID "+mng_Id);
                 emp_Id=rs.getString("EMP_ID");
                 System.out.println("EMPLOYEE ID "+emp_Id);
+                Transaction_Id=rs.getString("EMP_ID");
+                System.out.println("Transaction_Id "+Transaction_Id);
                 rs.close();
                 ps.close();
             }else{
@@ -570,7 +573,8 @@ public class ADD_NEW_EMP extends javax.swing.JFrame {
         else if(password.equals(c_pass) ){
             int i = ADD_NEW_EMP_DATAOBEJECT.inventory_management (fName, lName, mail, ph,emp, password,c_pass,dob, add, gen,Name,ID,date,time);
             
-            int j = ID_STORE_FETCH.insert_id(mng_Id, emp_id.toString());
+            
+            int j = ID_STORE_FETCH.insert_id(mng_Id, emp_id.toString(),Transaction_Id);
             if(i>0 || j>0){
                 System.out.println("Data inserted");
                 JOptionPane.showMessageDialog(this, "Add Employee Successfully");

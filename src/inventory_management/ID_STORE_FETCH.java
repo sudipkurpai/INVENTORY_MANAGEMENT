@@ -15,13 +15,14 @@ import java.sql.SQLException;
  * @author Sudip Maiti
  */
 public class ID_STORE_FETCH {
-    public static int insert_id (String MNG_ID, String EMP_ID){
+    public static int insert_id (String MNG_ID, String EMP_ID,String Transaction_Id){
         int status=0;
               try{
                    Connection con=DATABASE_CONNECTION.getConnection();  
-                   PreparedStatement ps=con.prepareStatement("UPDATE id_store SET MNG_ID=?,EMP_ID=?");
+                   PreparedStatement ps=con.prepareStatement("UPDATE id_store SET MNG_ID=?,EMP_ID=?,Transaction_Id=?");
                    ps.setString(1, MNG_ID);
                    ps.setString(2, EMP_ID); 
+                   ps.setString(3, Transaction_Id);
                    status=ps.executeUpdate();
                    con.close();
               }catch(Exception e){

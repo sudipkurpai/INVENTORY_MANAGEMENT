@@ -1542,7 +1542,7 @@ public class DASHBOARD_FINAL_EMPLOYEE extends javax.swing.JFrame {
         String Id = ID.getText();
         String t1 = time1.getText();
         String d1 = time2.getText();
-        spe.sp(name, Id, eml, ph, t1, d1);
+       // spe.sp(name, Id, eml, ph, t1, d1);
         spe.setVisible(true);
         this.dispose();
        

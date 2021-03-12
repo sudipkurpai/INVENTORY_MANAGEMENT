@@ -2672,7 +2672,9 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         String ID = mng_id.getText();
         String t1 = time1.getText();
         String d1 = time2.getText();
-        anp.anp(name, ID, eml,t1,d1,ph);
+        String t2 = Showtime.getText();
+        String d2 = date.getText();
+        anp.anp(name, ID, eml,t1,d1,ph,t2,d2);
         anp.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jPanel26MouseClicked

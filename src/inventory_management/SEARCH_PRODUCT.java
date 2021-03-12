@@ -6,6 +6,7 @@
 package inventory_management;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -20,30 +21,41 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
     String time2 = null;
     String time1 = null;
       
-    public static Statement st;
-            public static Connection conn;
-            public static prepareStatement getData;
-    
-    static{
-        String url ="http://localhost/phpmyadmin/sql.php?server=1&db=inventory_management&table=add_new_product&pos=0";
-         class.forName("com.mysql.jdbc.Driver");
-    }
-            
-            
- 
-                
-                
-            
- 
-            
-             
-
-    /**
+   /**
      * Creates new form Mng_product
      */
-    public SEARCH_PRODUCT() {
-        initComponents(); 
+   /* public SEARCH_PRODUCT() {
+        initComponents();
     }
+    void Update_Profile(){
+         System.out.println("!!!!!!!!56!");
+         String mng_ID = .getText();
+        
+         try{   
+            String sql = "Select * from register Where MNG_ID = ?";
+            Connection con=DATABASE_CONNECTION.getConnection();
+            PreparedStatement ps=con.prepareStatement(sql);
+            ps.setString(1,mng_ID);
+            ResultSet rs=ps.executeQuery();
+            if(rs.next()){
+                String eml=rs.getString("EMAIL");
+                String mob=rs.getString("MOBILE_NO"); 
+                String db=rs.getString("DOB");
+                String gn=rs.getString("GENDER");
+                String add =rs.getString("ADDRESS");
+                
+               
+               
+                
+                
+                rs.close();
+                ps.close();
+            }else{
+                JOptionPane.showMessageDialog(null, "NOTHING FOUND IN DATABASE!!!!!!");
+            }
+            con.close();
+           }
+        catch(Exception e){System.out.println(e);}
     
          void sp (String fullname, String emp_Id,String email, String phone,String Time,String Date ){
         Name = fullname;
@@ -55,7 +67,7 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         
     
     }
-
+*/
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -68,6 +80,7 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        Product_id = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -90,6 +103,9 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/RaghuSearch.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, 65));
+
+        Product_id.setText("jLabel2");
+        jPanel1.add(Product_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 45, 410, 30));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -245,6 +261,11 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("Search");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -281,14 +302,14 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        try{
-         getData=conn.prepareStatement("Select product_id,prodct_name,Description,Mfg_date,Exp_date,Quantity,Category,Brand from add_new_product where id=?");
-            int id = Integer.parseInt(textid.getext());
-            
-        }catch(){
         
     }//GEN-LAST:event_jButton4ActionPerformed
-    }
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton4MouseClicked
+    
     /**
      * @param args the command line arguments
      */
@@ -325,6 +346,7 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Product_id;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

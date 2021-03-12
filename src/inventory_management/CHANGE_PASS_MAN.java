@@ -6,6 +6,7 @@
 package inventory_management;
 
 import java.awt.Color;
+import java.util.Random;
 
 /**
  *
@@ -46,7 +47,7 @@ public class CHANGE_PASS_MAN extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         mng_name = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        get_otp = new javax.swing.JButton();
         pass = new javax.swing.JPasswordField();
         jPanel2 = new javax.swing.JPanel();
         Close_bb = new javax.swing.JPanel();
@@ -77,11 +78,16 @@ public class CHANGE_PASS_MAN extends javax.swing.JFrame {
         mng_name.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel1.add(mng_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 420, 40));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jButton2.setText("Get OTP");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 160, 40));
+        get_otp.setBackground(new java.awt.Color(255, 255, 255));
+        get_otp.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        get_otp.setForeground(new java.awt.Color(0, 0, 0));
+        get_otp.setText("Get OTP");
+        get_otp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                get_otpMouseClicked(evt);
+            }
+        });
+        jPanel1.add(get_otp, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 160, 40));
 
         pass.setBackground(new java.awt.Color(204, 255, 204));
         pass.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
@@ -377,6 +383,17 @@ public class CHANGE_PASS_MAN extends javax.swing.JFrame {
         
     }//GEN-LAST:event_Close_bbMouseClicked
 
+    private void get_otpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_get_otpMouseClicked
+        // TODO add your handling code here:
+        gen_otp();
+    }//GEN-LAST:event_get_otpMouseClicked
+
+    public void gen_otp(){
+         Random rand = new Random();
+        int otp = rand.nextInt(10000); // 0 - 9999
+        System.out.println("YOUR OTP IS "+otp);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -419,9 +436,9 @@ public class CHANGE_PASS_MAN extends javax.swing.JFrame {
     private javax.swing.JLabel Close_b;
     private javax.swing.JPanel Close_bb;
     private javax.swing.JLabel eml;
+    private javax.swing.JButton get_otp;
     private javax.swing.JLabel hide;
     private javax.swing.JLabel hide1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
