@@ -5,6 +5,7 @@
  */
 package inventory_management;
 
+import java.awt.Color;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -24,50 +25,49 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
    /**
      * Creates new form Mng_product
      */
-   /* public SEARCH_PRODUCT() {
-        initComponents();
+    public SEARCH_PRODUCT() {
+        initComponents();{
     }
-    void Update_Profile(){
-         System.out.println("!!!!!!!!56!");
-         String mng_ID = .getText();
+   String product_idee = pro_id.getText();
+        //String p_pass = pass.getText();
+        String Product_id = null;
         
-         try{   
-            String sql = "Select * from register Where MNG_ID = ?";
+        
+        try {
+             //Data fetch from database
+            String sql = "Select * from add_new_product Where Product_id = Product_id";
             Connection con=DATABASE_CONNECTION.getConnection();
             PreparedStatement ps=con.prepareStatement(sql);
-            ps.setString(1,mng_ID);
+            //ps.setString(1,Product_id);
             ResultSet rs=ps.executeQuery();
             if(rs.next()){
-                String eml=rs.getString("EMAIL");
-                String mob=rs.getString("MOBILE_NO"); 
-                String db=rs.getString("DOB");
-                String gn=rs.getString("GENDER");
-                String add =rs.getString("ADDRESS");
-                
+                String product_ide =rs.getString("Product_id");
+                System.out.println("EMpppppp "+product_ide);
                
-               
-                
-                
                 rs.close();
                 ps.close();
             }else{
-                JOptionPane.showMessageDialog(null, "NOTHING FOUND IN DATABASE!!!!!!");
+                System.out.println("Enter Correct User Name");
             }
-            con.close();
-           }
-        catch(Exception e){System.out.println(e);}
-    
-         void sp (String fullname, String emp_Id,String email, String phone,String Time,String Date ){
-        Name = fullname;
-        ID = emp_Id;
-        eml = email;
-        ph = phone;
-        time1 = Time;
-        time2=Date;
-        
-    
-    }
-*/
+        }catch(Exception e){
+            System.out.println("error"+e);
+        }
+        try{
+            //ganesh
+            if(Product_id.equals("pro_id")){
+                JOptionPane.showMessageDialog(this, "product found");
+            }
+            //raghu
+            else 
+            JOptionPane.showMessageDialog(this, "product not found");
+            //sudip
+           
+            
+        }catch (Exception e){
+            System.out.println("Exception -"+e);
+        }   
+     
+    }                            
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -79,12 +79,12 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        Product_id = new javax.swing.JLabel();
+        pro = new javax.swing.JLabel();
+        pro_id = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        pro1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -100,12 +100,12 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/magnifying-glass.png"))); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, -1, -1));
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/RaghuSearch.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, 65));
+        pro.setBackground(new java.awt.Color(255, 255, 255));
+        pro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/RaghuSearch.png"))); // NOI18N
+        jPanel1.add(pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, 65));
 
-        Product_id.setText("jLabel2");
-        jPanel1.add(Product_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 45, 410, 30));
+        pro_id.setText("jLabel2");
+        jPanel1.add(pro_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 45, 410, 30));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -137,10 +137,10 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1118, 0, -1, 30));
 
-        jTable1.setBackground(new java.awt.Color(255, 255, 255));
-        jTable1.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jTable1.setForeground(new java.awt.Color(102, 255, 0));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        pro1.setBackground(new java.awt.Color(255, 255, 255));
+        pro1.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        pro1.setForeground(new java.awt.Color(102, 255, 0));
+        pro1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null},
@@ -217,7 +217,7 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
                 "product ID", "Product Name", "Decription", "Unit Price", "Mfg Date", "ExperyDate", "Quantity", "Category", "Brand", "Total"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(pro1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 1160, 760));
 
@@ -346,18 +346,18 @@ public class SEARCH_PRODUCT extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Product_id;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel pro;
+    private javax.swing.JTable pro1;
+    private javax.swing.JLabel pro_id;
     // End of variables declaration//GEN-END:variables
 
     private static class prepareStatement {
