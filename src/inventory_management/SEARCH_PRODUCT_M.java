@@ -99,6 +99,16 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
         pro1_id.setBackground(new java.awt.Color(255, 255, 255));
         pro1_id.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         pro1_id.setBorder(null);
+        pro1_id.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pro1_idMouseClicked(evt);
+            }
+        });
+        pro1_id.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pro1_idActionPerformed(evt);
+            }
+        });
         jPanel1.add(pro1_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 49, 400, 30));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -106,6 +116,11 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, 65));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (23).png"))); // NOI18N
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 30, -1, -1));
 
         table.setModel(new javax.swing.table.DefaultTableModel(
@@ -231,6 +246,38 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel3MouseClicked
 
+    private void pro1_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pro1_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pro1_idActionPerformed
+
+    private void pro1_idMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pro1_idMouseClicked
+        // TODO add your handling code here:
+        pro1_id.setText("");
+    }//GEN-LAST:event_pro1_idMouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+    String tf = pro1_id.getText();
+    try{
+        String query ="SELECT * FROM add_new_product WHERE Product_id=?";
+        pst=con.prepareStatement(query);
+        table.setmodel(resultsetToTableModel(rs));
+        
+    }catch(Exception e){
+        JOptionpane.showMessegeDialog(null, e);
+    }//GEN-LAST:event_jLabel2MouseClicked
+      finally{
+        try{
+            if(pst!=null){
+               rs.close();
+               pst.close();
+            }
+        }
+        catch(Exception e){
+    }
+    }
+    }
+    
     /**
      * @param args the command line arguments
      */

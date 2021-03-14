@@ -210,6 +210,11 @@ public class ADD_NEW_PRODUCT_MA extends javax.swing.JFrame {
         d_t.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         t_idd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        t_idd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t_iddActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -594,6 +599,10 @@ public class ADD_NEW_PRODUCT_MA extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jLabel17MouseClicked
+
+    private void t_iddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_iddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_t_iddActionPerformed
     
 
     /**
