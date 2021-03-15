@@ -170,6 +170,11 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
         gen.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         gen.setForeground(new java.awt.Color(0, 0, 0));
         gen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
+        gen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genActionPerformed(evt);
+            }
+        });
         jPanel1.add(gen, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 370, 450, 40));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (11).png"))); // NOI18N
@@ -178,7 +183,7 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
                 jLabel16MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 640, -1, -1));
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 640, -1, -1));
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button (13).png"))); // NOI18N
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -276,6 +281,10 @@ public class UPDATEPROFILE_MAN extends javax.swing.JFrame {
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel18MouseClicked
+
+    private void genActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_genActionPerformed
 
     /**
      * @param args the command line arguments

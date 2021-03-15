@@ -5,64 +5,106 @@
  */
 package inventory_management;
 
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author RAGHUNATH DAS
  */
 public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
+     String time = null;
+     String date = null;
+     
+     String ph = null;
+     String Name = null;
+     String Id = null;
+     String emll = null;
+     String trn_id = null;
+     String Product_id = null;
+    
+    
+    
 
     /**
      * Creates new form SEARCH_PRODUCT_M
      */
     public SEARCH_PRODUCT_M() {
         initComponents();
+    }
+    void snp (String fullname, String mng_Id,String email,String t1,String d1,String p) {
+        Name = fullname;
+        Id = mng_Id;
+        emll = email;
+        time = t1;
+        date = d1;
+        ph= p;
+        
+        
+       
     
-    
-    String product_idee = pro1_id.getText();
+    //String product_idee = pro1_id.getText();
         //String p_pass = pass.getText();
-        String Product_id = null;
         
         
-        try {
-             //Data fetch from database
-            String sql = "Select * from add_new_product Where Product_id = Product_id";
-            Connection con=DATABASE_CONNECTION.getConnection();
-            PreparedStatement ps=con.prepareStatement(sql);
-            //ps.setString(1,Product_id);
-            ResultSet rs=ps.executeQuery();
-            if(rs.next()){
-                String product_ide =rs.getString("Product_id");
-                System.out.println("EMpppppp "+product_ide);
-                
-               
-                rs.close();
-                ps.close();
-            }else{
-                System.out.println("Enter Correct User Name");
-            }
-        }catch(Exception e){
-            System.out.println("error"+e);
-        }
-        try{
-            //ganesh
-            if(Product_id.equals("pro1_id")){
-                JOptionPane.showMessageDialog(this, "product found");
-            }
-            //raghu
-            else 
-            JOptionPane.showMessageDialog(this, "product not found");
-            //sudip
-           
-            
-        }catch (Exception e){
-            System.out.println("Exception -"+e);
-        }   
-     
+        
+//        try {
+//             //Data fetch from database
+//            String sql = "Select * from add_new_product Where Product_id = ?";
+//            Connection con=DATABASE_CONNECTION.getConnection();
+//            PreparedStatement ps=con.prepareStatement(sql);
+//             String product_idee = pro1_id.getText();
+//            ps.setString(1,product_idee);
+//            ResultSet rs=ps.executeQuery();
+//            if(rs.next()){
+//                String product_ideoo =rs.getString("Product_id");
+//                 System.out.println("EMpppppp "+product_ideoo);
+//                String product_nameyy =rs.getString("Product_name");
+//                 System.out.println("pppnnn "+product_nameyy);
+//                String description =rs.getString("Description");
+//                 System.out.println("ddsss "+description);
+//                String standerd_cost =rs.getString("Standerd_cost");
+//                 System.out.println("ssccc "+standerd_cost);
+//                String unitprice =rs.getString("Unit_price");
+//                 System.out.println("uuppp "+unitprice);
+//                String mfgdate =rs.getString("Mfg_date");
+//                 System.out.println("mmmddd "+mfgdate);
+//                String expirydate =rs.getString("Exp_date");
+//                 System.out.println("eeeddd "+expirydate);
+//                String quantity =rs.getString("Quantity");
+//                 System.out.println("qqqqnnn "+quantity);
+//                String category =rs.getString("Category");
+//                 System.out.println("ccccttt "+category);
+//                String brand =rs.getString("Brand");
+//                System.out.println("bbbrr "+brand);
+//                
+//               
+//                rs.close();
+//                ps.close();
+//            }else{
+//                System.out.println("Enter Correct Product Id");
+//            }
+//        }catch(Exception e){
+//            System.out.println("error"+e);
+//        }
+//        try{
+//            //ganesh
+//            if(Product_id.equals("pro1_id")){
+//                JOptionPane.showMessageDialog(this, "product found");
+//            }
+//            //raghu
+//            else 
+//            JOptionPane.showMessageDialog(this, "product not found");
+//            //sudip
+//           
+//            
+//        }catch (Exception e){
+//            System.out.println("Exception -"+e);
+//        }   
     }                            
 
     /**
@@ -99,16 +141,6 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
         pro1_id.setBackground(new java.awt.Color(255, 255, 255));
         pro1_id.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         pro1_id.setBorder(null);
-        pro1_id.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pro1_idMouseClicked(evt);
-            }
-        });
-        pro1_id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pro1_idActionPerformed(evt);
-            }
-        });
         jPanel1.add(pro1_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 49, 400, 30));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -170,11 +202,6 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ADD");
         jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 930, 140, 40));
 
         jButton2.setBackground(new java.awt.Color(0, 102, 204));
@@ -182,11 +209,6 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Modify");
         jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 930, 150, 40));
 
         jButton3.setBackground(new java.awt.Color(204, 0, 0));
@@ -194,11 +216,6 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Delete");
         jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 930, 140, 40));
 
         jPanel4.setBackground(new java.awt.Color(0, 204, 102));
@@ -230,53 +247,85 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel3MouseClicked
 
-    private void pro1_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pro1_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pro1_idActionPerformed
-
-    private void pro1_idMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pro1_idMouseClicked
-        // TODO add your handling code here:
-        pro1_id.setText("");
-    }//GEN-LAST:event_pro1_idMouseClicked
-
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        // TODO add your handling code here:
-    String tf = pro1_id.getText();
-    try{
-        String query ="SELECT * FROM add_new_product WHERE Product_id=?";
-        pst=con.prepareStatement(query);
-        table.setmodel(resultsetToTableModel(rs));
+   String product_idee = pro1_id.getText();
+    String product_ideoo= null;
+        try {
         
-    }catch(Exception e){
-        JOptionpane.showMessegeDialog(null, e);
-    }//GEN-LAST:event_jLabel2MouseClicked
-      finally{
-        try{
-            if(pst!=null){
-               rs.close();
-               pst.close();
+             //Data fetch from database
+            String sql = "Select * from add_new_product Where Product_id = ?";
+            Connection con=DATABASE_CONNECTION.getConnection();
+            PreparedStatement ps=con.prepareStatement(sql);
+             
+            ps.setString(1,product_idee);
+            ResultSet rs=ps.executeQuery();
+            if(rs.next()){
+                product_ideoo =rs.getString("Product_id");
+                 System.out.println("EMpppppp "+product_ideoo);
+                String product_nameyy =rs.getString("Product_name");
+                 System.out.println("pppnnn "+product_nameyy);
+                String description =rs.getString("Description");
+                 System.out.println("ddsss "+description);
+                String standerd_cost =rs.getString("Standerd_cost");
+                 System.out.println("ssccc "+standerd_cost);
+                String unitprice =rs.getString("Unit_price");
+                 System.out.println("uuppp "+unitprice);
+                String mfgdate =rs.getString("Mfg_date");
+                 System.out.println("mmmddd "+mfgdate);
+                String expirydate =rs.getString("Exp_date");
+                 System.out.println("eeeddd "+expirydate);
+                String quantity =rs.getString("Quantity");
+                 System.out.println("qqqqnnn "+quantity);
+                String category =rs.getString("Category");
+                 System.out.println("ccccttt "+category);
+                String brand =rs.getString("Brand");
+                System.out.println("bbbrr "+brand);
+               // JOptionPane.showMessageDialog(this, "Product Found");
+                
+               
+                rs.close();
+                ps.close();
+            }else{
+                JOptionPane.showMessageDialog(this, "Enter Correct Product Id");
+                System.out.println("Enter Correct Product Id");
             }
+        }catch(Exception e){
+            System.out.println("error"+e);
         }
-        catch(Exception e){
+        try{
+            //ganesh
+            if(ADD_NEW_PRODUCT_DETAOBJ.validate(product_idee))
+                 
+
+            {System.out.println("ppppppppppiiiiiiiiiii"+product_idee);
+                JOptionPane.showMessageDialog(this, "product found");
+               // System.out.println("pppppppppp"+pro1_id);
+               String table[] =  {Product_id};
+              
+         // DefaultTableModel model = (DefaultTableModel)table.getModel();
+           // model.addRow(table);
+              
+            
+    
+            //raghu
+            }else 
+            JOptionPane.showMessageDialog(this, "product not found");
+            //sudip
+            
+            
+        }catch (Exception e){
+            System.out.println("Exception -"+e);  
+    }//GEN-LAST:event_jLabel2MouseClicked
+     
+           
+      
+    
     }
-    }
-    }
+    
     
     /**
      * @param args the command line arguments
