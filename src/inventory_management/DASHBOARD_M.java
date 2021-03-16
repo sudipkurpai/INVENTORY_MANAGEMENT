@@ -2749,13 +2749,13 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
     private void UPDATEPROFILE_EMPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UPDATEPROFILE_EMPMouseClicked
         // TODO add your handling code here:
-        UPDATEPROFILE_EMP UP = new UPDATEPROFILE_EMP();
+             MANAGER_UPDATE_PROFILE UP = new  MANAGER_UPDATE_PROFILE();
         String name = mng_name.getText();
         String ID = mng_id.getText();
         String t1 = time1.getText();
         String d1 = time2.getText();
-        UP.udpe(name, ID, eml, t1, d1, ph);
-        UP.setVisible(true);
+       UP.udpe(name, ID, eml, t1, d1, ph);
+      UP.setVisible(true);
         this.dispose();
         
     }//GEN-LAST:event_UPDATEPROFILE_EMPMouseClicked
