@@ -128,7 +128,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         add_emp = new javax.swing.JPanel();
         jLabel97 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        jPanel57 = new javax.swing.JPanel();
+        Remove_Employee = new javax.swing.JPanel();
         jLabel98 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jPanel58 = new javax.swing.JPanel();
@@ -845,7 +845,12 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel57.setBackground(new java.awt.Color(204, 255, 204));
+        Remove_Employee.setBackground(new java.awt.Color(204, 255, 204));
+        Remove_Employee.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Remove_EmployeeMouseClicked(evt);
+            }
+        });
 
         jLabel98.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel98.setForeground(new java.awt.Color(0, 204, 102));
@@ -854,19 +859,19 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/fired.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
-        jPanel57.setLayout(jPanel57Layout);
-        jPanel57Layout.setHorizontalGroup(
-            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout Remove_EmployeeLayout = new javax.swing.GroupLayout(Remove_Employee);
+        Remove_Employee.setLayout(Remove_EmployeeLayout);
+        Remove_EmployeeLayout.setHorizontalGroup(
+            Remove_EmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel98, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Remove_EmployeeLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel35)
                 .addGap(52, 52, 52))
         );
-        jPanel57Layout.setVerticalGroup(
-            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
+        Remove_EmployeeLayout.setVerticalGroup(
+            Remove_EmployeeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Remove_EmployeeLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel35)
                 .addGap(18, 18, 18)
@@ -1013,7 +1018,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                     .addGroup(mng_empLayout.createSequentialGroup()
                         .addComponent(add_emp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70)
-                        .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Remove_Employee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(mng_empLayout.createSequentialGroup()
                         .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70)
@@ -1030,7 +1035,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                 .addGap(60, 60, 60)
                 .addGroup(mng_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(add_emp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel57, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Remove_Employee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55)
                 .addGroup(mng_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2760,6 +2765,21 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         
     }//GEN-LAST:event_UPDATEPROFILE_EMPMouseClicked
 
+    private void Remove_EmployeeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Remove_EmployeeMouseClicked
+        // TODO add your handling code here:
+         REMOVE_EMPLOYEE rmp = new REMOVE_EMPLOYEE();
+        
+  
+       String Name = mng_name.getText();
+       String ID = mng_id.getText();
+        String t1 = time1.getText();
+         String d1 = time2.getText();
+       
+       rmp.ree(Name, ID, eml, t1, d1, ph);
+        rmp.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Remove_EmployeeMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2801,6 +2821,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel LOGOUTaa;
+    private javax.swing.JPanel Remove_Employee;
     private javax.swing.JLabel Showtime;
     private javax.swing.JLabel UPDATEPROFILE_EMP;
     private javax.swing.JPanel UPD_PRO;
@@ -2948,7 +2969,6 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel55;
-    private javax.swing.JPanel jPanel57;
     private javax.swing.JPanel jPanel58;
     private javax.swing.JPanel jPanel59;
     private javax.swing.JPanel jPanel6;

@@ -132,6 +132,7 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -245,7 +246,8 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1047, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1160, 1047));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
@@ -290,6 +292,9 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
                
                 rs.close();
                 ps.close();
+                
+                DefaultTableModel model = (DefaultTableModel)table.getModel();
+                model.addRow(new Object[]{product_ideoo,product_nameyy,description,standerd_cost,unitprice,mfgdate,expirydate,quantity,category,brand});
             }else{
                 JOptionPane.showMessageDialog(this, "Enter Correct Product Id");
                 System.out.println("Enter Correct Product Id");
@@ -305,7 +310,7 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
             {System.out.println("ppppppppppiiiiiiiiiii"+product_idee);
                 JOptionPane.showMessageDialog(this, "product found");
                // System.out.println("pppppppppp"+pro1_id);
-               String table[] =  {Product_id};
+              // String table[] =  {Product_id};
               
          // DefaultTableModel model = (DefaultTableModel)table.getModel();
            // model.addRow(table);
