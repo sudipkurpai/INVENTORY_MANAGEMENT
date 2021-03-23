@@ -54,4 +54,27 @@ public class REGISTRATION_DATAOBEJECT {
         catch(Exception e){System.out.println(e);}
         return status;
     }
+    
+    public static int remove_emp_system (String manager_name, String mng_id, String date, 
+            String time, String emp_id,String emp_name, String reason){
+        int status=0;
+              try{
+                   Connection con=DATABASE_CONNECTION.getConnection();  
+                   PreparedStatement ps=con.prepareStatement("INSERT INTO remove_employee(Manager_Name, Mng_id, Date, Time, Emp_id, Emp_name, Reson) VALUES (?,?,?,?,?,?,?)");
+                   ps.setString(1, manager_name);
+                   ps.setString(2, mng_id);
+                   ps.setString(3, date);
+                   ps.setString(4, time);
+                   ps.setString(5, emp_id);
+                   ps.setString(6, emp_name);
+                   ps.setString(7, reason);
+                 
+                   status=ps.executeUpdate();
+                   con.close();
+              }catch(Exception e){
+                  System.out.println(e);
+              }
+              System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!"+status);
+              return status;
+}
 }

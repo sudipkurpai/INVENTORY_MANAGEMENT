@@ -286,7 +286,7 @@ public class LOGINFROM extends javax.swing.JFrame {
         jLabel10.setText("Inventory Management");
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inventory_management/profile.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/profile.png"))); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("Gabriola", 1, 48)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -552,7 +552,7 @@ public class LOGINFROM extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LOGINFROM().setVisible(true);
+           new LOGINFROM().setVisible(true);
             }
         });
     }
