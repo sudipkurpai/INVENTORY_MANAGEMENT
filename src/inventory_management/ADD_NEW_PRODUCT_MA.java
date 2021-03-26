@@ -553,7 +553,7 @@ public class ADD_NEW_PRODUCT_MA extends javax.swing.JFrame {
         int a,b,c ;
         a = Integer.parseInt(s_cost.getText());
         b = Integer.parseInt(quantity.getText());
-        c=a+b;
+        c=a*b;
         total.setText(""+c);
         
        

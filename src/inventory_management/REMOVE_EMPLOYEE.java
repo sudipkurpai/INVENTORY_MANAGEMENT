@@ -28,6 +28,7 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
     /**
      * Creates new form REMOVE_EMPLOYEE
      */
+   
     public REMOVE_EMPLOYEE() {
         initComponents();
     }
@@ -56,20 +57,20 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         emp_id = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        c = new javax.swing.JTextField();
+        phone = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        a = new javax.swing.JTextField();
-        b = new javax.swing.JTextField();
-        d = new javax.swing.JTextField();
+        emp_name = new javax.swing.JTextField();
+        email_id = new javax.swing.JTextField();
+        address = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        e = new javax.swing.JTextPane();
+        Reason = new javax.swing.JTextPane();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        search = new javax.swing.JButton();
+        Remove_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -96,7 +97,7 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(240, 240, 240)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 232, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addContainerGap())
         );
@@ -106,7 +107,7 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(210, 169, 251));
@@ -114,7 +115,7 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
 
         emp_id.setBackground(new java.awt.Color(255, 255, 255));
         emp_id.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        emp_id.setForeground(new java.awt.Color(0, 0, 255));
+        emp_id.setForeground(new java.awt.Color(0, 0, 204));
         emp_id.setText("Enter Employee ID");
         emp_id.setBorder(null);
         jPanel3.add(emp_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 360, 20));
@@ -122,37 +123,41 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/rounded (4).png"))); // NOI18N
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, -1, 40));
 
-        c.setBackground(new java.awt.Color(255, 255, 255));
-        c.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        c.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 260, 20));
+        phone.setBackground(new java.awt.Color(255, 255, 255));
+        phone.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        phone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 260, 20));
 
         jButton1.setBackground(new java.awt.Color(0, 255, 204));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 255));
         jButton1.setText("Reset");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 100, 40));
 
-        a.setBackground(new java.awt.Color(255, 255, 255));
-        a.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        a.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(a, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 260, 20));
+        emp_name.setBackground(new java.awt.Color(255, 255, 255));
+        emp_name.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        emp_name.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(emp_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 260, 20));
 
-        b.setBackground(new java.awt.Color(255, 255, 255));
-        b.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        b.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(b, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 260, 20));
+        email_id.setBackground(new java.awt.Color(255, 255, 255));
+        email_id.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        email_id.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(email_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 260, 20));
 
-        d.setBackground(new java.awt.Color(255, 255, 255));
-        d.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        d.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(d, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, 260, 20));
+        address.setBackground(new java.awt.Color(255, 255, 255));
+        address.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        address.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, 260, 20));
 
-        e.setBackground(new java.awt.Color(255, 255, 255));
-        e.setBorder(null);
-        e.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        e.setForeground(new java.awt.Color(0, 0, 0));
-        jScrollPane1.setViewportView(e);
+        Reason.setBackground(new java.awt.Color(255, 255, 255));
+        Reason.setBorder(null);
+        Reason.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        jScrollPane1.setViewportView(Reason);
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 224, 610, 130));
 
@@ -181,35 +186,42 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
         jLabel7.setText("Address :");
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, -1, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 224, 201));
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 204));
-        jButton2.setText("Search");
-        jButton2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 51, 255), new java.awt.Color(51, 51, 255)));
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        search.setBackground(new java.awt.Color(0, 224, 201));
+        search.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        search.setForeground(new java.awt.Color(0, 0, 204));
+        search.setText("Search");
+        search.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(255, 51, 255), new java.awt.Color(51, 51, 255)));
+        search.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                searchMouseClicked(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 10, 64, 32));
+        jPanel3.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(552, 10, 64, 32));
 
-        jButton3.setBackground(new java.awt.Color(255, 51, 0));
-        jButton3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 0));
-        jButton3.setText("Remove");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        Remove_button.setBackground(new java.awt.Color(255, 51, 0));
+        Remove_button.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Remove_button.setForeground(new java.awt.Color(255, 255, 0));
+        Remove_button.setText("Remove");
+        Remove_button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                Remove_buttonMouseClicked(evt);
             }
         });
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, -1, 40));
+        Remove_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Remove_buttonActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Remove_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, -1, 40));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,10 +239,12 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(800, 476));
+        setSize(new java.awt.Dimension(800, 477));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -242,10 +256,13 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseClicked
         // TODO add your handling code here:
         String Epeee = emp_id.getText();
-    String product_ideoo= null;
+        emp_name.setEditable(false);
+        email_id.setEditable(false);
+        phone.setEditable(false);
+        address.setEditable(false);
         try {
         
              //Data fetch from database
@@ -269,10 +286,10 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
                 String full= fname+lname;
                rs.close();
                 ps.close();
-                a.setText(full);
-                b.setText(eml);
-                c.setText(mob);
-                d.setText(add);
+                emp_name.setText(full);
+                email_id.setText(eml);
+                phone.setText(mob);
+                address.setText(add);
              }else{
                 JOptionPane.showMessageDialog(this, "Enter Correct Employee Id");
                
@@ -280,62 +297,119 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
         }catch(Exception e){
             System.out.println("error"+e);
         }
-    }//GEN-LAST:event_jButton2MouseClicked
+        
+    
+  
+    }//GEN-LAST:event_searchMouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void Remove_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Remove_buttonMouseClicked
         // TODO add your handling code here:
-        
-         String em_id = emp_id.getText();
-        String aa = a.getText();
-        String bb = b.getText();
-        String cc = c.getText();
-        String dd = d.getText();
-        String ee = e.getText();
-        if (aa.equals(null)||bb==null||cc==(null)||dd==(null))
-        
-          JOptionPane.showMessageDialog(this, "Fill Up All Filld First");  
-//        }else if (ee==""){
-//            JOptionPane.showMessageDialog(this, "Give a Reason for Remove Employee"); 
-//        }else{
-//            int Yes = JOptionPane.showConfirmDialog(null, "Are Your Sure Want to Remove This Employee ?");
-////        if(Yes == 0){
-////         
-//                  REGISTRATION_DATAOBEJECT.remove_emp_system(Name, ID, date, time, em_id, aa, ee);
-//                      
-//        }else{
-//             int No=0;
-//                if (No == 0){
-//                }
-//               }
-        
-    }//GEN-LAST:event_jButton3MouseClicked
+       
+        String en= emp_name.getText();
 
+        String eml= email_id.getText();
+         String phoe= phone.getText();
+          String add= address.getText();
+           String reas= Reason.getText();
+           String Epeee = emp_id.getText();
+      
+         
+          
+           
+            if ("".equals(en)||"".equals(eml)||"".equals(phoe)||"".equals(add) ||"".equals(Epeee) ||"".equals(Epeee)   )
+                  JOptionPane.showMessageDialog(this, "Fill up all Filed First");
+            else if ("".equals(reas))
+                
+                JOptionPane.showMessageDialog(this, "Enter Reason");
+            
+            else{
+                
+              int Yes = JOptionPane.showConfirmDialog(null, "Are Your Sure Want to Remove Employee ?");
+               System.out.println("000000000000000000000000000000000");
+        if(Yes == 0){
+            JOptionPane.showMessageDialog(this, "Employee Remove Successfully");
+        
+            {
+              
+        int status=0;
+        
+              try{
+                 
+                   Connection con=DATABASE_CONNECTION.getConnection();  
+                   PreparedStatement ps=con.prepareStatement("INSERT INTO remove_employee (manager_name, mng_id, employee_name, emp_id , reason,time_date) VALUES (?,?,?,?,?,?)");
+                   ps.setString(1, Name);  
+                   System.out.println("111111111"+Name);
+                   ps.setString(2, ID);
+                   System.out.println("22222"+ID);
+                   ps.setString(3, en);
+                   ps.setString(4, Epeee);
+                   System.out.println("55555551"+Epeee);
+                   ps.setString(5, reas);
+                   System.out.println("6666666"+ reas);
+                   ps.setString(6, date);
+                   System.out.println("77777777777"+date);
+                  
+                  status=ps.executeUpdate();
+                   con.close();
+              }catch(Exception e){
+                  System.out.println(e);
+              }
+              System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!"+status);
+            
+            }
+        
+            ganesh();
+        }else{
+             int No=0;
+                if (No == 0){
+                    
+                }
+    }//GEN-LAST:event_Remove_buttonMouseClicked
+        
+            }}  
+    
+// DELETE CODE......................AFTER REMOVE A EMPLOYEE DATA SHOULD BE DEWLETE FROM DATA BASE
+    
+    public  int ganesh (){
+             String Epeee = emp_id.getText();  
+              System.out.println("ADDD");
+        int status=0;
+              try{
+                   Connection con=DATABASE_CONNECTION.getConnection();  
+                   PreparedStatement ps=con.prepareStatement("DELETE FROM  employee_register WHERE EMP_ID = ?");
+                     ps.setString(1,Epeee);           
+                   status=ps.executeUpdate();
+                   con.close();
+              }catch(Exception e){
+                  System.out.println(e);
+              }
+              System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!"+status);
+              return status;
+    }
+
+
+    
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        emp_name.setText("");
+        email_id.setText("");
+        phone.setText("");
+        address.setText("");
+        Reason.setText("");
+        emp_id.setText("");
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void Remove_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Remove_buttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Remove_buttonActionPerformed
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(REMOVE_EMPLOYEE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(REMOVE_EMPLOYEE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(REMOVE_EMPLOYEE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(REMOVE_EMPLOYEE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+       
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -346,15 +420,13 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField a;
-    private javax.swing.JTextField b;
-    private javax.swing.JTextField c;
-    private javax.swing.JTextField d;
-    private javax.swing.JTextPane e;
+    private javax.swing.JTextPane Reason;
+    private javax.swing.JButton Remove_button;
+    private javax.swing.JTextField address;
+    private javax.swing.JTextField email_id;
     private javax.swing.JTextField emp_id;
+    private javax.swing.JTextField emp_name;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -367,5 +439,7 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField phone;
+    private javax.swing.JButton search;
     // End of variables declaration//GEN-END:variables
 }
