@@ -143,6 +143,9 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         add_emp3 = new javax.swing.JPanel();
         UPDATEPROFILE_EMP = new javax.swing.JLabel();
         jLabel122 = new javax.swing.JLabel();
+        Remove_Employee1 = new javax.swing.JPanel();
+        jLabel101 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
         navbar = new javax.swing.JPanel();
         mng_name = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -1008,6 +1011,40 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                 .addGap(10, 10, 10))
         );
 
+        Remove_Employee1.setBackground(new java.awt.Color(204, 255, 204));
+        Remove_Employee1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Remove_Employee1MouseClicked(evt);
+            }
+        });
+
+        jLabel101.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel101.setForeground(new java.awt.Color(0, 204, 102));
+        jLabel101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel101.setText("Remove Employee List");
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/fired.png"))); // NOI18N
+
+        javax.swing.GroupLayout Remove_Employee1Layout = new javax.swing.GroupLayout(Remove_Employee1);
+        Remove_Employee1.setLayout(Remove_Employee1Layout);
+        Remove_Employee1Layout.setHorizontalGroup(
+            Remove_Employee1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel101, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Remove_Employee1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel39)
+                .addGap(52, 52, 52))
+        );
+        Remove_Employee1Layout.setVerticalGroup(
+            Remove_Employee1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Remove_Employee1Layout.createSequentialGroup()
+                .addContainerGap(33, Short.MAX_VALUE)
+                .addComponent(jLabel39)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel101)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout mng_empLayout = new javax.swing.GroupLayout(mng_emp);
         mng_emp.setLayout(mng_empLayout);
         mng_empLayout.setHorizontalGroup(
@@ -1022,7 +1059,9 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                     .addGroup(mng_empLayout.createSequentialGroup()
                         .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70)
-                        .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(mng_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Remove_Employee1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(74, 74, 74)
                 .addGroup(mng_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1042,7 +1081,9 @@ public class DASHBOARD_M extends javax.swing.JFrame {
                     .addComponent(jPanel59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel61, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
                     .addComponent(add_emp3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addGap(51, 51, 51)
+                .addComponent(Remove_Employee1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jPanel1.add(mng_emp, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 63, 810, 640));
@@ -2780,6 +2821,10 @@ public class DASHBOARD_M extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_Remove_EmployeeMouseClicked
 
+    private void Remove_Employee1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Remove_Employee1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Remove_Employee1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2822,6 +2867,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel LOGOUTaa;
     private javax.swing.JPanel Remove_Employee;
+    private javax.swing.JPanel Remove_Employee1;
     private javax.swing.JLabel Showtime;
     private javax.swing.JLabel UPDATEPROFILE_EMP;
     private javax.swing.JPanel UPD_PRO;
@@ -2838,6 +2884,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
     private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
@@ -2902,6 +2949,7 @@ public class DASHBOARD_M extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;

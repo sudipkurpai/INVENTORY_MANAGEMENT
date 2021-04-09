@@ -13,19 +13,22 @@ import java.sql.*;
  *
  * @author Sudip Maiti
  */
+//check it and why we use this type class? what is the pupose of use it? its similar like databese, but not fully database
+//we use it because very much we need database query for execute some database function 
 public class ADD_NEW_EMP_DATAOBEJECT {
-    public static int inventory_management (String FIRST_NAME, String LAST_NAME, String EMAIL, 
+    public static int inventory_management (String NAME, String LAST_NAME, String EMAIL, 
             String MOBILE_NO, String EMP_ID, String PASSWORD, String CONFIRM_PASSWORD, 
             String DOB,String ADDRESS, String GENDER,String EMP_ADD_MNG_NAME,String EMP_ADD_MNG_ID, String ADD_TIME,String ADD_DATE){
         int status=0;
               try{
                    Connection con=DATABASE_CONNECTION.getConnection();  
                    PreparedStatement ps=con.prepareStatement("INSERT INTO employee_register (FIRST_NAME,LAST_NAME,EMAIL,MOBILE_NO,"
-                           + "EMP_ID,PASSWORD,CONFIRM_PASSWORD,DOB,ADDRESS,GENDER,EMP_ADD_MNG_NAME,EMP_ADD_MNG_ID,ADD_TIME,ADD_DATE) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-                   ps.setString(1, FIRST_NAME);
+                           + "EMP_ID,PASSWORD,CONFIRM_PASSWORD,DOB,ADDRESS,GENDER,EMP_ADD_MNG_NAME,EMP_ADD_MNG_ID,ADD_TIME,ADD_DATE) "
+                           + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                   ps.setString(1, NAME);
                    ps.setString(2, LAST_NAME);
                    ps.setString(3, EMAIL);
-                   ps.setString(4, MOBILE_NO);
+                   ps.setString(4, MOBILE_NO); 
                    ps.setString(5, EMP_ID);
                    ps.setString(6, PASSWORD);
                    ps.setString(7, CONFIRM_PASSWORD);
