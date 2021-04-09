@@ -327,7 +327,8 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
               int Yes = JOptionPane.showConfirmDialog(null, "Are Your Sure Want to Remove Employee ?");
                System.out.println("000000000000000000000000000000000");
         if(Yes == 0){
-            JOptionPane.showMessageDialog(this, "Employee Remove Successfully");
+            REMOVE_EMPLOYEE_DATA_OBJECT.remove(Epeee);
+            JOptionPane.showMessageDialog( this, "Employee Remove Successfully");
         
             {
               
@@ -358,7 +359,7 @@ public class REMOVE_EMPLOYEE extends javax.swing.JFrame {
             
             }
         
-            ganesh();
+            
         }else{
              int No=0;
                 if (No == 0){

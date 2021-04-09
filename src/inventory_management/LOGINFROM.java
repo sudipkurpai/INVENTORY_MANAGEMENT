@@ -414,7 +414,7 @@ public class LOGINFROM extends javax.swing.JFrame {
                 MAN_SEASION_DATAOBJECT.man_isert_session(name,mng_Id,phone,eml,timeee,"",date,"");
                 email.setForeground(Color.GREEN);
                 pass.setForeground(Color.GREEN);                
-                JOptionPane.showMessageDialog(null, "Login Successfully");
+                JOptionPane.showMessageDialog(this, "Login Successfully");
                 
                 DASHBOARD_M dm = new DASHBOARD_M();
                 System.out.println("2222222222222222" +timeee);
