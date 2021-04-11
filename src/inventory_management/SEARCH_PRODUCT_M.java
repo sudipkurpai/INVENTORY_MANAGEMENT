@@ -143,6 +143,11 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
         pro1_id.setBackground(new java.awt.Color(255, 255, 255));
         pro1_id.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         pro1_id.setBorder(null);
+        pro1_id.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                pro1_idKeyReleased(evt);
+            }
+        });
         jPanel1.add(pro1_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 49, 400, 30));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -324,13 +329,50 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
             
             
         }catch (Exception e){
-            System.out.println("Exception -"+e);  
+            System.out.println("Exception -"+e);
+        }
     }//GEN-LAST:event_jLabel2MouseClicked
+    
+    
+    private void pro1_idKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pro1_idKeyReleased
+        // TODO add your handling code here:
+        String product_idee = pro1_id.getText();
+    String product_ideoo= null;
+        try {
+        
+             //Data fetch from database
+            String sql = "Select * from add_new_product Where Product_id LIKE '%"+product_idee+"%'";
+            Connection con=DATABASE_CONNECTION.getConnection();
+            PreparedStatement ps=con.prepareStatement(sql);
+            
+            //ps.setString(1,product_idee);
+            ResultSet rs=ps.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)table.getModel();
+            model.setRowCount(0);
+            while (rs.next()){
+                 
+               Object o []={
+                   rs.getString("Product_id"),rs.getString("Product_name"),rs.getString("Description"),rs.getString("Standerd_cost"),rs.getString("Unit_price"),rs.getString("Mfg_date"),rs.getString("Exp_date"),rs.getString("Quantity"),rs.getString("Category"),rs.getString("Brand")
+                   
+               };
+               model.addRow(o);
+               
+                
+               
+                
+            }
+        }catch(Exception e){
+            System.out.println("error"+e);
+        }
+     
+            
+       
+    }//GEN-LAST:event_pro1_idKeyReleased
      
            
       
     
-    }
+    
     
     
     /**
