@@ -7,9 +7,13 @@ package inventory_management;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.Timer;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -39,7 +43,7 @@ public class SALES_REPORT extends javax.swing.JFrame {
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        table = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -55,18 +59,22 @@ public class SALES_REPORT extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        sales_search = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        quantity = new javax.swing.JTextField();
+        pro_id = new javax.swing.JTextField();
+        total_cost = new javax.swing.JTextField();
+        prd_nm = new javax.swing.JTextField();
+        price = new javax.swing.JTextField();
+        quanti = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         T1 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         D1 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        quantity1 = new javax.swing.JTextField();
+        date = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -74,12 +82,12 @@ public class SALES_REPORT extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 255, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Product ID", "Product Name", "Price", "Date", "TotalSales ", "Total Cost", " Total Piece"
+                "Product ID", "Product Name", "Price", "Date", "Quentity", "TotalSales ", "Total Cost"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -90,9 +98,14 @@ public class SALES_REPORT extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(table);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 1110, 360));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 1110, 250));
 
         jPanel2.setBackground(new java.awt.Color(0, 204, 102));
 
@@ -141,6 +154,11 @@ public class SALES_REPORT extends javax.swing.JFrame {
         search.setFont(new java.awt.Font("Dialog", 0, 20)); // NOI18N
         search.setForeground(new java.awt.Color(255, 255, 255));
         search.setText("Reset");
+        search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchActionPerformed(evt);
+            }
+        });
         jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 160, 103, 40));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -149,49 +167,54 @@ public class SALES_REPORT extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 30, 40));
         jPanel1.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 200, 40));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Average Sale", "Low Sale", " " }));
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, 160, 40));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(153, 0, 51));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("Total Piece");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 240, 170, 50));
+        jLabel4.setText("Total Cost");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, 240, 50));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(153, 0, 51));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("Product ID");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 170, 50));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 240, 50));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(153, 0, 51));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText("Product Name");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 170, 50));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 240, 50));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(153, 0, 51));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setText("Price Per Piece");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 170, 50));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, 240, 50));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(153, 0, 51));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel8.setText("Total Sale");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 240, 170, 50));
+        jLabel8.setText("Quantity");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 240, 50));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(153, 0, 51));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel9.setText("Total Cost");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 240, 170, 50));
+        jLabel9.setText("Total Sale");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 220, 50));
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 160, 180, 40));
+        sales_search.setBackground(new java.awt.Color(255, 255, 255));
+        sales_search.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        sales_search.setForeground(new java.awt.Color(0, 0, 255));
+        sales_search.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                sales_searchKeyReleased(evt);
+            }
+        });
+        jPanel1.add(sales_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 160, 180, 40));
 
         jButton1.setBackground(new java.awt.Color(0, 255, 255));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -199,35 +222,35 @@ public class SALES_REPORT extends javax.swing.JFrame {
         jButton1.setText("Ok");
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 160, 60, 40));
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 290, 170, 50));
+        quantity.setBackground(new java.awt.Color(255, 255, 255));
+        quantity.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        quantity.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 420, 240, 50));
 
-        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 170, 50));
+        pro_id.setBackground(new java.awt.Color(255, 255, 255));
+        pro_id.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        pro_id.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(pro_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 240, 50));
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 290, 170, 50));
+        total_cost.setBackground(new java.awt.Color(255, 255, 255));
+        total_cost.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        total_cost.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(total_cost, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 420, 240, 50));
 
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 170, 50));
+        prd_nm.setBackground(new java.awt.Color(255, 255, 255));
+        prd_nm.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        prd_nm.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(prd_nm, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, 240, 50));
 
-        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField6.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 170, 50));
+        price.setBackground(new java.awt.Color(255, 255, 255));
+        price.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        price.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 240, 50));
 
-        jTextField7.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(0, 0, 255));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 290, 170, 50));
+        quanti.setBackground(new java.awt.Color(255, 255, 255));
+        quanti.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        quanti.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(quanti, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 240, 50));
 
         jLabel10.setBackground(new java.awt.Color(0, 0, 0));
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -247,6 +270,28 @@ public class SALES_REPORT extends javax.swing.JFrame {
         D1.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         D1.setForeground(new java.awt.Color(0, 0, 255));
         jPanel1.add(D1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 100, 180, 30));
+
+        jLabel11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(153, 0, 51));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel11.setText("Profit");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 370, 240, 50));
+
+        quantity1.setBackground(new java.awt.Color(255, 255, 255));
+        quantity1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        quantity1.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(quantity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 420, 240, 50));
+
+        date.setBackground(new java.awt.Color(255, 255, 255));
+        date.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        date.setForeground(new java.awt.Color(0, 0, 255));
+        jPanel1.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 300, 240, 50));
+
+        jLabel13.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(153, 0, 51));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel13.setText("Date");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 250, 240, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -272,6 +317,63 @@ public class SALES_REPORT extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel19MouseClicked
 
+    private void sales_searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_sales_searchKeyReleased
+        // TODO add your handling code here:
+        
+       
+        String product_ideeeee = sales_search.getText();
+    String product_ideoo= null;
+        try {
+        
+             //Data fetch from database
+            String sql = "Select * from sell Where Product_id LIKE '%"+product_ideeeee+"%'";
+            Connection con=DATABASE_CONNECTION.getConnection();
+            PreparedStatement ps=con.prepareStatement(sql);
+            
+            //ps.setString(1,product_idee);
+            ResultSet rs=ps.executeQuery();
+            DefaultTableModel model = (DefaultTableModel)table.getModel();
+            model.setRowCount(0);
+            while (rs.next()){
+                 
+               Object o []={
+                   rs.getString("Product_id"),rs.getString("Product_name"),rs.getString("Price"),rs.getString("Date"),rs.getString("Quantity")
+                   
+               };
+               model.addRow(o);
+               
+                
+               
+                
+            }
+        }catch(Exception e){
+            System.out.println("error"+e);
+        }
+     
+            
+    }//GEN-LAST:event_sales_searchKeyReleased
+
+    private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
+        // TODO add your handling code here:
+        sales_search.setText("");
+        DefaultTableModel ganesh= (DefaultTableModel)table.getModel();
+        while(ganesh.getRowCount()>0){
+            ganesh.setRowCount(0);
+        } 
+    }//GEN-LAST:event_searchActionPerformed
+
+    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
+        // TODO add your handling code here:
+        int i = table.getSelectedRow();
+     DefaultTableModel model=(DefaultTableModel)table.getModel();
+     pro_id.setText(model.getValueAt(i,0).toString());
+     prd_nm.setText(model.getValueAt(i,1).toString());
+     price.setText(model.getValueAt(i,2).toString());
+    date.setText(model.getValueAt(i,3).toString());
+     quanti.setText(model.getValueAt(i,4).toString());
+     //quantity.setText(model.getValueAt(i,4).toString());
+    }//GEN-LAST:event_tableMouseClicked
+    
     void date() {
         Date d = new Date();
         SimpleDateFormat s = new SimpleDateFormat("dd-MM-yyyy");
@@ -329,6 +431,7 @@ public class SALES_REPORT extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel D1;
     private javax.swing.JLabel T1;
+    private javax.swing.JTextField date;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
@@ -336,7 +439,9 @@ public class SALES_REPORT extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -349,14 +454,15 @@ public class SALES_REPORT extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField prd_nm;
+    private javax.swing.JTextField price;
+    private javax.swing.JTextField pro_id;
+    private javax.swing.JTextField quanti;
+    private javax.swing.JTextField quantity;
+    private javax.swing.JTextField quantity1;
+    private javax.swing.JTextField sales_search;
     private javax.swing.JButton search;
+    private javax.swing.JTable table;
+    private javax.swing.JTextField total_cost;
     // End of variables declaration//GEN-END:variables
 }
