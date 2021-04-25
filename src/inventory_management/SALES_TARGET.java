@@ -442,7 +442,7 @@ public class SALES_TARGET extends javax.swing.JFrame {
         if(fName.isEmpty() || lName.equals("") || ph.equals("") ||c_pass.isEmpty()){
             JOptionPane.showMessageDialog(this, "Fill up all field first");
        // }else if(password.equals(c_pass) ){
-            int i = SALES_TARGET_DATAOBJECT.inventory_management_system(fName, lName,  ph, c_pass);
+     //       int i = SALES_TARGET_DATAOBJECT.inventory_management_system(fName, lName,  ph, c_pass);
             //`MANAGER_NAME`, `MANAGER_ID`, `DATE`, `TIME`, `PRODUCT_ID`, `PRODUCT_NAME`, `FROM_DATE`, `TO_DATE`, `QUANTITY`, `DESCRIPTION`
         }
     }//GEN-LAST:event_jButton3MouseClicked
