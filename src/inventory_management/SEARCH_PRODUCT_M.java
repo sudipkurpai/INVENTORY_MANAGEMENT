@@ -273,25 +273,25 @@ public class SEARCH_PRODUCT_M extends javax.swing.JFrame {
             ResultSet rs=ps.executeQuery();
             if(rs.next()){
                 product_ideoo =rs.getString("Product_id");
-                 System.out.println("EMpppppp "+product_ideoo);
+                
                 String product_nameyy =rs.getString("Product_name");
-                 System.out.println("pppnnn "+product_nameyy);
+                
                 String description =rs.getString("Description");
-                 System.out.println("ddsss "+description);
+                
                 String standerd_cost =rs.getString("Standerd_cost");
-                 System.out.println("ssccc "+standerd_cost);
+                 
                 String unitprice =rs.getString("Unit_price");
-                 System.out.println("uuppp "+unitprice);
+             
                 String mfgdate =rs.getString("Mfg_date");
-                 System.out.println("mmmddd "+mfgdate);
+                
                 String expirydate =rs.getString("Exp_date");
-                 System.out.println("eeeddd "+expirydate);
+                
                 String quantity =rs.getString("Quantity");
-                 System.out.println("qqqqnnn "+quantity);
+                 
                 String category =rs.getString("Category");
-                 System.out.println("ccccttt "+category);
+                 
                 String brand =rs.getString("Brand");
-                System.out.println("bbbrr "+brand);
+               
                // JOptionPane.showMessageDialog(this, "Product Found");
                 
                

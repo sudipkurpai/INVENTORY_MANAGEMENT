@@ -209,6 +209,11 @@ public class SALES_REPORT extends javax.swing.JFrame {
         sales_search.setBackground(new java.awt.Color(255, 255, 255));
         sales_search.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         sales_search.setForeground(new java.awt.Color(0, 0, 255));
+        sales_search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sales_searchActionPerformed(evt);
+            }
+        });
         sales_search.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 sales_searchKeyReleased(evt);
@@ -373,6 +378,10 @@ public class SALES_REPORT extends javax.swing.JFrame {
      quanti.setText(model.getValueAt(i,4).toString());
      //quantity.setText(model.getValueAt(i,4).toString());
     }//GEN-LAST:event_tableMouseClicked
+
+    private void sales_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sales_searchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sales_searchActionPerformed
     
     void date() {
         Date d = new Date();
